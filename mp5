@@ -1,0 +1,26 @@
+#Muzzle#
+Flash Guard				:	+ Muzzle Flash Concealment
+							- Bullet Velocity
+Tactical Suppressor		:	+ Sound Suppression
+							- ADS
+							- Aim Walking Steadiness
+							
+Muzzle Brake			:	+ Recoil Stabilization
+							- ADS
+							- Aiming Stability
+							
+Monolithic Suppressor	:	+ Sound Suppression
+							+ Damage Range
+							- ADS
+							- Aim Walking Steadiness
+							
+Lightweight Suppressor	:	+ Sound Suppression
+							- Damage Range
+							
+Breacher Device			:	+ Melee Quickness
+							- ADS
+							- Aim Walk Steadiness
+							
+Compensator				:	+ Recoil Control
+							- ADS
+							- Aim Stability
