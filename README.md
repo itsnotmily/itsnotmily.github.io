@@ -2,4 +2,4 @@
 
 [I'm an inline-style link](https://www.google.com)
 
-[MP5](/mp5.html)
+[MP5](./mp5.html)
