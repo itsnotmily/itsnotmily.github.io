@@ -2,4 +2,4 @@
 
 [I'm an inline-style link](https://www.google.com)
 
-[MP5](itsnotmily.github.io/mp5.html)
+[MP5](https://itsnotmily.github.io/mp5.html)
