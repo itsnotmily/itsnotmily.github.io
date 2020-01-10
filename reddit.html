@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Milan B. - Reddit Quick Viewer</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="./media/logox.png" width="30" height="30" class="d-inline-block align-bottom" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+		
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="projects.html">Projects
+			  	<span class="sr-only">(current)</span>
+				</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gaming.html">Gaming</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+ <!-- Page Content -->
+
+    <div class="container text-center">	
+<h1>Reddit Posts</h1>
+
+
+<br>
+<form action="#">
+    <span>
+		<input name="group1" type="radio" id="rHot" checked="checked" onclick="redditChange()"/>
+		<label for="rHot">Hot</label>
+    </span>
+    <span>
+		<input name="group1" type="radio" id="rNew" onclick="redditChange()"/>
+		<label for="rNew">New</label>
+    </span>
+	<br>
+	<br>
+	<div class="formInline">
+    <span>
+		<input name="group1" type="radio" id="topHour"  onclick="redditChange()"/>
+		<label for="topHour">Top (Hour)</label>
+    </span>
+	<span>
+		<input name="group1" type="radio" id="top24"  onclick="redditChange()"/>
+		<label for="top24">Top (24h)</label>
+    </span>
+	<span>
+		<input name="group1" type="radio" id="topWeek"  onclick="redditChange()"/>
+		<label for="topWeek">Top (Week)</label>
+    </span>
+	<span>
+		<input name="group1" type="radio" id="topMonth"  onclick="redditChange()"/>
+		<label for="topMonth">Top (Month)</label>
+    </span>
+	<span>
+		<input name="group1" type="radio" id="topYear"  onclick="redditChange()"/>
+		<label for="topYear">Top (Year)</label>
+    </span>
+	<span>
+		<input name="group1" type="radio" id="topAll"  onclick="redditChange()"/>
+		<label for="topAll">Top (All)</label>
+    </span>
+	</div>
+	<br>
+	<div class="formInline">
+	  <div class="switch"><label>NSFW<input type="checkbox" name="redditSwitch"onchange="redditSFW()" >
+      <span class="lever" ></span>SFW</label></div>
+	<br>
+	    <span>
+		<a href="#" ><i class="small material-icons" onclick="redditRefresh()" id="refreshIcon" title="Refresh">refresh</i></a>
+	    <a href="#" ><i class="small material-icons" onclick="redditReset()" id="resetIcon" title="Reset">do_not_disturb</i></a>
+    </span>
+
+	</div>
+</form>
+<br>
+
+
+<div class="input-group mb-3">
+  <input type="text" id = "redditSub" class="form-control" placeholder="subreddit name" aria-label="subreddit name" aria-describedby="basic-addon2"
+  onkeydown = "if (event.keyCode == 13)
+                        reddit()"
+                        autofocus>
+  <div class="input-group-append">
+    <button class="btn text-white bg-dark btn-outline-secondary" type="button" onclick="reddit()">Send</button>
+  </div>
+</div>
+
+
+
+						
+<h2 id="redditQuery"></h2>
+<p id="redditAuthor"></p>
+
+<h2 id="redditInfo"></h2>
+<h3 id="redditSelf"></h3>
+<div class="card bg-dark text-white">
+  <div class="card-body" id="redditFinal">
+    Waiting for your input
+  </div>
+</div>
+<p id="redditPerma"></p>
+
+	    <a href="#" onclick="redditTopsubs()">Click to see/hide top 25 subreddits<i class="small material-icons" onclick="redditTopsubs()" id="trendIcon" title="Top 25">trending_up</i></a>
+<p id="trending25"></p>
+
+
+</div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./js/js.js" type="text/javascript"></script>
+  </body>
+</html>
