@@ -68,29 +68,28 @@ function reddit(){
 	var redditResult;
 	for (i = 0;i<redditRadio.length;i++){
 		if (redditRadio[i].checked == true){
-			if (redditRadio[i].id == "test1"){
+			if (redditRadio[i].id == "rHot"){
 				redditCheck = "/hot.json?"+Date.now();
 			}
-			else if (redditRadio[i].id == "test2"){
+			else if (redditRadio[i].id == "rNew"){
 				redditCheck = "/new.json?"+Date.now();
 			}
-			else if(redditRadio[i].id == "test3"){
+			else if(redditRadio[i].id == "topHour"){
 				redditCheck = "/top/.json?"+Date.now()+"?sort=top&t=hour";
 			}
-			else if(redditRadio[i].id == "test4"){
+			else if(redditRadio[i].id == "top24"){
 				redditCheck = "/top.json?"+Date.now();
 			}
-			
-			else if(redditRadio[i].id == "test5"){
+			else if(redditRadio[i].id == "topWeek"){
 				redditCheck = "/top/.json?"+Date.now()+"?sort=top&t=week";
 			}
-			else if(redditRadio[i].id == "test6"){
+			else if(redditRadio[i].id == "topMonth"){
 				redditCheck = "/top/.json?"+Date.now()+"?sort=top&t=month";
 			}
-			else if(redditRadio[i].id == "test7"){
+			else if(redditRadio[i].id == "topYear"){
 				redditCheck = "/top/.json?"+Date.now()+"?sort=top&t=year";
 			}
-			else if(redditRadio[i].id == "test8"){
+			else if(redditRadio[i].id == "topAll"){
 				redditCheck = "/top/.json?"+Date.now()+"?sort=top&t=all";
 			}
 		}
