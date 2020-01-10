@@ -21,7 +21,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="./media/logox.png" width="30" height="30" class="d-inline-block align-bottom" alt=""></a>
+        <a class="navbar-brand" href="index.html"><img src="./media/logox.png" width="30" height="30" class="d-inline-block align-bottom" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -54,7 +54,34 @@
 <h1>Reddit Posts</h1>
 
 
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary active for="rHot" onclick="redditChange()">
+    <input type="radio" name="group1" id="rHot" autocomplete="off" checked onclick="redditChange()"> Hot
+  </label>
+  <label class="btn btn-secondary for="rNew" onclick="redditChange()">
+    <input type="radio" name="group1" id="rNew" autocomplete="off" onclick="redditChange()"> New
+  </label>
+  <label class="btn btn-secondary" for="topHour" onclick="redditChange()">
+    <input type="radio" name="group1" id="topHour" autocomplete="off" onclick="redditChange()"> Top (Hour)
+  </label>
+  <label class="btn btn-secondary" for="top24" onclick="redditChange()">
+    <input type="radio" name="group1" id="top24" autocomplete="off" onclick="redditChange()"> Top (24h)
+  </label>  
+  <label class="btn btn-secondary" for="topWeek" onclick="redditChange()">
+    <input type="radio" name="group1" id="topWeek" autocomplete="off" onclick="redditChange()"> Top (Week)
+  </label>
+  <label class="btn btn-secondary" for="topMonth" onclick="redditChange()">
+    <input type="radio" name="group1" id="topMonth" autocomplete="off" onclick="redditChange()"> Top (Month)
+  </label>
+  <label class="btn btn-secondary" for="topYear" onclick="redditChange()">
+    <input type="radio" name="group1" id="topYear" autocomplete="off" onclick="redditChange()"> Top (Year)
+  </label>
+  <label class="btn btn-secondary" for="topAll" onclick="redditChange()">
+    <input type="radio" name="group1" id="topAll" autocomplete="off" onclick="redditChange()"> Top (All)
+  </label>
+</div>
 <br>
+<!--
 <form action="#">
     <span>
 		<input name="group1" type="radio" id="rHot" checked="checked" onclick="redditChange()"/>
@@ -104,6 +131,7 @@
 
 	</div>
 </form>
+-->
 <br>
 
 
