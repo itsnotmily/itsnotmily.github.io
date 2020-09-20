@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+<html>
+<body style="text-align:center;">
+
+<h1>Warzone Drop Randomiser</h1>
+<button type="button" onclick="randomItemFunc()" style="font-size: xxx-large;">Click Me!</button>
+<p id="drop" style="font-size: xxx-large;"> </p>
+
+
+
+ <script>
+var items = ["Military Base", "Dam", "Quarry", "Airport", "Airport Tower", "Superstore", "Storage Town", "TV Station","Stadium", "Lumber", "Farmland", "Downtown", "Hospital" ,"Boneyard" ,"Train Station" , "Park Bunker" , "Port" , "Prison", "Split Up and Good Luck"];
+function randomItemFunc() {
+	var randomItem = items[Math.floor(Math.random()*items.length)];
+	console.log(randomItem);
+	document.querySelector("#drop").innerText=randomItem;
+	}
+
+
+
+
+</script> 
+
+
+
+
+
+
+
+</body>
+</html> 
+
+
+
+
