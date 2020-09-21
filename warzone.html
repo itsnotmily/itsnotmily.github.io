@@ -3,7 +3,7 @@
 <body style="text-align:center;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);background-color: lightslategray;">
 
 <h1>Warzone Drop Randomiser</h1>
-<button type="button" id="buttonDrop" onclick="randomItemFunc()" style="font-size: 100px;border-width: 15px;">Let's Drop Here</button><p id="drop" style="font-size: xxx-large;"> </p>
+<button type="button" id="buttonDrop" onclick="wheelLoad()" style="font-size: 100px;border-width: 15px;">Let's Drop Here</button><p id="drop" style="font-size: xxx-large;"> </p>
 
  <script>
 var items = ["Military Base", "Dam", "Quarry", "Airport", "Airport Tower", "Superstore", "Storage Town", "TV Station","Stadium", "Lumber", "Farmland", "Downtown", "Hospital" ,"Boneyard" ,"Train Station" , "Park Bunker" , "Port" , "Prison", "Split Up and Good Luck"];
@@ -12,6 +12,16 @@ function randomItemFunc() {
 	console.log(randomItem);
 document.querySelector("#buttonDrop").innerText=randomItem;
 	}
+function wheelLoad(){
+ for(var i=0;i<8000;i++){
+ 
+ setTimeout(function(){ 
+ 
+	randomItemFunc()
+	
+ }, 0);
+ }
+ }
 	
 </script> 
 </body>
