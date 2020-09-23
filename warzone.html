@@ -17,15 +17,14 @@ function wheelLoad(){
 
 function timerMethod() {
 
-	if(runCount !== 10){
-		document.querySelector("#buttonDrop").style.backgroundColor="";
-	}
-    runCount++;
     if(runCount === 10){
-		clearInterval(timerId);
-		document.querySelector("#buttonDrop").style.backgroundColor="#51fe5c";
-		runCount=0;
-	}
+        clearInterval(timerId);
+        document.querySelector("#buttonDrop").style.backgroundColor="#51fe5c";
+        runCount=0;
+    } else {
+        document.querySelector("#buttonDrop").style.backgroundColor="";
+        runCount++;
+    }
 randomItemFunc();
 }
 
