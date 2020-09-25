@@ -53,18 +53,15 @@
     <div class="container text-center">	
 	<br>
 	<div class="card text-white bg-dark">
-
-  
-  <div class="card-body">
+	<div class="card-body">
     <h1 class="card-title">Call of Duty: Warzone</h1>
     <p class="card-text">Drop Location:</p>
-  </div>
+	</div>
 
-  <ul class="list-group list-group-flush">
-    <button type="button" class="btn btn-primary  btn-lg btn-block" id="buttonDrop" onclick="wheelLoad()" style="font-size: 80px;">Let's Drop Here</button>
-  </ul>
-
-</div>
+	<ul class="list-group list-group-flush">
+    <button type="button" class="btn btn-primary  btn-lg btn-block" id="buttonDrop" onclick="wheelLoad()"><h1>Let's Drop Here</h1></button>
+	</ul>
+	</div>
 	
 	
 	
@@ -76,7 +73,7 @@ var items = ["Military Base", "Dam", "Quarry", "Airport", "Airport Tower", "Supe
 function randomItemFunc() {
 	var randomItem = items[Math.floor(Math.random()*items.length)];
 	console.log(randomItem);
-document.querySelector("#buttonDrop").innerText=randomItem;
+document.querySelector("#buttonDrop").innerHTML= "<h1>" + randomItem + "<\/h1>";
 	}
 	var runCount = 0; 
 	   
