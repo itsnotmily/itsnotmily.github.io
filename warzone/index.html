@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Milan B. - Reddit Quick Viewer</title>
+    <title>Milan B. - Warzone Randomiser</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -16,7 +16,7 @@
 
   </head>
 
-  <body>
+<body>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -47,24 +47,47 @@
         </div>
       </div>
     </nav>
-
- <!-- Page Content -->
+	
+	 <!-- Page Content -->
 
     <div class="container text-center">	
-<h1>Reddit Posts</h1>
+	<br>
+	
+	<button type="button" class="btn btn-secondary  btn-lg btn-block" id="buttonDrop" onclick="wheelLoad()" style="font-size: 80px;">Let's Drop Here</button>
+	
+
+ <script>
+var items = ["Military Base", "Dam", "Quarry", "Airport", "Airport Tower", "Superstore", "Storage Town", "TV Station","Stadium", "Lumber", "Farmland", "Downtown", "Hospital" ,"Boneyard" ,"Train Station" , "Park Bunker" , "Port" , "Prison", "Split Up and Good Luck"];
+function randomItemFunc() {
+	var randomItem = items[Math.floor(Math.random()*items.length)];
+	console.log(randomItem);
+document.querySelector("#buttonDrop").innerText=randomItem;
+	}
+	var runCount = 0; 
+	   
+	function wheelLoad(){
+
+	function timerMethod() {
+
+		if(runCount !== 10){
+			document.querySelector("#buttonDrop").style.backgroundColor="";
+		}
+		runCount++;
+		if(runCount === 10){
+			clearInterval(timerId);
+			document.querySelector("#buttonDrop").style.backgroundColor="rgb(24, 113, 30)";
+			runCount=0;
+		}
+	randomItemFunc();
+	}
+
+	var timerId = setInterval(timerMethod, 100);   
+	}
+	
+</script> 
+</body>
+</html> 
 
 
 
-<br>
 
-<br>
-
-
-</div>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="./vendor/jquery/jquery.min.js"></script>
-    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="./js/js.js" type="text/javascript"></script>
-  </body>
-</html>
