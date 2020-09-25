@@ -52,10 +52,24 @@
 
     <div class="container text-center">	
 	<br>
-	
-	<button type="button" class="btn btn-secondary  btn-lg btn-block" id="buttonDrop" onclick="wheelLoad()" style="font-size: 80px;">Let's Drop Here</button>
-	
+	<div class="card text-white bg-dark">
 
+  
+  <div class="card-body">
+    <h1 class="card-title">Call of Duty: Warzone</h1>
+    <p class="card-text">Drop Location:</p>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <button type="button" class="btn btn-primary  btn-lg btn-block" id="buttonDrop" onclick="wheelLoad()" style="font-size: 80px;">Let's Drop Here</button>
+  </ul>
+
+</div>
+	
+	
+	
+	
+	
  <script>
 var items = ["Military Base", "Dam", "Quarry", "Airport", "Airport Tower", "Superstore", "Storage Town", "TV Station", "Stadium", "Lumber", "Farmland", "Downtown", "Hospital", "Kart Racing Track (C7)", "Boneyard", "Final Stop", "North Limit (D1)", "Train Station", "Park Bunker (60274513)", "Port", "🚆 Train", "Crashed Site (E3)", "Hills (D8)", "Promenade East", "Promenade West", "Prison", "Split Up and Good Luck"];
 
@@ -86,9 +100,11 @@ document.querySelector("#buttonDrop").innerText=randomItem;
 	}
 	
 </script> 
-</body>
-</html> 
-
-
+    <!-- Bootstrap core JavaScript -->
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./js/js.js" type="text/javascript"></script>
+  </body>
+</html>
 
 
