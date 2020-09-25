@@ -57,7 +57,7 @@
     <h1 class="card-title">Drop Location</h1>
 	</div>
 	<ul class="list-group list-group-flush">
-    <button type="button" class="btn btn-primary  btn-lg btn-block" id="buttonDrop" onclick="wheelLoad()" style="white-space:normal;"><h1>Let's Drop Here</h1>
+    <button type="button" class="btn btn-primary  btn-lg btn-block" id="buttonDrop" onclick="dropLoad()" style="white-space:normal;"><h1>Let's Drop Here</h1>
 	</button>
 	</ul>
 	</div>
@@ -67,7 +67,7 @@
 	<br>
 	<div class="card text-white bg-dark">
 	<div class="card-body">
-    <h1 class="card-title">Mission (not working)</h1>
+    <h1 class="card-title">Mission</h1>
 	</div>
 	<ul class="list-group list-group-flush">
     <button type="button" class="btn btn-primary  btn-lg btn-block" id="buttonMission" onclick="missionLoad()" style="white-space:normal;"><h1>Most Wanted</h1>
@@ -83,39 +83,69 @@
     <h1 class="card-title">Revive (not working)</h1>
 	</div>
 	<ul class="list-group list-group-flush">
-    <button type="button" class="btn btn-primary  btn-lg btn-block" id="buttonMission" onclick="missionLoad()" style="white-space:normal;"><h1>Orange player</h1>
+    <button type="button" class="btn btn-primary  btn-lg btn-block" id="buttonMission" onclick="misssionLoad()" style="white-space:normal;"><h1>Orange player</h1>
 	</button>
 	</ul>
 	</div>
 	</div>
 	
  <script>
-var items = ["Military Base", "Dam", "Quarry", "Airport", "Airport Tower", "Superstore", "Storage Town", "TV Station", "Stadium", "Lumber", "Farmland", "Downtown", "Hospital", "Kart Racing Track (C7)", "Boneyard", "Final Stop", "North Limit (D1)", "Train Station", "Park Bunker (60274513)", "Port", "🚆 Train", "Crashed Site (E3)", "Hills (D8)", "Promenade East", "Promenade West", "Prison", "Split Up and Good Luck"];
+var itemsDrop = ["Military Base", "Dam", "Quarry", "Airport", "Airport Tower", "Superstore", "Storage Town", "TV Station", "Stadium", "Lumber", "Farmland", "Downtown", "Hospital", "Kart Racing Track (C7)", "Boneyard", "Final Stop", "North Limit (D1)", "Train Station", "Park Bunker (60274513)", "Port", "🚆 Train", "Crashed Site (E3)", "Hills (D8)", "Promenade East", "Promenade West", "Prison", "Split Up and Good Luck"];
 
-function randomItemFunc() {
-	var randomItem = items[Math.floor(Math.random()*items.length)];
-	console.log(randomItem);
-document.querySelector("#buttonDrop").innerHTML= "<h1>" + randomItem + "<\/h1>";
+var itemsMission = ["Most Wanted 👑", "Bounty 🎯", "Supply Run ⏱️", "Recon 🏁", "Scavenger 🔍"];
+	var dropCount = 0;
+	var missionCount = 0; 
+	var reviveCount = 0; 
+function randomDropFunc() {
+	var randomDrop = itemsDrop[Math.floor(Math.random()*itemsDrop.length)];
+	console.log(randomDrop);
+	document.querySelector("#buttonDrop").innerHTML= "<h1>" + randomDrop + "<\/h1>";
 	}
-	var runCount = 0; 
-	   
-	function wheelLoad(){
+ 	function dropLoad(){
 
-	function timerMethod() {
+	function dropTimer() {
 
-		if(runCount !== 10){
-			document.querySelector("#buttonDrop").style.backgroundColor="";
+		if(dropCount !== 10){
+			document.querySelector("#buttonDrop").style.borderColor="";
+			document.querySelector("#buttonDrop").style.borderWidth="";
 		}
-		runCount++;
-		if(runCount === 10){
-			clearInterval(timerId);
-			document.querySelector("#buttonDrop").style.backgroundColor="rgb(24, 113, 30)";
-			runCount=0;
+		dropCount++;
+		if(dropCount === 10){
+			clearInterval(timerIdDrop);
+			document.querySelector("#buttonDrop").style.borderWidth="medium";
+			document.querySelector("#buttonDrop").style.borderColor="cornflowerblue";
+			dropCount=0;
 		}
-	randomItemFunc();
+	randomDropFunc();
 	}
+	var timerIdDrop = setInterval(dropTimer, 100);   
+	}
+	
+	
+	
+function randomMissionFunc() {
+	var randomMission = itemsMission[Math.floor(Math.random()*itemsMission.length)];
+	console.log(randomMission);
+	document.querySelector("#buttonMission").innerHTML= "<h1>" + randomMission + "<\/h1>";
+	}
+ 	function missionLoad(){
 
-	var timerId = setInterval(timerMethod, 100);   
+	function missionTimer() {
+
+		if(missionCount !== 10){
+			document.querySelector("#buttonMission").style.borderColor="";
+			document.querySelector("#buttonMission").style.borderWidth="";
+		}
+		missionCount++;
+		if(missionCount === 10){
+			clearInterval(timerIdMission);
+			document.querySelector("#buttonMission").style.borderWidth="medium";
+			document.querySelector("#buttonMission").style.borderColor="cornflowerblue";
+			missionCount=0;
+		}
+	randomMissionFunc();
+	}
+	var timerIdMission = setInterval(missionTimer, 100);   
 	}
 	
 </script> 
