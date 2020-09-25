@@ -54,7 +54,7 @@
 	<br>
 	<div class="card text-white bg-dark">
 	<div class="card-body">
-    <h1 class="card-title">Drop Location</h1>
+    <h1 class="card-title">Drop Location 🗺️</h1>
 	</div>
 	<ul class="list-group list-group-flush">
     <button type="button" class="btn btn-primary  btn-lg btn-block" id="buttonDrop" onclick="dropLoad()" style="white-space:normal;"><h1>Let's Drop Here</h1>
@@ -67,10 +67,10 @@
 	<br>
 	<div class="card text-white bg-dark">
 	<div class="card-body">
-    <h1 class="card-title">Mission</h1>
+    <h1 class="card-title">Mission 📑</h1>
 	</div>
 	<ul class="list-group list-group-flush">
-    <button type="button" class="btn btn-primary  btn-lg btn-block" id="buttonMission" onclick="missionLoad()" style="white-space:normal;"><h1>Most Wanted</h1>
+    <button type="button" class="btn btn-primary  btn-lg btn-block" id="buttonMission" onclick="missionLoad()" style="white-space:normal;"><h1>Pick a mission</h1>
 	</button>
 	</ul>
 	</div>
@@ -80,19 +80,25 @@
 	<br>
 	<div class="card text-white bg-dark">
 	<div class="card-body">
-    <h1 class="card-title">Revive (not working)</h1>
+    <h1 class="card-title">Revive 💸</h1>
 	</div>
 	<ul class="list-group list-group-flush">
-    <button type="button" class="btn btn-primary  btn-lg btn-block" id="buttonMission" onclick="misssionLoad()" style="white-space:normal;"><h1>Orange player</h1>
+    <button type="button" class="btn btn-primary  btn-lg btn-block" id="buttonRevive" onclick="reviveLoad()" style="white-space:normal;"><h1>Pick a lucky person</h1>
 	</button>
 	</ul>
 	</div>
 	</div>
+
+<br>
+<br>
 	
  <script>
 var itemsDrop = ["Military Base", "Dam", "Quarry", "Airport", "Airport Tower", "Superstore", "Storage Town", "TV Station", "Stadium", "Lumber", "Farmland", "Downtown", "Hospital", "Kart Racing Track (C7)", "Boneyard", "Final Stop", "North Limit (D1)", "Train Station", "Park Bunker (60274513)", "Port", "🚆 Train", "Crashed Site (E3)", "Hills (D8)", "Promenade East", "Promenade West", "Prison", "Split Up and Good Luck"];
 
 var itemsMission = ["Most Wanted 👑", "Bounty 🎯", "Bounty 🎯", "Bounty 🎯", "Supply Run ⏱️", "Supply Run ⏱️", "Recon 🏁", "Recon 🏁", "Scavenger 🔍", "Scavenger 🔍"];
+
+var itemsRevive = ["Orange 🟠", "Purple 🟣", "Blue 🔵", "Green 🟢"];
+
 	var dropCount = 0;
 	var missionCount = 0; 
 	var reviveCount = 0; 
@@ -146,6 +152,31 @@ function randomMissionFunc() {
 	randomMissionFunc();
 	}
 	var timerIdMission = setInterval(missionTimer, 100);   
+	}
+	
+function randomReviveFunc() {
+	var randomRevive = itemsRevive[Math.floor(Math.random()*itemsRevive.length)];
+	console.log(randomRevive);
+	document.querySelector("#buttonRevive").innerHTML= "<h1>" + randomRevive + "<\/h1>";
+	}
+ 	function reviveLoad(){
+
+	function reviveTimer() {
+
+		if(reviveCount !== 10){
+			document.querySelector("#buttonRevive").style.borderColor="";
+			document.querySelector("#buttonRevive").style.borderWidth="";
+		}
+		reviveCount++;
+		if(reviveCount === 10){
+			clearInterval(timerIdRevive);
+			document.querySelector("#buttonRevive").style.borderWidth="medium";
+			document.querySelector("#buttonRevive").style.borderColor="cornflowerblue";
+			reviveCount=0;
+		}
+	randomReviveFunc();
+	}
+	var timerIdRevive = setInterval(reviveTimer, 100);   
 	}
 	
 </script> 
