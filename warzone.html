@@ -93,7 +93,7 @@
 <br>
 	
  <script>
-var itemsDrop = ["Military Base", "Dam", "Quarry", "Airport", "Airport Tower", "Superstore", "Storage Town", "TV Station", "Stadium", "Lumber", "Farmland", "Downtown", "Hospital", "Kart Racing Track (C7)", "Boneyard", "Final Stop", "North Limit (D1)", "Train Station", "Park Bunker (60274513)", "Port", "🚆 Train", "Crashed Site (E3)", "Hills (D8)", "Promenade East", "Promenade West", "Prison", "Split Up and Good Luck"];
+var itemsDrop = ["Military Base 🔫", "Dam 🚰", "Quarry ⛏️", "Airport ✈️", "Airport Tower", "Superstore 🛒", "Storage Town", "TV Station 📡", "Stadium 🏟️", "Lumber 🪓", "Farmland", "Downtown 🏢", "Hospital 🏥", "Kart Racing Track (C7)", "Boneyard 🦴", "Final Stop ⏭️", "North Limit (D1)", "Train Station 🚉", "Park Bunker (60274513)", "Port 🛥️", "Train 🚆", "Crashed Site (E3)", "Hills (D8)", "Promenade East", "Promenade West", "Prison 🚨"];
 
 var itemsMission = ["Most Wanted 👑", "Bounty 🎯", "Bounty 🎯", "Bounty 🎯", "Supply Run ⏱️", "Supply Run ⏱️", "Recon 🏁", "Recon 🏁", "Scavenger 🔍", "Scavenger 🔍"];
 
@@ -104,7 +104,7 @@ var itemsRevive = ["Orange 🟠", "Purple 🟣", "Blue 🔵", "Green 🟢"];
 	var reviveCount = 0; 
 function randomDropFunc() {
 	var randomDrop = itemsDrop[Math.floor(Math.random()*itemsDrop.length)];
-	console.log(randomDrop);
+	//console.log(randomDrop);
 	document.querySelector("#buttonDrop").innerHTML= "<h1>" + randomDrop + "<\/h1>";
 	}
  	function dropLoad(){
@@ -131,7 +131,7 @@ function randomDropFunc() {
 	
 function randomMissionFunc() {
 	var randomMission = itemsMission[Math.floor(Math.random()*itemsMission.length)];
-	console.log(randomMission);
+	//console.log(randomMission);
 	document.querySelector("#buttonMission").innerHTML= "<h1>" + randomMission + "<\/h1>";
 	}
  	function missionLoad(){
@@ -156,7 +156,7 @@ function randomMissionFunc() {
 	
 function randomReviveFunc() {
 	var randomRevive = itemsRevive[Math.floor(Math.random()*itemsRevive.length)];
-	console.log(randomRevive);
+	//console.log(randomRevive);
 	document.querySelector("#buttonRevive").innerHTML= "<h1>" + randomRevive + "<\/h1>";
 	}
  	function reviveLoad(){
