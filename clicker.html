@@ -40,14 +40,16 @@
 <br>
 	
  <script>
-	if (typeof totalClicks == 'undefined') {
-    	var totalClicks = "0";
-	}
+	if (localStorage.clickcount) {
+		document.querySelector("#totallus").innerHTML = "Total Clicks: " +  localStorage.clickcount
+	} else {
+  localStorage.clickcount = 0;
+}
 
 function clickAdd() {
-	totalClicks = parseInt(totalClicks) +1;
-	console.log(totalClicks);
-	document.querySelector("#totallus").innerHTML = "Total Clicks: " + totalClicks;
+	localStorage.clickcount = Number(localStorage.clickcount) + 1;
+	console.log(localStorage.clickcount);
+	document.querySelector("#totallus").innerHTML = "Total Clicks: " +  localStorage.clickcount ;
 	}
 	
 	
