@@ -18,7 +18,6 @@
 
 <body>
 
-    <!-- Navigation -->
    
 	
 	 <!-- Page Content -->
@@ -34,27 +33,42 @@
 	</button>
 	</ul>
 	</div>
-	
+
+  <br>
+
 
 <br>
 <br>
-	
+<img id="cat" src="https://cataas.com/cat" alt="Kitty" /> 
+
+    <!-- Main Scripts -->
+
  <script>
 	if (localStorage.clickcount) {
-		document.querySelector("#totallus").innerHTML = "Total Clicks: " +  localStorage.clickcount
+		document.querySelector("#totallus").innerHTML = "Total Cookies: " +  localStorage.clickcount
 	} else {
   localStorage.clickcount = 0;
 }
 
+
+
 function clickAdd() {
 	localStorage.clickcount = Number(localStorage.clickcount) + 1;
 	console.log(localStorage.clickcount);
-	document.querySelector("#totallus").innerHTML = "Total Clicks: " +  localStorage.clickcount ;
-	}
+	document.querySelector("#totallus").innerHTML = "Total Cookies: " +  localStorage.clickcount ;
+  if (localStorage.clickcount % 50 == 0){
+    document.getElementById("cat").src = "https://cataas.com/cat" + "?" + Math.random();
+document.getElementById("cat").onclick = function() {myFunction()};
+
+function myFunction() {
+  document.getElementById("cat").src = "https://cataas.com/cat" + "?" + Math.random();
+}
+  }
 	
 	
 
-	
+
+}	
 
 	
 </script> 
