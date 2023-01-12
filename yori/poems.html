@@ -18,7 +18,14 @@
   </head>
 
   <body>
+<script>
+  window.onload = function(){
+    if (window.location.href.split("#")[1] !=0){
+      $("#"+ window.location.href.split("#")[1]).collapse("show"); 
+	}
+}
 
+</script>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div class="container">
@@ -69,7 +76,7 @@
         >
         ⬆️ 
 </button>
-<button class="btn btn-primary" type="button" data-toggle="collapse" href=".multi-collapse" aria-expanded="false" aria-controls="collPoem1 collPoem2">Show All</button>
+<button class="btn btn-primary" type="button" data-toggle="collapse" href=".multi-collapse" aria-expanded="false" aria-controls="collpoem1 collpoem2">Show All</button>
 </div>
     </div>
 	
@@ -80,11 +87,11 @@
 <br>
 
 <p>
-  <a class="btn btn-primary btn-lg btn-block dropdown-toggle" data-toggle="collapse" href="#collPoem1" role="button" aria-expanded="false" aria-controls="collPoem1">
+  <a class="btn btn-primary btn-lg btn-block dropdown-toggle" data-toggle="collapse" href="#collpoem1" role="button" aria-expanded="false" aria-controls="collpoem1">
     A Walk in the Forest
   </a>
 </p>
-<div class="collapse multi-collapse" id="collPoem1">
+<div class="collapse multi-collapse" id="collpoem1">
 	<div class="card text-center text-white bg-dark">
 
     <div class="card-text">
@@ -113,10 +120,10 @@
 <br>
 
 <p>
-  <a class="btn btn-secondary btn-lg btn-block dropdown-toggle" data-toggle="collapse"  href="#collPoem2" role="button" aria-expanded="false" aria-controls="collPoem2">
+  <a class="btn btn-secondary btn-lg btn-block dropdown-toggle" data-toggle="collapse"  href="#collpoem2" role="button" aria-expanded="false" aria-controls="collpoem2">
     In Search in the Sea</a>
 </p>
-<div class="collapse multi-collapse" id="collPoem2">
+<div class="collapse multi-collapse" id="collpoem2">
 	<div class="card text-center">
 
     <div class="card-text">
