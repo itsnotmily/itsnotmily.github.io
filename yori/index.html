@@ -18,7 +18,15 @@
   </head>
 
   <body>
-
+    <script>
+      window.onload = function(){
+        if (window.location.href.indexOf("#") !=-1){
+          $("#collstories").collapse("show"); 
+          $("#"+ window.location.href.split("#")[1]).modal("show"); 
+      }
+    }
+    
+    </script>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div class="container">
