@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Milan @ Daxx</title>
+    <title>Milan @ Yori</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -18,7 +18,15 @@
   </head>
 
   <body>
-
+    <script>
+      window.onload = function(){
+        if (window.location.href.indexOf("#") !=-1){
+          $("#collstories").collapse("show"); 
+          $("#"+ window.location.href.split("#")[1]).modal("show"); 
+      }
+    }
+    
+    </script>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div class="container">
