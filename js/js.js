@@ -429,13 +429,18 @@ function backToTop() {
 	document.documentElement.scrollTop = 0;
 }
 
-
-function storieschange(){
-	if($('#collstories').hasClass('show')==false){
-		document.querySelectorAll("#colltester")[0].innerHTML = document.querySelectorAll("#colltester")[0].innerHTML.replace("Stories","Stories (Click a story title to read more)") 
+function storieschange() {
+	if ($('#collstories').hasClass('show') == false) 
+	{
+		document.querySelectorAll("#colltester")[0].innerHTML = document.querySelectorAll("#colltester")[0].innerHTML.replace("Stories", "Stories (Click a story title to read more)");
 
 	}
-	else if(document.querySelectorAll("#colltester")[0].innerHTML.indexOf(("Click a story")) !=-1 ){
-		document.querySelectorAll("#colltester")[0].innerHTML = document.querySelectorAll("#colltester")[0].innerHTML.replace("Stories (Click a story title to read more)","Stories") 
+	else if (document.querySelectorAll("#colltester")[0].innerHTML.split("(Click a story title to read more)").length>1 )
+	{
+		document.querySelectorAll("#colltester")[0].innerHTML = document.querySelectorAll("#colltester")[0].innerHTML.replaceAll("(Click a story title to read more)", "");
+	}
+	else if (document.querySelectorAll("#colltester")[0].innerHTML.indexOf(("Click a story")) != -1) 
+	{
+	document.querySelectorAll("#colltester")[0].innerHTML = document.querySelectorAll("#colltester")[0].innerHTML.replace("Stories (Click a story title to read more)", "Stories");
 	}
 }
