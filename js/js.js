@@ -7,32 +7,12 @@ var reddPerma = document.getElementById("redditPerma");
 var reddSub = document.getElementById("redditSub");
 
 
-var powV = document.getElementById("voltBoxx");
-var powI = document.getElementById("ampBoxx");
-var powP = document.getElementById("powBox");
-var powMsg = document.getElementById("powMsg");
-var voltV = document.getElementById("voltBox");
-var ampI = document.getElementById("ampBox");
-var ohmR = document.getElementById("ohmBox");
-var ohmsMsg = document.getElementById("ohmsMsg");
-
 function whatyouselected() {
 	var hello = document.getElementById("fruits").value;
 	document.getElementById("what you selected").innerHTML = hello;
 }
 
-function miniMap() {
-	if (document.getElementById("mapLoc").value.length == 0) {
-		document.getElementById("mapFinal").innerHTML = "You should type something first, try again";
-	} else {
-		var mapLoc = document.getElementById("mapLoc").value.split(" ");
-		var imaje = "<img src=\"https:\/\/maps.googleapis.com\/maps\/api\/staticmap?center=" + mapLoc.join("+") + "&zoom=15&size=640x640&maptype=hybrid&key=AIzaSyDjnmesqqzEMkfURj8YOd71nDPNhMvVFTc\">";
-		document.getElementById("mapFinal").innerHTML = imaje;
-		document.getElementById("mapQuery").innerHTML = "You searched for:<br>" + document.getElementById("mapLoc").value;
-		document.getElementById("mapLoc").value = "";
-	}
 
-}
 
 function eightBall() {
 
@@ -276,118 +256,6 @@ function redditTopsubs() {
 	}
 
 } //end redditTopsubs
-
-function yoloSwag() {
-	var yoloId = document.getElementById("urbanId");
-	var yoloTerm = document.getElementById("urbanQuery");
-	var yoloUrl = document.getElementById("urbanUrl");
-	var yoloDefinition = document.getElementById("urbanDefinition");
-	var yoloExample = document.getElementById("urbanExample");
-	var yoloAuthor = document.getElementById("urbanAuthor");
-	var yoloBox = document.getElementById("urbanDict");
-	var yoloMsg = document.getElementById("urbanMsg");
-
-	var xmlhttp = new XMLHttpRequest();
-	var url = "http://cors-proxy.htmldriven.com/?url=http://urbanscraper.herokuapp.com/define/" + yoloBox.value.split(" ").join("%20");
-
-	xmlhttp.onreadystatechange = function () {
-		if (this.readyState == 4 && this.status == 200) {
-			var myArr = JSON.parse(this.responseText);
-			myArr = JSON.parse(myArr.body);
-			console.log(myArr);
-			if ((myArr.term || myArr.author || myArr.example || myArr.definition || myArr.url).includes("<script")) {
-				console.log("Nice try");
-				yoloTerm.innerHTML = "";
-				yoloBox.value = "";
-				yoloMsg.innerHTML = "Please try something else";
-				yoloAuthor.innerHTML = "";
-				yoloExample.innerHTML = "";
-				yoloDefinition.innerHTML = "";
-				yoloUrl.innerHTML = "";
-			} else {
-				yoloTerm.innerHTML = "You searched for: " + myArr.term;
-				yoloBox.value = "";
-				yoloMsg.innerHTML = "";
-				yoloAuthor.innerHTML = myArr.author;
-				yoloExample.innerHTML = myArr.example.split("\n")[0] + "<br>";
-				yoloDefinition.innerHTML = myArr.definition.split("\r")[0];
-				yoloUrl.innerHTML = "<a href=" + myArr.url + " target=\"_blank\">" + myArr.url + "</a>";
-			}
-
-		} else if (this.status == 500) {
-			yoloMsg.innerHTML = "Not found";
-			yoloBox.innerHTML = "";
-			yoloAuthor.innerHTML = "";
-			yoloExample.innerHTML = "";
-			yoloDefinition.innerHTML = "";
-			yoloUrl.innerHTML = "";
-			yoloTerm.innerHTML = "";
-			yoloId.innerHTML = "";
-		}
-	};
-	xmlhttp.open("GET", url, true);
-	xmlhttp.send();
-
-} //end yoloSwag
-
-function ohmsLaw() {
-
-
-	if (((voltV.value == "") && (ampI.value == "")) || ((voltV.value == "") && (ohmR.value == "")) || ((ohmR.value == "") && (ampI.value == ""))) {
-		console.log("cant do anything yet");
-		ohmsMsg.innerHTML = "";
-	} else if ((voltV.value != "") && (ampI.value != "") && (ohmR.value == "")) {
-		ohmR.value = parseFloat(voltV.value) / parseFloat(ampI.value);
-		ohmsMsg.innerHTML = "";
-	} else if ((voltV.value != "") && (ohmR.value != "") && (ampI.value == "")) {
-		ampI.value = parseFloat(voltV.value) / parseFloat(ohmR.value);
-		ohmsMsg.innerHTML = "";
-	} else if ((ampI.value != "") && (ohmR.value != "") && (voltV.value == "")) {
-		voltV.value = parseFloat(ampI.value) * parseFloat(ohmR.value);
-		ohmsMsg.innerHTML = "";
-	} else {
-		ohmsMsg.innerHTML = "Please clear one entry and try again";
-	}
-
-
-
-} //end ohmsLaw
-
-function pivLaw() {
-
-	if ((powP.value || powI.value || powV.value).includes("a")) {
-		console.log("numebr");
-	}
-	if (((powV.value == "") && (powI.value == "")) || ((powV.value == "") && (powP.value == "")) || ((powP.value == "") && (powI.value == ""))) {
-		console.log("cant do anything yet");
-		ohmsMsg.innerHTML = "";
-	} else if ((powP.value != "") && (powI.value != "") && (powV.value == "")) {
-		powV.value = parseFloat(powP.value) / parseFloat(powI.value);
-		powMsg.innerHTML = "";
-
-	} else if ((powP.value != "") && (powV.value != "") && (powI.value == "")) {
-		powI.value = parseFloat(powP.value) / parseFloat(powV.value);
-		powMsg.innerHTML = "";
-
-	} else if ((powI.value != "") && (powV.value != "")) {
-		powP.value = parseFloat(powI.value) * parseFloat(powV.value);
-		powMsg.innerHTML = "";
-	}
-
-
-} //end pivLaw
-
-function powReset() {
-	powP.value = "";
-	powV.value = "";
-	powI.value = "";
-} //end powReset
-
-function ohmsReset() {
-	ampI.value = "";
-	voltV.value = "";
-	ohmR.value = "";
-} //end ohmsReset
 
 function test() {
 	var xmlhttp = new XMLHttpRequest();
