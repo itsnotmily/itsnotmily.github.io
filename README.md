@@ -25,6 +25,11 @@ This website was built using the following technologies:
 - JavaScript
 - Bootstrap
 
+## 📫 How to reach me
+
+- Email: itsnotmily@gmail.com
+- Discord: itsnotmily#0203
+
 ## 📜 License
 
 This project is licensed under the MIT License.
