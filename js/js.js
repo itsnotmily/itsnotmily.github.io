@@ -24,7 +24,7 @@ function eightBall() {
 		document.getElementById("ball").innerHTML = "At least ask something! ";
 		document.getElementById("ballQuery").innerHTML = "";
 	} else {
-		document.getElementById("ball").innerHTML = answerz;
+		document.getElementById("ball").innerHTML = "I say: " + answerz;
 		document.getElementById("ballQuery").innerHTML = "You asked:" + "<br>" + eighBt.value;
 		eighBt.value = "";
 	}
