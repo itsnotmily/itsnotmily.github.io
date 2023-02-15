@@ -58,16 +58,18 @@
 
 <script>
 
-fetch('https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=98B5CF3194F3DEAC3972886836BEBE07&include_appinfo&steamid=76561198076253437&format=json')
-  .then(response => response.json())
-  .then(data => {
-    // Handle the JSON data here
-    console.log(data);
+fetch('https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=98B5CF3194F3DEAC3972886836BEBE07&include_appinfo&steamid=76561198076253437&format=json', {
+  mode: 'no-cors'
+})
+  .then(response => {
+    console.log('Response:', response);
   })
   .catch(error => {
-    // Handle any errors here
-    console.error("why");
+    console.error('Error:', error);
   });
+
+
+
   const xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=98B5CF3194F3DEAC3972886836BEBE07&include_appinfo&steamid=76561198076253437&format=json');
 xhr.onload = () => {
