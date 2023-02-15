@@ -58,7 +58,7 @@
 
 <script>
 
-fetch('https://cors-proxy.htmldriven.com/?url=http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=98B5CF3194F3DEAC3972886836BEBE07&include_appinfo&steamid=76561198076253437&format=json')
+fetch('https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=98B5CF3194F3DEAC3972886836BEBE07&include_appinfo&steamid=76561198076253437&format=json')
   .then(response => response.json())
   .then(data => {
     // Handle the JSON data here
@@ -68,6 +68,19 @@ fetch('https://cors-proxy.htmldriven.com/?url=http://api.steampowered.com/IPlaye
     // Handle any errors here
     console.error("why");
   });
+  const xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=98B5CF3194F3DEAC3972886836BEBE07&include_appinfo&steamid=76561198076253437&format=json');
+xhr.onload = () => {
+  if (xhr.status === 200) {
+    console.log(xhr.responseText);
+  } else {
+    console.error(xhr.statusText);
+  }
+};
+xhr.onerror = () => {
+  console.error('Network error');
+};
+xhr.send();
 
   
 </script>
