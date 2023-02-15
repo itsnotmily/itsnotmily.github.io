@@ -17,7 +17,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="/media/logox.png" width="30" height="30"
+      <a class="navbar-brand" href="/"><img src="/media/logox.png" width="30" height="30"
           class="d-inline-block align-bottom" alt=""></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,12 +28,13 @@
           <li class="nav-item">
             <a class="nav-link" href="/index.html">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/projects">Projects</a>
-          </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/gaming">Gaming
+            <a class="nav-link" href="/projects">Projects
               <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/gaming">Gaming
             </a>
           </li>
           <li class="nav-item">
@@ -44,6 +45,8 @@
     </div>
   </nav>
 
+  <!--content-->
+
   <div class="container text-center">
     <br>
     <div class="card bg-dark text-white">
@@ -52,19 +55,24 @@
       </div>
       <div class="card-body">
         <br>
-        <input type="text" id="balltext" placeholder="enter a question here" onkeydown="if (event.keyCode == 13)
-        eightBall()" autofocus>     
-        <br>   
-        <br>   
+        <div class="input-group">
+          <input type="text" class="form-control" id="balltext" onkeydown="if (event.keyCode == 13)
+            eightBall()" placeholder="enter a question here" aria-label="enter a question here"
+            aria-describedby="basic-addon2" autofocus>
+          <div class="input-group-append">
+            <button class="btn " type="button" onclick="eightBall()">Send</button>
+          </div>
+        </div>
+
+        <br>
         <h3 id="ballQuery"></h3>
 
         <h2 id="ball">Waiting for your input</h2>
       </div>
     </div>
 
+  </div>
 
-
-</div>
   <!-- Bootstrap core JavaScript -->
   <script src="/vendor/jquery/jquery.min.js"></script>
   <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

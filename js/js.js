@@ -63,7 +63,7 @@ function reddit() {
 	}
 
 	var xmlhttp = new XMLHttpRequest();
-	var url = "https://www.reddit.com/r/" + reddSub.value.split(" ").join("_") + redditCheck;
+	var url = "https://api.reddit.com/r/" + reddSub.value.split(" ").join("_") + redditCheck;
 	xmlhttp.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
 
@@ -92,7 +92,7 @@ function reddit() {
 			var firstURL = myArr.data.children[stickyChecker].data.url;
 			var postTitle = myArr.data.children[stickyChecker].data.title;
 			var postAuthor = myArr.data.children[stickyChecker].data.author;
-			var postPerma = "<a href=\"https://reddit.com" + myArr.data.children[stickyChecker].data.permalink + "\" target=\"_blank\"> Permalink: https://reddit.com" + myArr.data.children[stickyChecker].data.permalink + "</a>";
+			var postPerma = "<a href=\"https://api.reddit.com" + myArr.data.children[stickyChecker].data.permalink + "\" target=\"_blank\"> Permalink: https://api.reddit.com" + myArr.data.children[stickyChecker].data.permalink + "</a>";
 
 
 			if (myArr.data.children[stickyChecker].data.selftext != "") {
