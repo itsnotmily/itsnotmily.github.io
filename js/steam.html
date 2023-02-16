@@ -69,19 +69,19 @@
 
   </div>
   <script>
-function testa() {
-	var xmlhttp = new XMLHttpRequest();
-	var url = "https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=98B5CF3194F3DEAC3972886836BEBE07&include_appinfo&steamid=76561198076253437&format=json";
+// Retrieve the JSON data using the fetch function
+fetch("https://api.pushshift.io/reddit/search/comment/?q=trump&after=24h&aggs=author&size=3")
+  .then(response => response.json())
+  .then(data => {
+    // Extract the comment body and subreddit ID from the data
+    console.log(data);
+    // Display the extracted information in the console
 
-	xmlhttp.onreadystatechange = function () {
-		if (this.readyState == 4 && this.status == 200) {
-			var myArr = (this.responseText);
-			console.log(myArr);
-		} else if (this.status == 500) {}
-	};
-	xmlhttp.open("GET", url, true);
-	xmlhttp.send();
-}
+  })
+  .catch(error => {
+    console.error(error);
+  });
+
   </script>
 
 
