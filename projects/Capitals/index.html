@@ -32,7 +32,7 @@ const question = document.getElementById("question");
 const choices = document.querySelectorAll("#choices button");
 const result = document.getElementById("result");
 const nextButton = document.getElementById("next");
-
+let score=0;
 let currentQuestionIndex = 0;
 
 function shuffle(array) {
@@ -61,19 +61,23 @@ function setQuestion() {
   // Shuffle the answer choices and display them on buttons
   shuffle(choicesArray);
   choicesArray.forEach((choice, index) => {
-    choices[index].textContent = choice;
-    choices[index].addEventListener("click", () => {
-      if (choice === capital) {
-        result.textContent = "Correct!";
-      } else {
-        result.textContent = `Wrong! The capital of ${country} is ${capital}.`;
-      }
-      choices.forEach(choice => {
-        choice.disabled = true;
-      });
-      nextButton.style.display = "block";
+  choices[index].textContent = choice;
+  choices[index].onclick = () => {
+    if (choice === capital) {
+      score++;
+      console.log(score);
+      result.textContent = "Correct!";
+    } else {
+      score=0;
+      console.log(score);
+      result.textContent = `Wrong! The capital of ${country} is ${capital}.`;
+    }
+    choices.forEach(choice => {
+      choice.disabled = true;
     });
-  });
+    nextButton.style.display = "block";
+  };
+});
 }
 
 function resetQuestion() {
