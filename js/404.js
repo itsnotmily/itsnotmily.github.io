@@ -24,7 +24,7 @@ function bounce() {
   if (ball.x > width || ball.x < 0) {
     ball.xspeed = ball.xspeed * -1;
     if (ranWord == "inm") {
-      ranWord = "mil";
+      ranWord = "404";
     } else {
       ranWord = "inm";
     }
