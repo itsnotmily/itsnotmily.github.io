@@ -16,7 +16,7 @@ function draw() {
   bounce();
   display();
   fill(100)
-  text("Page not found",windowWidth/2,windowHeight/2)
+  text("404 Page not found",windowWidth/2,windowHeight/2)
 
 }
 
