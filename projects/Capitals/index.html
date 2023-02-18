@@ -20,13 +20,13 @@
 <body>
 
   <div class="container text-center">
-    <div class="card bg-dark text-white">
+    <div class="card bg-dark text-white mt-2">
       <div class="card-body">
         <p class="h1">Capitals Quiz</p>
       </div>
     </div>
-    <div class="card mt-3">
-      <div class="card-body">
+    <div class="card mt-2">
+      <div class="card-title">
         <h2 id="question"></h2>
       </div>
     </div>
@@ -37,13 +37,30 @@
       <button type="button"class="btn  btn-lg btn-secondary mt-2" id="choice4"></button>
 
     </ul>
-    <div class="card bg-dark text-white" id="resultCard" style="display: none">
-      <div class="card-body">
-        <h4 id="result"></h4>
+    <div class="card  mt-2" id="resultCard">
+      <div class="card-text">
+        <h5 id="result">Pick one of the answers above</h5>
       </div>
     </div>
 
-    <button type="button" class="btn btn-primary btn-lg btn-block" id="next" style="display: none;" >Next Question</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block bg-dark text-white mt-2" id="next">Next Question</button>
+
+
+    <div class="card mt-2">
+      <div class="row justify-content-start">
+        <div class="col-4" id="highestScore">
+          Your highest score is: 0
+        </div>
+        <div class="col-4" id="currentScore">
+          Your current score is: 0
+        </div>
+        <div class="col-4" id="lifetimeScore">
+          Your lifetime score is: 0
+        </div>
+      </div>
+      </div>
+
+
   </div>
   <!-- Bootstrap core JavaScript -->
   <script src="/vendor/jquery/jquery.min.js"></script>
