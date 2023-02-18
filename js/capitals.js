@@ -621,6 +621,7 @@ function shuffle(array) {
 
 function setQuestion() {
     nextButton.disabled = "true";
+    nextButton.textContent = "Good Luck!";
     currentQuestionIndex = Math.floor(Math.random() * countries.length);
     const country = countries[currentQuestionIndex].Country;
     const capital = countries[currentQuestionIndex].Capital;
