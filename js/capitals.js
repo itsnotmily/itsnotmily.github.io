@@ -646,7 +646,7 @@ function setQuestion() {
                 currentScore++;
                 localStorage.lifeScore++;
                 result.textContent = `Correct! The capital of ${country} is ${capital}.`;
-                document.getElementById("lifetimeScore").innerText = `Your current score is: ${localStorage.lifeScore}`;
+                document.getElementById("lifetimeScore").innerText = `Your lifetime score is: ${localStorage.lifeScore}`;
                 document.getElementById("currentScore").innerText = `Your current score is: ${currentScore}`;
                 if (currentScore>localStorage.highestScore) {
                     localStorage.highestScore=currentScore;
