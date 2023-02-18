@@ -600,7 +600,6 @@ const result = document.getElementById("result");
 const nextButton = document.getElementById("next");
 let currentScore = 0;
 if (localStorage.highestScore != NaN && localStorage.highestScore != undefined) {
-    console.log("loaded high score");
     document.getElementById("highestScore").innerText = `Your highest score is: ${localStorage.highestScore}`;
 } else {
     localStorage.highestScore = 0;
@@ -646,6 +645,8 @@ function setQuestion() {
                 currentScore++;
                 localStorage.lifeScore++;
                 result.textContent = `Correct! The capital of ${country} is ${capital}.`;
+                document.getElementById("resultCard").style.backgroundColor="lightgreen";
+
                 document.getElementById("lifetimeScore").innerText = `Your lifetime score is: ${localStorage.lifeScore}`;
                 document.getElementById("currentScore").innerText = `Your current score is: ${currentScore}`;
                 if (currentScore>localStorage.highestScore) {
@@ -655,6 +656,8 @@ function setQuestion() {
             } else {
                 currentScore = 0;
                 result.textContent = `Wrong! The capital of ${country} is ${capital}.`;
+                document.getElementById("resultCard").style.backgroundColor="lightcoral";
+
                 document.getElementById("currentScore").innerText = `Your current score is: ${currentScore}`;
             }
             choices.forEach(choice => {
@@ -671,7 +674,7 @@ function resetQuestion() {
         choice.disabled = false;
     });
     result.textContent = "Pick one of the answers above";
-    //document.getElementById("resultCard").style.display="none";
+    document.getElementById("resultCard").style.backgroundColor="lightsalmon";
 
     //nextButton.disabled = "true";
 }
