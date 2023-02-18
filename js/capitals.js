@@ -665,6 +665,7 @@ function setQuestion() {
             });
             //document.getElementById("resultCard").style.display="block";
             nextButton.disabled = false;
+            nextButton.textContent = "Next Question";
         };
     });
 }
