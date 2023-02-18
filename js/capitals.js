@@ -606,7 +606,7 @@ if (localStorage.highestScore != NaN && localStorage.highestScore != undefined) 
     localStorage.highestScore = 0;
 }
 if (localStorage.lifeScore) {
-    document.getElementById("lifetimeScore").innerText = `Your current score is: ${localStorage.lifeScore}`;
+    document.getElementById("lifetimeScore").innerText = `Your lifetime score is: ${localStorage.lifeScore}`;
 } else {
     localStorage.lifeScore = 0;
 }
