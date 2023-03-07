@@ -4,16 +4,16 @@ const question = document.getElementById("question");
 const choices = document.querySelectorAll("#choices button");
 const result = document.getElementById("result");
 const nextButton = document.getElementById("next");
-let currentScore = 0;
-if (!isNaN(localStorage.highestScore) && localStorage.highestScore !== undefined) {
-        document.getElementById("highestScore").innerText = `Your highest score is: ${localStorage.highestScore}`;
+let currentStreak = 0;
+if (!isNaN(localStorage.highestStreak) && localStorage.highestStreak !== undefined) {
+        document.getElementById("highestStreak").innerText = `Your highest streak is: ${localStorage.highestStreak}`;
 } else {
-    localStorage.highestScore = 0;
+    localStorage.highestStreak = 0;
 }
-if (localStorage.lifeScore) {
-    document.getElementById("lifetimeScore").innerText = `Your lifetime score is: ${localStorage.lifeScore}`;
+if (localStorage.previousStreak) {
+    document.getElementById("previousStreak").innerText = `Your previous streak was: ${localStorage.previousStreak}`;
 } else {
-    localStorage.lifeScore = 0;
+    localStorage.previousStreak = 0;
 }
 
 let currentQuestionIndex = 0;
@@ -60,28 +60,29 @@ function setQuestion() {
         choices[index].textContent = choice;
         choices[index].onclick = () => {
             if (choice === capital) {
-                currentScore++;
-                localStorage.lifeScore++;
+                currentStreak++;
+                localStorage.lifestreak++;
                 result.textContent = `Correct! The capital of ${country} is ${capital}.`;
                 document.getElementById("resultCard").style.backgroundColor="lightgreen";
-
-                document.getElementById("lifetimeScore").innerText = `Your lifetime score is: ${localStorage.lifeScore}`;
-                document.getElementById("currentScore").innerText = `Your current score is: ${currentScore}`;
-                if (currentScore>localStorage.highestScore) {
-                    localStorage.highestScore=currentScore;
-                    document.getElementById("highestScore").innerText = `Your highest score is: ${localStorage.highestScore}`;
+                document.getElementById("currentStreak").innerText = `Your current streak is: ${currentStreak}`;
+                if (currentStreak>localStorage.highestStreak) {
+                    localStorage.highestStreak=currentStreak;
+                    document.getElementById("highestStreak").innerText = `Your highest streak is: ${localStorage.highestStreak}`;
                 }
             } else {
-                currentScore = 0;
-                result.textContent = `Wrong! The capital of ${country} is ${capital}.`;
+                localStorage.previousStreak=currentStreak;
+                currentStreak = 0;
+                result.textContent = `Wrong! The capital of ${country} is ${capital}`;
                 document.getElementById("resultCard").style.backgroundColor="lightcoral";
+                document.getElementById("currentStreak").innerText = `Your current streak is: ${currentStreak}`;
+                document.getElementById("previousStreak").innerText = `Your previous streak was: ${localStorage.previousStreak}`;
+                doneQs=[];
 
-                document.getElementById("currentScore").innerText = `Your current score is: ${currentScore}`;
             }
             choices.forEach(choice => {
                 choice.disabled = true;
             });
-            //document.getElementById("resultCard").style.display="block";
+            document.getElementById("countriesLeft").innerText = "Countries remaining: " + (198-doneQs.length);
             nextButton.disabled = false;
             nextButton.textContent = "Next Question";
         };
