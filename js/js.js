@@ -307,3 +307,10 @@ function storieschange() {
 		document.querySelectorAll("#colltester")[0].innerHTML = document.querySelectorAll("#colltester")[0].innerHTML.replace("Stories (Click a story title to read more)", "Stories");
 	}
 }
+
+$(document).ready(function(){
+    $('.toggle-button').click(function(){
+        $(this).toggleClass('btn-primary'); // Toggle btn-primary class
+        $(this).toggleClass('btn-secondary btn-light'); // Toggle other classes
+    });
+});
