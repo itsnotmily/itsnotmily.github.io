@@ -279,6 +279,7 @@ window.onscroll = function () {
 	scrollFunction();
 };
 
+/*
 function scrollFunction() {
 	if (
 		document.body.scrollTop > 20 ||
@@ -296,6 +297,7 @@ function backToTop() {
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 }
+*/
 
 function storieschange() {
 	if ($('#collstories').hasClass('show') == false && document.querySelectorAll("#colltester")[0].innerHTML.split("(Click a story title to read more)").length<2){
@@ -308,9 +310,7 @@ function storieschange() {
 	}
 }
 
-$(document).ready(function(){
-    $('.toggle-button').click(function(){
+$('.toggle-button').click(function(){
         $(this).toggleClass('btn-primary'); // Toggle btn-primary class
         $(this).toggleClass('btn-secondary btn-light'); // Toggle other classes
     });
-});
