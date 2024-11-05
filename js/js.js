@@ -310,7 +310,16 @@ function storieschange() {
 	}
 }
 
-$('.toggle-button').click(function(){
-        $(this).toggleClass('btn-primary'); // Toggle btn-primary class
-        $(this).toggleClass('btn-secondary btn-light'); // Toggle other classes
-    });
+function toggleButtonClass(button) {
+    // Toggle the btn-primary class
+    button.classList.toggle('btn-primary');
+    
+    // Toggle the other classes based on the current state
+    if (button.classList.contains('btn-secondary')) {
+        button.classList.remove('btn-secondary');
+        button.classList.add('btn-light');
+    } else {
+        button.classList.remove('btn-light');
+        button.classList.add('btn-secondary');
+    }
+}
