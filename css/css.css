@@ -8,3 +8,17 @@
   body {
     background-color: #20222599 !important;
   }
+
+  .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+  color: dark;
+  background-color: #28a745;
+  border-color: #343a40;
+}
+
+.btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active,
+.show > .btn-light.dropdown-toggle {
+  color: dark;
+  background-color: #28a745;
+  border-color: #343a40;
+}
