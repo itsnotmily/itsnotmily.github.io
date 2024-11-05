@@ -6,6 +6,6 @@
   }
 
   .btn-secondary:active {
-    background-color: #007bff; /* Bootstrap primary color */
-    color: white; /* Ensure the text is visible */
+    background-color: #007bff !important; /* Bootstrap primary color */
+    color: white !important; /* Ensure the text is visible */
 }
