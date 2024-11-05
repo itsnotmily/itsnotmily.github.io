@@ -5,11 +5,3 @@
     display: none;
   }
 
-  .btn-secondary:active,
-  .btn-secondary:focus,
- .btn-light:active,
-  .btn-light:focus
-    {
-    background-color: #007bff !important; /* Bootstrap primary color */
-    color: white !important; /* Ensure the text is visible */
-}
