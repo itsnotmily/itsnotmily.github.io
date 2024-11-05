@@ -315,11 +315,11 @@ function toggleButtonClass(button) {
 	let originalButton = button.classList[1];
 
     // Toggle the other classes based on the current state
-    if (button.classList.[1] !== originalButton {
+    if (button.classList[1] !== originalButton) {
         button.classList.remove(button.classList[1]);
         button.classList.add('btn-primary');
     } else {
         button.classList.remove('btn-primary');
-        button.classList.add('originalButton');
+        button.classList.add(originalButton);
     }
 }
