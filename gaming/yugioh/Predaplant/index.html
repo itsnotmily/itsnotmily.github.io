@@ -70,168 +70,106 @@
   <!-- Paths -->
 
   <div class="container mt-4">
-    <div class="row g-4">
-      <!-- Sundew + Non cobra PP Path -->
-      <div class="col-md-6">
-        <button type="button" class="btn btn-warning btn-lg w-100 mb-3">Sundew + Non cobra PP</button>
-        <div class="btn-group-vertical w-100 mb-4" role="group">
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Normal summon: Sundew</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Fusion Ambu</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Fuse: [Sundew + other]</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Add Predaponics</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: SS one of the GY</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">SS GY, no effect defense</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: Tribute random for Cobra</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">SS: Cobra</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: Add Super Poly</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Set Super Poly</button>
+    <div class="accordion" id="predaplantAccordion">
+    
+      <!-- Sundew + Non Cobra PP Path -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Sundew + Non Cobra PP
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#predaplantAccordion">
+          <div class="accordion-body">
+            <div class="btn-group-vertical w-100 mb-4" role="group">
+              <button type="button" class="btn btn-secondary">Normal summon: Sundew</button>
+              <button type="button" class="btn btn-light">Eff: Fusion Ambu</button>
+              <button type="button" class="btn btn-secondary">Fuse: [Sundew + other]</button>
+              <button type="button" class="btn btn-light">Eff: Add Predaponics</button>
+              <button type="button" class="btn btn-secondary">Eff: SS one of the GY</button>
+              <button type="button" class="btn btn-light">SS GY, no effect defense</button>
+              <button type="button" class="btn btn-secondary">Eff: Tribute random for Cobra</button>
+              <button type="button" class="btn btn-light">SS: Cobra</button>
+              <button type="button" class="btn btn-secondary">Eff: Add Super Poly</button>
+              <button type="button" class="btn btn-light">Set Super Poly</button>
+            </div>
+          </div>
         </div>
       </div>
   
       <!-- Scorpio + Monster Path -->
-      <div class="col-md-6">
-        <button type="button" class="btn btn-warning btn-lg w-100 mb-3">Scorpio + Monster</button>
-        <div class="btn-group-vertical w-100 mb-4" role="group">
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Summon: Scorpio</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Activate: Discard 1</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">SS: Cobra</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Activate: Add Ultra Poly</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">[Scorpio + Cobra]</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Add Bufo</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Banish and resummon Cobra + Scorpio</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Tribute something SS Sarra</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Fuse: Dragostapelia</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Ambu + Sarra</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: Add Predaplanning</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Set Predaplanning</button>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Scorpio + Monster
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#predaplantAccordion">
+          <div class="accordion-body">
+            <div class="btn-group-vertical w-100 mb-4" role="group">
+              <button type="button" class="btn btn-secondary">Summon: Scorpio</button>
+              <button type="button" class="btn btn-light">Activate: Discard 1</button>
+              <button type="button" class="btn btn-secondary">SS: Cobra</button>
+              <button type="button" class="btn btn-light">Activate: Add Ultra Poly</button>
+              <button type="button" class="btn btn-secondary">[Scorpio + Cobra]</button>
+              <button type="button" class="btn btn-light">Eff: Add Bufo</button>
+              <button type="button" class="btn btn-secondary">Add Bufo</button>
+              <button type="button" class="btn btn-light">Banish and resummon Cobra + Scorpio</button>
+              <button type="button" class="btn btn-secondary">Set Predaplanning</button>
+            </div>
+          </div>
         </div>
       </div>
   
       <!-- Predapractice + Scorpio Path -->
-      <div class="col-md-6">
-        <button type="button" class="btn btn-warning btn-lg w-100 mb-3">Predapractice + Scorpio</button>
-        <div class="btn-group-vertical w-100 mb-4" role="group">
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: SS Scorpio Add Bylblisp</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">SS Scorpio</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Add Bylblisp</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Discard Bylblisp SS Cobra</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">SS: Cobra</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Add Ultra Poly</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Add Bufo</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Scale Bufo Fuse: Ambu</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Fuse: [Scorpio + Cobra]</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Add Predaponics</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: SS one of the GY</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Tribute random for Sarra</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">SS Sarra</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Fusion: Dragostapelia</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Ambu + Sarra</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Add Predaprime fusion</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: Banish itself SS Ambu + Sarra</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Set Predaprime Fuse on enemy turn</button>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Predapractice + Scorpio
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#predaplantAccordion">
+          <div class="accordion-body">
+            <div class="btn-group-vertical w-100 mb-4" role="group">
+              <button type="button" class="btn btn-secondary">Eff: SS Scorpio</button>
+              <button type="button" class="btn btn-light">Add Bylblisp</button>
+              <button type="button" class="btn btn-secondary">SS Cobra</button>
+              <button type="button" class="btn btn-light">Eff: Add Ultra Poly</button>
+              <button type="button" class="btn btn-secondary">Fuse: [Scorpio + Cobra]</button>
+              <button type="button" class="btn btn-light">Eff: Add Predaponics</button>
+              <button type="button" class="btn btn-secondary">Eff: Add Sarra</button>
+            </div>
+          </div>
         </div>
       </div>
   
       <!-- Scale + Bylblisp Path -->
-      <div class="col-md-6">
-        <button type="button" class="btn btn-warning btn-lg w-100 mb-3">Scale + Bylblisp</button>
-        <div class="btn-group-vertical w-100 mb-4" role="group">
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Summon Bylblisp</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Link Bylblisp</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: Add scale Bufo/Triantis</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Scale: Triantis</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Scale: Bufo Fuse: Ambu</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Bufo + Triantis</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: Place counter</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Add Triantis</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Add Predaprime</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">SS itself GY</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: Tribute Bylblisp SS Cobra</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Add Ultra Poly</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Fuse: Dragostapelia</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Any two</button>
-          <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: Banish itself Resummon fuse mats</button>
-          <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Set Predaprime</button>
-        </div>
-      </div>
-      
-          <!-- Predapractice + Sundew Path -->
-          <div class="col-md-6">
-            <button type="button" class="btn btn-warning btn-lg w-100 mb-3">Predapractice + Sundew</button>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Scale + Bylblisp
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#predaplantAccordion">
+          <div class="accordion-body">
             <div class="btn-group-vertical w-100 mb-4" role="group">
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: SS Sundew</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Fuse Ambu</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Sundew + Bylblisp</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Add Predaprime</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Add Sarra</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Tribute Sarra</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">SS Sarra</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">SS: Cobra</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Add Ultra Poly</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Add Planning</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Fuse: Dragostapelia</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Ambu + Cobra</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: Banish itself Resummon fuse mats</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Set Predaplanning</button>
-            </div>
-          </div>
-      
-          <!-- Scorpio + Cobra + Any monster Path -->
-          <div class="col-md-6">
-            <button type="button" class="btn btn-warning btn-lg w-100 mb-3">Scorpio + Cobra + Any monster</button>
-            <div class="btn-group-vertical w-100 mb-4" role="group">
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Summon: Scorpio</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Activate: Discard non cobra</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">SS Sundew</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Fuse Ambu</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Sundew + Cobra</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Add Bufo</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Tribute Scorpio Add Sarra</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Scale: Bufo</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: Fuse Dragostapelia</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Ambu + Sarra</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: Add Predaplanning</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Set Predaplanning</button>
-            </div>
-          </div>
-      
-          <!-- Predapractice + Sundew + Cobra Path -->
-          <div class="col-md-6">
-            <button type="button" class="btn btn-warning btn-lg w-100 mb-3">Predapractice + Sundew + Cobra</button>
-            <div class="btn-group-vertical w-100 mb-4" role="group">
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: SS Sundew</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Fuse Ambu</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Sundew + Cobra</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Add Bufo</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Tribute Scorpio Add Sarra</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Scale: Bufo</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: Fuse Dragostapelia</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Ambu + Sarra</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: Add Predaplanning</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Set Predaplanning</button>
-            </div>
-          </div>
-      
-          <!-- Bufo + Cobra + Triantis Path -->
-          <div class="col-md-6">
-            <button type="button" class="btn btn-warning btn-lg w-100 mb-3">Bufo + Cobra + Triantis</button>
-            <div class="btn-group-vertical w-100 mb-4" role="group">
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: SS Bufo + Cobra</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Add Triantis</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: Add Predaprime</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">SS itself GY</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: Tribute Bylblisp SS Cobra</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Eff: Add Ultra Poly</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Fuse: Dragostapelia</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Any two</button>
-              <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false">Eff: Banish itself Resummon fuse mats</button>
-              <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false">Set Predaprime</button>
+              <button type="button" class="btn btn-secondary">Summon Bylblisp</button>
+              <button type="button" class="btn btn-light">Link Bylblisp</button>
+              <button type="button" class="btn btn-secondary">Eff: Add scale Bufo/Triantis</button>
+              <button type="button" class="btn btn-light">Eff: Fuse Ambu</button>
+              <button type="button" class="btn btn-secondary">Fuse: Ambu + Triantis</button>
+              <button type="button" class="btn btn-light">Eff: Add Predaprime</button>
+              <button type="button" class="btn btn-secondary">Eff: Tribute Bylblisp SS Sarra</button>
             </div>
           </div>
         </div>
       </div>
-          </div>
+  
+      <!-- Additional Paths (Add each path here following the same pattern) -->
+    </div>
   </div>
+  
+  
   
 
 
