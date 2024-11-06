@@ -57,13 +57,19 @@ var tanks = [
   'Reinhardt', 'Roadhog', 'Sigma', 'Winston', 'Wrecking Ball', 'Zarya'
 ];
 
-var dps = [ 
-  
+var dps = [
+  'Ashe', 'Bastion', 'Cassidy', 'Echo', 'Genji', 'Hanzo', 
+  'Junkrat', 'Mei', 'Pharah', 'Reaper', 'Sojourn', 
+  'Soldier: 76', 'Sombra', 'Symmetra', 'Torbjörn', 'Tracer', 'Venture' , 'Widowmaker'
 ];
 
-var supps = [];
+
+var supps = ['Ana', 'Baptiste', 'Brigitte', 'Illari', 'Juno','Kiriko', 
+  'Lifeweaver', 'Lúcio', 'Mercy', 'Moira', 'Zenyatta'
+];
 
 var owClasses = ['Tank' , 'DPS', 'Support'];
+
 function generateRandomTank() {
   var randomTank = tanks[Math.floor(Math.random() * tanks.length)];
   document.querySelector("#tankDrop").innerText = randomTank;
@@ -87,6 +93,73 @@ function startTankWheel() {
     generateRandomTank();
   }
   var timerId = setInterval(spinTankWheel, 100);
+
+  
+function generateRandomDps() {
+  var randomDps = dps[Math.floor(Math.random() * dps.length)];
+  document.querySelector("#dpsDrop").innerText = randomDps;
+}
+
+function startDpsWheel() {
+  var runCount = 0;
+  function spinDpsWheel() {
+    if (runCount !== 10) {
+      document.querySelector("#dpsDrop").style.backgroundColor = "";
+    }
+    runCount++;
+    if (runCount === 10) {
+      clearInterval(timerId);
+      document.querySelector("#dpsDrop").style.backgroundColor = "rgb(24, 113, 30)";
+      runCount = 0;
+    }
+    generateRandomDps();
+  }
+  var timerId = setInterval(spinDpsWheel, 100);
+}
+
+function generateRandomSupp() {
+  var randomSupp = supps[Math.floor(Math.random() * supps.length)];
+  document.querySelector("#suppDrop").innerText = randomSupp;
+}
+
+function startSuppWheel() {
+  var runCount = 0;
+  function spinSuppWheel() {
+    if (runCount !== 10) {
+      document.querySelector("#suppDrop").style.backgroundColor = "";
+    }
+    runCount++;
+    if (runCount === 10) {
+      clearInterval(timerId);
+      document.querySelector("#suppDrop").style.backgroundColor = "rgb(24, 113, 30)";
+      runCount = 0;
+    }
+    generateRandomSupp();
+  }
+  var timerId = setInterval(spinSuppWheel, 100);
+}
+
+function generateRandomClass() {
+  var randomClass = owClasses[Math.floor(Math.random() * owClasses.length)];
+  document.querySelector("#classDrop").innerText = randomClass;
+}
+
+function startClassWheel() {
+  var runCount = 0;
+  function spinClassWheel() {
+    if (runCount !== 10) {
+      document.querySelector("#classDrop").style.backgroundColor = "";
+    }
+    runCount++;
+    if (runCount === 10) {
+      clearInterval(timerId);
+      document.querySelector("#classDrop").style.backgroundColor = "rgb(24, 113, 30)";
+      runCount = 0;
+    }
+    generateRandomClass();
+  }
+  var timerId = setInterval(spinClassWheel, 100);
+}
 }
 
   </script>
