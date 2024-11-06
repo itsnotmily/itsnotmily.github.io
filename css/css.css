@@ -23,9 +23,10 @@
   border-color: #343a40;
 }
 
-ul li a:hover {
+.container ul li a:hover {
   color: rgb(84, 212, 255) !important;
-  }
-  .btn:hover{
+}
+
+.btn:hover{
   color:darkorange;}
   
