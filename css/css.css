@@ -1,34 +1,35 @@
 /*bg colour */
 
-  body {
-    background-color: #20222599 !important;
-  }
+body {
+  background-color: #20222599 !important;
+}
 
 
 /*keep button green after pressing */
 
- .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
-.show{
-  color: black  !important;
-  background-color: #28a745;
-  border-color: #343a40;
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:focus {
+color: black !important;
+background-color: #28a745; /* Green color */
+border-color: #343a40; /* Darker border */
 }
 
-/*keep button green after pressing */
-
-.btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active,
-.show{
-  color: dark;
-  background-color: #28a745;
-  border-color: #343a40;
+.btn-light:not(:disabled):not(.disabled):active,
+.btn-light:not(:disabled):not(.disabled).active,
+.btn-light:focus {
+color: black !important;
+background-color: #28a745; /* Green color */
+border-color: #343a40; /* Darker border */
 }
+
 
 /*make hover text on lists light blue */
 .container ul li a:hover {
-  color: rgb(84, 212, 255) !important;
+color: rgb(84, 212, 255) !important;
 }
 
 /*make hover text darkorange except when its a warning button which is already orange */
 .btn:not(.btn-warning):hover {
-  color: darkorange;
+color: darkorange;
 }
