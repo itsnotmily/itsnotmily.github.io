@@ -22,3 +22,12 @@
   background-color: #28a745;
   border-color: #343a40;
 }
+
+img {
+  max-width: 100vw; /* Maximum width: 100% of the viewport width */
+  max-height: 100vh; /* Maximum height: 100% of the viewport height */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: auto; /* Center the image */
+}
