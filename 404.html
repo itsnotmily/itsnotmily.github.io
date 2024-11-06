@@ -24,22 +24,20 @@
             color: #6c757d;
         }
         /* Center card in viewport and limit its maximum size */
-        .card {
-            max-width: 100vw;
-            max-height: 100vh;
+        body, html {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: auto;
+            height: 100vh;
+            margin: 0;
         }
 
-        /* Ensure image doesn't exceed card dimensions */
-        .card img {
-            width: 100%;
-            height: auto;
-            max-width: 100%; /* Extra safeguard to stay within viewport */
-            max-height: 100vh; /* Extra safeguard to stay within viewport */
-            object-fit: contain; /* Keeps aspect ratio */
+        img {
+            max-width: 50vw; /* Maximum width is 50% of viewport width */
+            max-height: 50vh; /* Maximum height is 50% of viewport height */
+            width: auto; /* Maintain aspect ratio */
+            height: 300; /* Maintain aspect ratio */
+            object-fit: cover;
         }
     </style>
       <!-- Favicon -->
@@ -55,13 +53,9 @@
         <p class="text-light">The page you're looking for doesn't exist. Please check the URL or head back to the homepage.</p>
         <a href="index.html" class="btn btn-secondary btn-lg btn-block mt-3">Go to Homepage</a>
         <br>
-        <div class="card shadow">
-          <a href="https://cataas.com/" target="_blank">
-              <img src="https://cataas.com/cat" class="card-img-top" alt="Random Cat">
-          </a>
-          <div class="card-body text-center">
-              <p class="card-text">Enjoy a random cat! Click the image for more cats.</p>
-          </div>
+        <a href="https://cataas.com/" target="_blank">
+          <img src="https://cataas.com/cat" alt="Random Cat">
+      </a>
       </div>
     </div>
 </div>
