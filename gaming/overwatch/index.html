@@ -40,7 +40,6 @@ var tanks = [
 
 function generateRandomTank() {
   var randomTank = tanks[Math.floor(Math.random() * tanks.length)];
-  console.log(randomTank);
   document.querySelector("#tankDrop").innerText = randomTank;
 }
 
@@ -55,6 +54,7 @@ function startTankWheel() {
     if (runCount === 10) {
       clearInterval(timerId);
       document.querySelector("#tankDrop").style.backgroundColor = "rgb(24, 113, 30)";
+      console.log(randomTank);
       runCount = 0;
     }
     generateRandomTank();
