@@ -24,10 +24,29 @@
   <!-- Page Content -->
 
   <div class="d-flex container-fluid align-items-center justify-content-center" style="height: 100vh;">
-    <button type="button" class="btn btn-secondary  btn-lg btn-block" id="tankDrop" onclick="startTankWheel()"
+    <button type="button" class="btn btn-dark  btn-lg btn-block" id="classDrop" onclick="startClassWheel()"
+      style="font-size: 80px;">Class Picker</button>
+      <br>
+  </div>
+
+  <div class="d-flex container-fluid align-items-center justify-content-center" style="height: 100vh;">
+    <button type="button" class="btn btn-dark  btn-lg btn-block" id="tankDrop" onclick="startTankWheel()"
       style="font-size: 80px;">Tank Picker</button>
       <br>
   </div>
+
+  <div class="d-flex container-fluid align-items-center justify-content-center" style="height: 100vh;">
+    <button type="button" class="btn btn-dark  btn-lg btn-block" id="dpsDrop" onclick="startDpsWheel()"
+      style="font-size: 80px;">DPS Picker</button>
+      <br>
+  </div>
+
+  <div class="d-flex container-fluid align-items-center justify-content-center" style="height: 100vh;">
+    <button type="button" class="btn btn-dark  btn-lg btn-block" id="suppDrop" onclick="startSuppWheel()"
+      style="font-size: 80px;">Support Picker</button>
+      <br>
+  </div>
+
 
 
 
@@ -38,6 +57,13 @@ var tanks = [
   'Reinhardt', 'Roadhog', 'Sigma', 'Winston', 'Wrecking Ball', 'Zarya'
 ];
 
+var dps = [ 
+  
+];
+
+var supps = [];
+
+var owClasses = ['Tank' , 'DPS', 'Support'];
 function generateRandomTank() {
   var randomTank = tanks[Math.floor(Math.random() * tanks.length)];
   document.querySelector("#tankDrop").innerText = randomTank;
@@ -54,6 +80,7 @@ function startTankWheel() {
     if (runCount === 10) {
       clearInterval(timerId);
       document.querySelector("#tankDrop").style.backgroundColor = "rgb(24, 113, 30)";
+      var randomTank = tanks[Math.floor(Math.random() * tanks.length)];
       console.log(randomTank);
       runCount = 0;
     }
