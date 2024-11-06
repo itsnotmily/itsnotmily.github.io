@@ -215,11 +215,11 @@ function generateRandomClass() {
 // Function to start spinning Class wheel
 function startClassWheel() {
   var timerId = setInterval(function() {
-    if (runCount !== 10) {
+    if (runCount !== 20) {
       document.querySelector("#classDrop").style.backgroundColor = "";
     }
     runCount++;
-    if (runCount === 10) {
+    if (runCount === 20) {
       clearInterval(timerId);
       document.querySelector("#classDrop").style.backgroundColor = "rgb(24, 113, 30)";
       runCount = 0;
