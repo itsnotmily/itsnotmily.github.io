@@ -1,13 +1,11 @@
-#btn-back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-  }
+/*bg colour */
 
   body {
     background-color: #20222599 !important;
   }
+
+
+/*keep button green after pressing */
 
  .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
 .show{
@@ -16,6 +14,8 @@
   border-color: #343a40;
 }
 
+/*keep button green after pressing */
+
 .btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active,
 .show{
   color: dark;
@@ -23,10 +23,12 @@
   border-color: #343a40;
 }
 
+/*make hover text on lists light blue */
 .container ul li a:hover {
   color: rgb(84, 212, 255) !important;
 }
 
-.btn:hover{
-  color:darkorange;}
-  
+/*make hover text darkorange except when its a warning button which is already orange */
+.btn:not(.btn-warning):hover {
+  color: darkorange;
+}
