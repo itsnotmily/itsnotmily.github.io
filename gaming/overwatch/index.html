@@ -22,26 +22,23 @@
 
 
   <!-- Page Content -->
-
-  <div class="d-flex container-fluid align-items-center justify-content-center" style="height: 100vh;">
+  <div style="display: flex; flex-direction: column; height: 100vh; justify-content: center; align-items: center;">
     <button type="button" class="btn btn-dark  btn-lg btn-block" id="classDrop" onclick="startClassWheel()"
-      style="font-size: 80px;">Class Picker</button>
+      style="font-size: 80px; margin-bottom: 20px;">Class Picker</button>
       <br>
-  </div>
-
-  <div class="d-flex container-fluid align-items-center justify-content-center" style="height: 100vh;">
-    <button type="button" class="btn btn-dark  btn-lg btn-block" id="tankDrop" onclick="startTankWheel()"
-      style="font-size: 80px;">Tank Picker</button>
       <br>
-  </div>
 
-  <div class="d-flex container-fluid align-items-center justify-content-center" style="height: 100vh;">
+    <button type="button" class="btn btn-dark  text-white btn-block" id="tankDrop" onclick="startTankWheel()"
+      style="font-size: 80px; margin-bottom: 20px;">Tank Picker</button>
+      <br>
+      <br>
+
     <button type="button" class="btn btn-dark  btn-lg btn-block" id="dpsDrop" onclick="startDpsWheel()"
-      style="font-size: 80px;">DPS Picker</button>
+      style="font-size: 80px; margin-bottom: 20px;">DPS Picker</button>
       <br>
-  </div>
+      <br>
 
-  <div class="d-flex container-fluid align-items-center justify-content-center" style="height: 100vh;">
+  <br>
     <button type="button" class="btn btn-dark  btn-lg btn-block" id="suppDrop" onclick="startSuppWheel()"
       style="font-size: 80px;">Support Picker</button>
       <br>
@@ -70,15 +67,17 @@ var supps = ['Ana', 'Baptiste', 'Brigitte', 'Illari', 'Juno','Kiriko',
 
 var owClasses = ['Tank' , 'DPS', 'Support'];
 
+var runCount = 0;
+
+// Function to generate random Tank
 function generateRandomTank() {
   var randomTank = tanks[Math.floor(Math.random() * tanks.length)];
   document.querySelector("#tankDrop").innerText = randomTank;
 }
 
-var runCount = 0;
-
+// Function to start spinning Tank wheel
 function startTankWheel() {
-  function spinTankWheel() {
+  var timerId = setInterval(function() {
     if (runCount !== 10) {
       document.querySelector("#tankDrop").style.backgroundColor = "";
     }
@@ -86,23 +85,23 @@ function startTankWheel() {
     if (runCount === 10) {
       clearInterval(timerId);
       document.querySelector("#tankDrop").style.backgroundColor = "rgb(24, 113, 30)";
-      var randomTank = tanks[Math.floor(Math.random() * tanks.length)];
-      console.log(randomTank);
       runCount = 0;
+      generateRandomTank();
+    } else {
+      generateRandomTank();
     }
-    generateRandomTank();
-  }
-  var timerId = setInterval(spinTankWheel, 100);
-
+  }, 100);
+}
   
+// Function to generate random DPS
 function generateRandomDps() {
   var randomDps = dps[Math.floor(Math.random() * dps.length)];
   document.querySelector("#dpsDrop").innerText = randomDps;
 }
 
+// Function to start spinning DPS wheel
 function startDpsWheel() {
-  var runCount = 0;
-  function spinDpsWheel() {
+  var timerId = setInterval(function() {
     if (runCount !== 10) {
       document.querySelector("#dpsDrop").style.backgroundColor = "";
     }
@@ -111,20 +110,22 @@ function startDpsWheel() {
       clearInterval(timerId);
       document.querySelector("#dpsDrop").style.backgroundColor = "rgb(24, 113, 30)";
       runCount = 0;
+      generateRandomDps();
+    } else {
+      generateRandomDps();
     }
-    generateRandomDps();
-  }
-  var timerId = setInterval(spinDpsWheel, 100);
+  }, 100);
 }
 
+// Function to generate random Support
 function generateRandomSupp() {
   var randomSupp = supps[Math.floor(Math.random() * supps.length)];
   document.querySelector("#suppDrop").innerText = randomSupp;
 }
 
+// Function to start spinning Support wheel
 function startSuppWheel() {
-  var runCount = 0;
-  function spinSuppWheel() {
+  var timerId = setInterval(function() {
     if (runCount !== 10) {
       document.querySelector("#suppDrop").style.backgroundColor = "";
     }
@@ -133,20 +134,23 @@ function startSuppWheel() {
       clearInterval(timerId);
       document.querySelector("#suppDrop").style.backgroundColor = "rgb(24, 113, 30)";
       runCount = 0;
+      generateRandomSupp();
+    } else {
+      generateRandomSupp();
     }
-    generateRandomSupp();
-  }
-  var timerId = setInterval(spinSuppWheel, 100);
+  }, 100);
 }
 
+
+// Function to generate random Class
 function generateRandomClass() {
   var randomClass = owClasses[Math.floor(Math.random() * owClasses.length)];
   document.querySelector("#classDrop").innerText = randomClass;
 }
 
+// Function to start spinning Class wheel
 function startClassWheel() {
-  var runCount = 0;
-  function spinClassWheel() {
+  var timerId = setInterval(function() {
     if (runCount !== 10) {
       document.querySelector("#classDrop").style.backgroundColor = "";
     }
@@ -155,11 +159,11 @@ function startClassWheel() {
       clearInterval(timerId);
       document.querySelector("#classDrop").style.backgroundColor = "rgb(24, 113, 30)";
       runCount = 0;
+      generateRandomClass();
+    } else {
+      generateRandomClass();
     }
-    generateRandomClass();
-  }
-  var timerId = setInterval(spinClassWheel, 100);
-}
+  }, 100);
 }
 
   </script>
