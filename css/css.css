@@ -23,3 +23,6 @@
   border-color: #343a40;
 }
 
+.btn-link:hover {
+  color: #218dff;
+}
