@@ -51,21 +51,48 @@
 
   <!-- Page Content -->
 
-  <div class="container text-center">
+<div class="container text-center">
     <br>
     <div class="card text-white bg-dark">
       <div class="card-body">
         <h1 class="card-title">Gallery</h1>
       </div>
+      <br>
       <ul class="list-group list-group-flush">
         <li class="list-group-item text-dark">Here's some memorable screenshots and moments from games I played</li>
-        <li class="list-group-item text-white bg-dark">Path of Exile</li>
       </ul>
     </div>
-  </div>
-  <br>
+    <br>
+    <div class="card text-white bg-dark">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Path of Exile</li>
+        </ul>
+      </div>
 
-<!-- POE Carousel -->
+        <div id="poeCarouselControls" class="carousel slide pointer-event" data-bs-ride="carousel" data-bs-interval="false">
+            <div class="carousel-inner">
+            <div class="carousel-item">
+                <img src="/media/Screenshots/poebadluck.jpg" class="d-block w-100" alt="POE Bad Luck Screenshot" style="object-fit: contain; width: auto;">
+            </div>
+            <div class="carousel-item active">
+                <img src="/media/Screenshots/poedrops.jpg" class="d-block w-100" style="object-fit: contain; max-height: 720px; width: auto;" alt="POE Drops Screenshot">
+            </div>
+            <div class="carousel-item">
+                <img src="/media/Screenshots/poehideout1.jpg" class="d-block w-100" style="object-fit: contain; max-height: 720px; width: auto;" alt="POE Hideout Screenshot">
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#poeCarouselControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#poeCarouselControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+</div>
+
+<!-- POE Carousel DO NOT DLEETE
 <div id="poeCarouselControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -87,7 +114,8 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <!-- POE Carousel End -->
+  
+  --POE Carousel End -->
   
 
   <br>
