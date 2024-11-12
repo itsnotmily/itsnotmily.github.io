@@ -44,3 +44,23 @@ color: darkorange;
   border-radius: 100%; /* Make sure it's circular */
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5)); /* Add a slight shadow for visibility */
 }
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background for better contrast */
+  color: white; /* White text for better readability */
+  padding: 15px 20px; /* Increased padding for better spacing */
+  border-radius: 8px; /* Rounded corners for a smooth effect */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Optional: shadow to create a floating effect */
+}
+
+.carousel-caption h5 {
+  font-weight: bold; /* Bold for the title */
+  font-size: 1.4em; /* Larger title font for emphasis */
+  margin-bottom: 10px; /* Add space below the title */
+}
+
+.carousel-caption p {
+  font-size: 1.2em; /* Slightly larger description text */
+  line-height: 1.4; /* Increase line height for better text spacing */
+  font-family: "Arial", sans-serif; /* Use a clean sans-serif font for better readability */
+}
