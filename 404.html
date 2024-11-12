@@ -16,39 +16,6 @@
   <link rel="shortcut icon" href="/media/fav/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/media/fav/favicon.ico" type="image/x-icon">
 
-  <!-- Custom Styles -->
-  <style>
-    .error-page {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .error-page h1 {
-      font-size: 6rem;
-      font-weight: bold;
-    }
-    .error-page p {
-      font-size: 1.25rem;
-      color: #6c757d;
-    }
-    /* Center card in viewport and limit its maximum size */
-    body, html {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    img {
-      max-width: 50vw; /* Maximum width is 50% of viewport width */
-      max-height: 50vh; /* Maximum height is 50% of viewport height */
-      width: 300px; /* Maintain aspect ratio */
-      height: 300px; /* Maintain aspect ratio */
-      object-fit: cover;
-    }
-  </style>
 </head>
 <body>
 
@@ -95,6 +62,40 @@
       <img src="https://cataas.com/cat" alt="Random Cat" onclick="this.src='https://cataas.com/cat?nocache=' + new Date().getTime()">
     </div>
   </div>
+  
+  <!-- Custom Styles -->
+  <style>
+    .error-page {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .error-page h1 {
+      font-size: 6rem;
+      font-weight: bold;
+    }
+    .error-page p {
+      font-size: 1.25rem;
+      color: #6c757d;
+    }
+    /* Center card in viewport and limit its maximum size */
+    body, html {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    img {
+      max-width: 50vw; /* Maximum width is 50% of viewport width */
+      max-height: 50vh; /* Maximum height is 50% of viewport height */
+      width: 300px; /* Maintain aspect ratio */
+      height: 300px; /* Maintain aspect ratio */
+      object-fit: cover;
+    }
+  </style>
   <!-- Content 404 end -->
 
   <!-- Bootstrap Bundle with Popper.js for Bootstrap 5 functionality -->
