@@ -1,46 +1,16 @@
-var redditSwitchCheck = 0;
-var reddSelf = document.getElementById("redditSelf");
-var reddInfo = document.getElementById("redditInfo");
-var reddAuthor = document.getElementById("redditAuthor");
-var reddFinal = document.getElementById("redditFinal");
-var reddPerma = document.getElementById("redditPerma");
-var reddSub = document.getElementById("redditSub");
-
-
-function whatyouselected() {
-	var hello = document.getElementById("fruits").value;
-	document.getElementById("what you selected").innerHTML = hello;
-}
-
-
-
-function eightBall() {
-
-	var eighBt = document.getElementById("balltext");
-
-	var answers = ['Maybe.', 'Certainly not.', 'I hope so.', 'Not in your wildest dreams.', 'There is a good chance.', 'Quite likely.', 'I think so.', 'I hope not.', 'I hope so.', 'Never!', 'Fuhgeddaboudit.', 'Ahaha! Really?!?', 'Pfft.', 'Sorry, bucko.', 'Hell, yes.', 'Hell to the no.', 'The future is bleak.', 'The future is uncertain.', 'I would rather not say.', 'Who cares!', 'Possibly.', 'Never,ever ever.', 'There is a small chance.', 'Yes!'];
-	var answerz = answers[Math.floor(Math.random() * answers.length)];
-	if (eighBt.value == "" || eighBt.value == " " || eighBt.value == null) {
-		document.getElementById("ball").innerHTML = "At least ask something! ";
-		document.getElementById("ballQuery").innerHTML = "";
-	} else {
-		document.getElementById("ball").innerHTML = "I say: " + answerz;
-		document.getElementById("ballQuery").innerHTML = "You asked:" + "<br>" + eighBt.value;
-		eighBt.value = "";
-	}
-}
-
-// Initialize global elements and variables
-const reddFinal = document.getElementById('redditFinal');
-const reddSub = document.getElementById('redditSub');
-const reddSelf = document.getElementById('redditSelf');
-const reddInfo = document.getElementById('redditInfo');
-const reddAuthor = document.getElementById('redditAuthor');
-const reddPerma = document.getElementById('redditPerma');
-const trendIcon = document.getElementById('trendIcon');
-const trending25 = document.getElementById('trending25');
+// Declare variables globally
 let redditSwitchCheck = 0; // Default value for NSFW filter
-let topSubredditsVisible = false; // To track the visibility of top subreddits
+let topSubredditsVisible = false; // To track visibility of top subreddits
+
+// Get references to elements
+const reddSelf = document.getElementById("redditSelf");
+const reddInfo = document.getElementById("redditInfo");
+const reddAuthor = document.getElementById("redditAuthor");
+const reddFinal = document.getElementById("redditFinal");
+const reddPerma = document.getElementById("redditPerma");
+const reddSub = document.getElementById("redditSub");
+const trendIcon = document.getElementById("trendIcon");
+const trending25 = document.getElementById("trending25");
 
 // Event Listeners
 document.getElementById('sendIcon').addEventListener('click', reddit);
@@ -51,6 +21,8 @@ document.getElementById('redditSub').addEventListener('keydown', function(event)
 });
 document.getElementById('refreshIcon').addEventListener('click', redditRefresh);
 document.getElementById('resetIcon').addEventListener('click', redditReset);
+document.getElementById('redditSwitch').addEventListener('change', redditSFW);
+trendIcon.addEventListener("click", redditTopsubs);
 
 // Main function to fetch Reddit data
 function reddit() {
@@ -191,18 +163,14 @@ function redditTopsubs() {
   }
 }
 
-// Event listener for the link to toggle top 25 subreddits
-trendIcon.addEventListener("click", redditTopsubs);
-
+// storieschange function remains the same
 
 function storieschange() {
-	if ($('#collstories').hasClass('show') == false && document.querySelectorAll("#colltester")[0].innerHTML.split("(Click a story title to read more)").length<2){
-		document.querySelectorAll("#colltester")[0].innerHTML = document.querySelectorAll("#colltester")[0].innerHTML.replace("Stories", "Stories (Click a story title to read more)");
-
-	} else if (document.querySelectorAll("#colltester")[0].innerHTML.split("(Click a story title to read more)").length > 1) {
-		document.querySelectorAll("#colltester")[0].innerHTML = document.querySelectorAll("#colltester")[0].innerHTML.replaceAll("(Click a story title to read more)", "");
-	} else if (document.querySelectorAll("#colltester")[0].innerHTML.indexOf(("Click a story")) != -1) {
-		document.querySelectorAll("#colltester")[0].innerHTML = document.querySelectorAll("#colltester")[0].innerHTML.replace("Stories (Click a story title to read more)", "Stories");
-	}
+  if ($('#collstories').hasClass('show') == false && document.querySelectorAll("#colltester")[0].innerHTML.split("(Click a story title to read more)").length < 2) {
+    document.querySelectorAll("#colltester")[0].innerHTML = document.querySelectorAll("#colltester")[0].innerHTML.replace("Stories", "Stories (Click a story title to read more)");
+  } else if (document.querySelectorAll("#colltester")[0].innerHTML.split("(Click a story title to read more)").length > 1) {
+    document.querySelectorAll("#colltester")[0].innerHTML = document.querySelectorAll("#colltester")[0].innerHTML.replaceAll("(Click a story title to read more)", "");
+  } else if (document.querySelectorAll("#colltester")[0].innerHTML.indexOf("Click a story") != -1) {
+    document.querySelectorAll("#colltester")[0].innerHTML = document.querySelectorAll("#colltester")[0].innerHTML.replace("Stories (Click a story title to read more)", "Stories");
+  }
 }
-
