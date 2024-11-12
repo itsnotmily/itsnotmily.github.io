@@ -15,6 +15,53 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="/media/fav/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/media/fav/favicon.ico" type="image/x-icon">
+  <!-- Custom Styles -->
+  <style>
+    /* Center the entire error page content vertically and horizontally */
+    .error-page {
+      min-height: calc(100vh - 56px); /* Account for navbar height (56px in Bootstrap 5) */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 56px; /* Avoid content overlap with navbar */
+    }
+
+    /* Large 404 error text styling */
+    .error-page h1 {
+      font-size: 8rem;
+      font-weight: bold;
+      color: #dc3545; /* Bootstrap's "text-danger" color */
+    }
+
+    /* Medium-sized message text styling */
+    .error-page h2 {
+      font-size: 2.5rem;
+      color: #f8f9fa; /* Bootstrap's "text-light" color */
+    }
+    .error-page p {
+      font-size: 1.5rem;
+      color: #6c757d; /* Slightly muted color */
+    }
+
+    /* Button Styling: wide, responsive, and large padding */
+    .error-page .btn {
+      width: 100%;
+      max-width: 500px;
+      padding: 0.75rem;
+      font-size: 1.25rem;
+    }
+
+    /* Center card in viewport and limit its maximum size */
+    img {
+      max-width: 50vw; /* Maximum width is 50% of viewport width */
+      max-height: 50vh; /* Maximum height is 50% of viewport height */
+      width: 300px; /* Maintain aspect ratio */
+      height: 300px; /* Maintain aspect ratio */
+      object-fit: cover;
+      margin-top: 1.5rem; /* Space between buttons and image */
+    }
+  </style>
 
 </head>
 <body>
@@ -63,39 +110,7 @@
     </div>
   </div>
   
-  <!-- Custom Styles -->
-  <style>
-    .error-page {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .error-page h1 {
-      font-size: 6rem;
-      font-weight: bold;
-    }
-    .error-page p {
-      font-size: 1.25rem;
-      color: #6c757d;
-    }
-    /* Center card in viewport and limit its maximum size */
-    body, html {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    img {
-      max-width: 50vw; /* Maximum width is 50% of viewport width */
-      max-height: 50vh; /* Maximum height is 50% of viewport height */
-      width: 300px; /* Maintain aspect ratio */
-      height: 300px; /* Maintain aspect ratio */
-      object-fit: cover;
-    }
-  </style>
+
   <!-- Content 404 end -->
 
   <!-- Bootstrap Bundle with Popper.js for Bootstrap 5 functionality -->
