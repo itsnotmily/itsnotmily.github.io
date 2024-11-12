@@ -33,3 +33,14 @@ color: rgb(84, 212, 255) !important;
 .btn:not(.btn-warning):hover {
 color: darkorange;
 }
+
+/* larger carousel arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: none; /* Ensure the arrow is visible */
+  background-size: 100%; /* Scale the arrow itself */
+  width: 9rem; /* Set the width of the arrow */
+  height: 5rem; /* Set the height of the arrow */
+  border-radius: 100%; /* Make sure it's circular */
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5)); /* Add a slight shadow for visibility */
+}
