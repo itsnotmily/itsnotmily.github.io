@@ -15,54 +15,6 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="/media/fav/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/media/fav/favicon.ico" type="image/x-icon">
-  <!-- Custom Styles -->
-  <style>
-    /* Center the entire error page content vertically and horizontally */
-    .error-page {
-      min-height: calc(100vh - 56px); /* Account for navbar height (56px in Bootstrap 5) */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding-top: 56px; /* Avoid content overlap with navbar */
-    }
-
-    /* Large 404 error text styling */
-    .error-page h1 {
-      font-size: 8rem;
-      font-weight: bold;
-      color: #dc3545; /* Bootstrap's "text-danger" color */
-    }
-
-    /* Medium-sized message text styling */
-    .error-page h2 {
-      font-size: 2.5rem;
-      color: #f8f9fa; /* Bootstrap's "text-light" color */
-    }
-    .error-page p {
-      font-size: 1.5rem;
-      color: #6c757d; /* Slightly muted color */
-    }
-
-    /* Button Styling: wide, responsive, and large padding */
-    .error-page .btn {
-      width: 100%;
-      max-width: 500px;
-      padding: 0.75rem;
-      font-size: 1.25rem;
-    }
-
-    /* Center card in viewport and limit its maximum size */
-    img {
-      max-width: 50vw; /* Maximum width is 50% of viewport width */
-      max-height: 50vh; /* Maximum height is 50% of viewport height */
-      width: 300px; /* Maintain aspect ratio */
-      height: 300px; /* Maintain aspect ratio */
-      object-fit: cover;
-      margin-top: 1.5rem; /* Space between buttons and image */
-    }
-  </style>
-
 </head>
 <body>
 
@@ -98,18 +50,23 @@
   </nav>
 
   <!-- Content 404 -->
-  <div class="container error-page">
-    <div>
-      <h1 class="text-danger">404</h1>
-      <h2>Oops! Mily Not Found</h2>
-      <p class="text-light">The Mily you're looking for doesn't Milyxist. Please check the MilyRL or head back to the Milypage / previous Milypage</p>
-      <a href="/index.html" class="d-grid gap-2 btn btn-warning btn-lg w-100 mt-3">Go to Homepage</a>
-      <a onclick="window.history.back()" class="d-grid gap-2 btn btn-warning btn-lg w-100 mt-3">Go Back</a>
-      <br>
-      <img src="https://cataas.com/cat" alt="Random Cat" onclick="this.src='https://cataas.com/cat?nocache=' + new Date().getTime()">
+  <div class="d-flex vh-100 align-items-center justify-content-center">
+    <div class="text-center">
+      <h1 class="display-1 fw-bold text-danger">404</h1>
+      <h2 class="mb-3">Oops! Mily Not Found</h2>
+      <p class="fs-5 mb-4">The Mily you're looking for doesn't Milyxist. Please check the MilyRL or head back to the Milypage / previous Milypage</p>
+      
+      <!-- Buttons -->
+      <div class="d-grid gap-2 mb-3">
+        <a href="/index.html" class="btn btn-warning btn-lg">Go to Homepage</a>
+        <a onclick="window.history.back()" class="btn btn-warning btn-lg">Go Back</a>
+      </div>
+
+      <!-- Image -->
+      <img src="https://cataas.com/cat" alt="Random Cat" class="img-fluid" style="max-width: 300px;" 
+           onclick="this.src='https://cataas.com/cat?nocache=' + new Date().getTime()">
     </div>
   </div>
-  
 
   <!-- Content 404 end -->
 
