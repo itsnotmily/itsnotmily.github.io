@@ -28,7 +28,7 @@ This website was built using the following technologies:
 ## 📫 How to reach me
 
 - Email: itsnotmily@gmail.com
-- Discord: itsnotmily#0203
+- Discord: itsnotmily
 
 ## 📜 License
 
