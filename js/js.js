@@ -30,246 +30,170 @@ function eightBall() {
 	}
 }
 
+// Initialize global elements and variables
+const reddFinal = document.getElementById('redditFinal');
+const reddSub = document.getElementById('redditSub');
+const reddSelf = document.getElementById('redditSelf');
+const reddInfo = document.getElementById('redditInfo');
+const reddAuthor = document.getElementById('redditAuthor');
+const reddPerma = document.getElementById('redditPerma');
+const trendIcon = document.getElementById('trendIcon');
+const trending25 = document.getElementById('trending25');
+let redditSwitchCheck = 0; // Default value for NSFW filter
+let topSubredditsVisible = false; // To track the visibility of top subreddits
+
+// Event Listeners
+document.getElementById('sendIcon').addEventListener('click', reddit);
+document.getElementById('redditSub').addEventListener('keydown', function(event) {
+  if (event.keyCode === 13) { // Enter key
+    reddit();
+  }
+});
+document.getElementById('refreshIcon').addEventListener('click', redditRefresh);
+document.getElementById('resetIcon').addEventListener('click', redditReset);
+
+// Main function to fetch Reddit data
 function reddit() {
-	reddSelf.innerHTML = "";
-	reddInfo.innerHTML = "";
-	reddAuthor.innerHTML = "";
-	reddFinal.innerHTML = "";
-	reddPerma.innerHTML = "";
+  // Clear previous results
+  reddSelf.innerHTML = "";
+  reddInfo.innerHTML = "";
+  reddAuthor.innerHTML = "";
+  reddFinal.innerHTML = "";
+  reddPerma.innerHTML = "";
 
-	var redditRadio = document.getElementsByName("group1");
-	var redditCheck = "/hot.json?" + Date.now();
-	var redditResult;
-	for (i = 0; i < redditRadio.length; i++) {
-		if (redditRadio[i].checked == true) {
-			if (redditRadio[i].id == "rHot") {
-				redditCheck = "/hot.json?" + Date.now();
-			} else if (redditRadio[i].id == "rNew") {
-				redditCheck = "/new.json?" + Date.now();
-			} else if (redditRadio[i].id == "topHour") {
-				redditCheck = "/top/.json?" + Date.now() + "?sort=top&t=hour";
-			} else if (redditRadio[i].id == "top24") {
-				redditCheck = "/top.json?" + Date.now();
-			} else if (redditRadio[i].id == "topWeek") {
-				redditCheck = "/top/.json?" + Date.now() + "?sort=top&t=week";
-			} else if (redditRadio[i].id == "topMonth") {
-				redditCheck = "/top/.json?" + Date.now() + "?sort=top&t=month";
-			} else if (redditRadio[i].id == "topYear") {
-				redditCheck = "/top/.json?" + Date.now() + "?sort=top&t=year";
-			} else if (redditRadio[i].id == "topAll") {
-				redditCheck = "/top/.json?" + Date.now() + "?sort=top&t=all";
-			}
-		}
-	}
+  let redditCheck = "/hot.json?" + Date.now();
+  const redditRadio = document.getElementsByName("group1");
 
-	var xmlhttp = new XMLHttpRequest();
-	var url = "https://api.reddit.com/r/" + reddSub.value.split(" ").join("_") + redditCheck;
-	xmlhttp.onreadystatechange = function () {
-		if (this.readyState == 4 && this.status == 200) {
+  // Determine the selected filter
+  for (let i = 0; i < redditRadio.length; i++) {
+    if (redditRadio[i].checked === true) {
+      switch (redditRadio[i].id) {
+        case "rHot":
+          redditCheck = "/hot.json?" + Date.now();
+          break;
+        case "rNew":
+          redditCheck = "/new.json?" + Date.now();
+          break;
+        case "topHour":
+          redditCheck = "/top/.json?" + Date.now() + "?sort=top&t=hour";
+          break;
+        case "top24":
+          redditCheck = "/top.json?" + Date.now();
+          break;
+        case "topWeek":
+          redditCheck = "/top/.json?" + Date.now() + "?sort=top&t=week";
+          break;
+        case "topMonth":
+          redditCheck = "/top/.json?" + Date.now() + "?sort=top&t=month";
+          break;
+        case "topYear":
+          redditCheck = "/top/.json?" + Date.now() + "?sort=top&t=year";
+          break;
+        case "topAll":
+          redditCheck = "/top/.json?" + Date.now() + "?sort=top&t=all";
+          break;
+      }
+    }
+  }
 
-			var myArr = JSON.parse(this.responseText);
-			console.log(myArr);
-			var stickyChecker = 0;
-			if (myArr.data.children[0].data.stickied == true) {
-				stickyChecker += 1;
-				console.log(stickyChecker);
-			}
+  // Make the API request
+  const url = `https://api.reddit.com/r/${reddSub.value.split(" ").join("_")}${redditCheck}`;
+  const xmlhttp = new XMLHttpRequest();
 
-			if (myArr.data.children[0 + stickyChecker].data.stickied == true) {
-				stickyChecker += 1;
-			}
-			if (redditSwitchCheck == 1) {
-				if (myArr.data.children[stickyChecker].data.over_18 == true) {
-					reddFinal.innerHTML = "NSFW posts are disabled currently";
-					reddSub.value = "";
-					reddSelf.innerHTML = "";
-					reddInfo.innerHTML = "";
-					reddAuthor.innerHTML = "";
-					reddPerma.innerHTML = "";
-					return;
-				}
-			}
-			var firstURL = myArr.data.children[stickyChecker].data.url;
-			var postTitle = myArr.data.children[stickyChecker].data.title;
-			var postAuthor = myArr.data.children[stickyChecker].data.author;
-			var postPerma = "<a href=\"https://api.reddit.com" + myArr.data.children[stickyChecker].data.permalink + "\" target=\"_blank\"> Permalink: https://api.reddit.com" + myArr.data.children[stickyChecker].data.permalink + "</a>";
+  xmlhttp.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200) {
+      const myArr = JSON.parse(this.responseText);
+      let stickyChecker = 0;
 
+      if (myArr.data.children[stickyChecker].data.stickied) {
+        stickyChecker += 1;
+      }
 
-			if (myArr.data.children[stickyChecker].data.selftext != "") {
-				reddInfo.innerHTML = postTitle;
-				reddAuthor.innerHTML = "posted by: " + postAuthor;
-				reddSelf.innerHTML = myArr.data.children[stickyChecker].data.selftext;
-				reddPerma.innerHTML = postPerma;
-				console.log(postPerma);
-			} else if (firstURL.includes("youtube.com") || firstURL.includes("youtu.be")) {
-				console.log(firstURL);
-				firstURL = firstURL.replace("watch?v=", "embed/");
-				reddInfo.innerHTML = postTitle;
-				reddAuthor.innerHTML = "posted by: " + postAuthor;
-				reddFinal.innerHTML = "<iframe src=" + firstURL + " frameborder=\"0\" scrolling=\"no\" allowfullscreen=\"\" width=\"640\" height=\"640\"><\/iframe>";
-				reddSelf.innerHTML = myArr.data.children[stickyChecker].data.selftext;
-				reddPerma.innerHTML = postPerma;
+      if (redditSwitchCheck === 1 && myArr.data.children[stickyChecker].data.over_18) {
+        reddFinal.innerHTML = "NSFW posts are disabled currently";
+        reddSub.value = "";
+        reddSelf.innerHTML = "";
+        reddInfo.innerHTML = "";
+        reddAuthor.innerHTML = "";
+        reddPerma.innerHTML = "";
+        return;
+      }
 
-			} else if ((firstURL.includes("imgur.com") == 0) && (firstURL.includes("instagram.com") == 0) && (firstURL.includes("gfycat.com") == 0) && (firstURL.includes(".png") == 0) && (firstURL.includes(".gif") == 0) && (firstURL.includes(".jpg") == 0) && (firstURL.includes(".gifv") == 0)) {
-				reddInfo.innerHTML = postTitle;
-				reddAuthor.innerHTML = "posted by: " + postAuthor;
-				reddFinal.innerHTML = "<a href=" + myArr.data.children[stickyChecker].data.url + " target=\"_blank\" >" + myArr.data.children[stickyChecker].data.url + "</a>";
-				reddSelf.innerHTML = myArr.data.children[stickyChecker].data.selftext;
-				reddPerma.innerHTML = postPerma;
+      const firstURL = myArr.data.children[stickyChecker].data.url;
+      const firstTitle = myArr.data.children[stickyChecker].data.title;
+      const firstAuthor = myArr.data.children[stickyChecker].data.author;
+      const firstPerma = myArr.data.children[stickyChecker].data.permalink;
 
-			} else if (firstURL.includes("gifv")) {
-				firstURL = firstURL.replace(".gifv", "/embed");
-				reddInfo.innerHTML = postTitle;
-				reddAuthor.innerHTML = "posted by: " + postAuthor;
-				reddFinal.innerHTML = "<iframe src=" + firstURL + " frameborder=\"0\" scrolling=\"no\" allowfullscreen=\"\" width=\"640\" height=\"640\"><\/iframe>";
-				reddSelf.innerHTML = myArr.data.children[stickyChecker].data.selftext;
-				reddPerma.innerHTML = postPerma;
+      reddSelf.innerHTML = firstTitle;
+      reddAuthor.innerHTML = "by " + firstAuthor;
+      reddInfo.innerHTML = `<a href="${firstURL}" target="_blank">Link to post</a>`;
+      reddPerma.innerHTML = `<a href="https://www.reddit.com${firstPerma}" target="_blank">Permalink</a>`;
+    }
+  };
 
-			} else if (firstURL.includes("imgur.com") && firstURL.includes("/gallery/")) {
-				console.log(firstURL);
-				reddInfo.innerHTML = postTitle;
-				reddAuthor.innerHTML = "posted by: " + postAuthor;
-				reddFinal.innerHTML = "Cannot open gallery. Here is the link: <br>" + firstURL;
-				reddSelf.innerHTML = myArr.data.children[stickyChecker].data.selftext;
-				reddPerma.innerHTML = postPerma;
-
-			} else if (firstURL.includes("imgur.com") && (firstURL.includes("jpg") == 0) && (firstURL.includes("png") == 0) && (firstURL.includes("gif") == 0) && (firstURL.includes("gifv") == 0)) {
-				firstURL = firstURL + "/embed";
-				reddInfo.innerHTML = postTitle;
-				reddAuthor.innerHTML = "posted by: " + postAuthor;
-				console.log(firstURL);
-				reddFinal.innerHTML = "<iframe src=" + firstURL + " frameborder=\"0\" scrolling=\"no\" allowfullscreen=\"\" width=\"640\" height=\"640\"><\/iframe>";
-				reddSelf.innerHTML = myArr.data.children[stickyChecker].data.selftext;
-				reddPerma.innerHTML = postPerma;
-
-			} else if (firstURL.includes("gfycat.com")) {
-				console.log(firstURL);
-				reddInfo.innerHTML = postTitle;
-				reddAuthor.innerHTML = "posted by: " + postAuthor;
-				reddFinal.innerHTML = "<iframe src=" + firstURL + " frameborder=\"0\" scrolling=\"no\" allowfullscreen=\"\" width=\"640\" height=\"640\"><\/iframe>";
-				reddSelf.innerHTML = myArr.data.children[stickyChecker].data.selftext;
-				reddPerma.innerHTML = postPerma;
-
-			} else if (firstURL.includes("instagram.com")) {
-				firstURL = firstURL + "embed";
-				console.log(firstURL);
-				reddInfo.innerHTML = postTitle;
-				reddAuthor.innerHTML = "posted by: " + postAuthor;
-				reddFinal.innerHTML = "<iframe src=" + firstURL + " frameborder=\"0\" scrolling=\"no\" allowfullscreen=\"\" width=\"640\" height=\"640\"><\/iframe>";
-				reddSelf.innerHTML = myArr.data.children[stickyChecker].data.selftext;
-				reddPerma.innerHTML = postPerma;
-
-			} else {
-				console.log(firstURL);
-				reddInfo.innerHTML = postTitle;
-				reddAuthor.innerHTML = "posted by: " + postAuthor;
-				reddFinal.innerHTML = "<img src=" + myArr.data.children[stickyChecker].data.url + ">";
-				reddSelf.innerHTML = myArr.data.children[stickyChecker].data.selftext;
-				reddPerma.innerHTML = postPerma;
-
-			}
-		} //end main if
-		else if (this.status == 404 || this.status == 403) {
-			console.log("Subreddit not found");
-			reddFinal.innerHTML = "Subreddit not found.";
-			reddSub.value = "";
-		} //end else if 404,403
-
-
-
-
-	};
-	xmlhttp.open("GET", url, true);
-	xmlhttp.onerror = function () {
-		console.log("** An error occurred during the transaction");
-		reddFinal.innerHTML = "Subreddit not found.";
-		reddSub.value = "";
-		reddSelf.innerHTML = "";
-		reddInfo.innerHTML = "";
-		reddAuthor.innerHTML = "";
-		reddPerma.innerHTML = "";
-
-
-	};
-	xmlhttp.send();
-
-} //end reddit
-
-function redditRefresh() {
-	if (reddFinal.innerHTML == "Waiting for your input" || reddFinal.innerHTML == "Nothing interesting happens.") {
-		reddFinal.innerHTML = "Nothing interesting happens.";
-	} else {
-		reddit();
-	}
-
-} //end redditRefresh
-
-function redditChange() {
-	if (reddFinal.innerHTML == "Waiting for your input" || reddFinal.innerHTML == "Nothing interesting happens.") {
-		console.log("Nothing needs to change yet");
-	} else {
-		reddit();
-	}
-
-} //end redditChange
-
-function redditSFW() {
-	if (document.getElementsByName("redditSwitch")[0].checked == false) {
-		redditSwitchCheck = 0;
-	} else {
-		redditSwitchCheck = 1;
-		redditReset();
-	}
-
-} //end redditSFW
-
-function redditReset() {
-	reddFinal.innerHTML = "Waiting for your input";
-	reddSub.value = "";
-	reddSelf.innerHTML = "";
-	reddInfo.innerHTML = "";
-	reddAuthor.innerHTML = "";
-	reddPerma.innerHTML = "";
-
-
-} //end redditReset
-
-function redditTopsubs() {
-	if (document.getElementById("trending25").innerHTML == "") {
-		var xmlhttp = new XMLHttpRequest();
-		var url = "https://www.reddit.com/reddits.json";
-
-		xmlhttp.onreadystatechange = function () {
-			if (this.readyState == 4 && this.status == 200) {
-				var myArr = JSON.parse(this.responseText);
-				for (i = 0; i < myArr.data.children.length; i++) {
-					var newParagraph = document.createElement('p');
-					newParagraph.textContent = myArr.data.children[i].data.display_name;
-					document.getElementById("trending25").appendChild(newParagraph);
-				}
-			}
-		};
-		xmlhttp.open("GET", url, true);
-		xmlhttp.send();
-	} else {
-		document.getElementById("trending25").innerHTML = "";
-	}
-
-} //end redditTopsubs
-
-function test() {
-	var xmlhttp = new XMLHttpRequest();
-	var url = "https://milycors.herokuapp.com/define/yolo";
-
-	xmlhttp.onreadystatechange = function () {
-		if (this.readyState == 4 && this.status == 200) {
-			var myArr = (this.responseText);
-			console.log(myArr);
-		} else if (this.status == 500) {}
-	};
-	xmlhttp.open("GET", url, true);
-	xmlhttp.send();
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send();
 }
+
+// Handle the NSFW switch
+function redditSFW() {
+  redditSwitchCheck = document.getElementById('redditSwitch').checked ? 1 : 0;
+}
+
+// Refresh Reddit Data
+function redditRefresh() {
+  reddit();
+}
+
+// Reset Reddit Data
+function redditReset() {
+  reddSub.value = "";
+  reddSelf.innerHTML = "";
+  reddInfo.innerHTML = "";
+  reddAuthor.innerHTML = "";
+  reddFinal.innerHTML = "Waiting for your input";
+  reddPerma.innerHTML = "";
+}
+
+// Fetch and display top 25 subreddits
+function redditTopsubs() {
+  // Toggle visibility of the trending subreddits list
+  topSubredditsVisible = !topSubredditsVisible;
+  if (topSubredditsVisible) {
+    // Show loading message until the data is fetched
+    trending25.innerHTML = "Loading top 25 subreddits...";
+
+    // Fetch top 25 subreddits
+    const url = "https://www.reddit.com/r/popular/top/.json?limit=25"; // Example for popular subreddits
+    const xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        const myArr = JSON.parse(this.responseText);
+        let topSubredditsHTML = "<ul>";
+
+        // Loop through the top 25 subreddits and display them
+        myArr.data.children.forEach(function (item) {
+          const subredditName = item.data.subreddit;
+          topSubredditsHTML += `<li><a href="https://www.reddit.com/r/${subredditName}" target="_blank">${subredditName}</a></li>`;
+        });
+
+        topSubredditsHTML += "</ul>";
+        trending25.innerHTML = topSubredditsHTML;
+      }
+    };
+
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+  } else {
+    // Hide the top 25 subreddits list
+    trending25.innerHTML = "";
+  }
+}
+
+// Event listener for the link to toggle top 25 subreddits
+trendIcon.addEventListener("click", redditTopsubs);
+
 
 function storieschange() {
 	if ($('#collstories').hasClass('show') == false && document.querySelectorAll("#colltester")[0].innerHTML.split("(Click a story title to read more)").length<2){
