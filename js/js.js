@@ -13,7 +13,16 @@ const trendIcon = document.getElementById("trendIcon");
 const trending25 = document.getElementById("trending25");
 
 // Event Listeners
-document.getElementById('sendIcon').addEventListener('click', reddit);
+
+// Main function to fetch Reddit data
+function reddit() {
+  // Clear previous results
+  reddSelf.innerHTML = "";
+  reddInfo.innerHTML = "";
+  reddAuthor.innerHTML = "";
+  reddFinal.innerHTML = "";
+  reddPerma.innerHTML = "";
+  document.getElementById('sendIcon').addEventListener('click', reddit);
 document.getElementById('redditSub').addEventListener('keydown', function(event) {
   if (event.keyCode === 13) { // Enter key
     reddit();
@@ -24,14 +33,6 @@ document.getElementById('resetIcon').addEventListener('click', redditReset);
 document.getElementById('redditSwitch').addEventListener('change', redditSFW);
 trendIcon.addEventListener("click", redditTopsubs);
 
-// Main function to fetch Reddit data
-function reddit() {
-  // Clear previous results
-  reddSelf.innerHTML = "";
-  reddInfo.innerHTML = "";
-  reddAuthor.innerHTML = "";
-  reddFinal.innerHTML = "";
-  reddPerma.innerHTML = "";
 
   let redditCheck = "/hot.json?" + Date.now();
   const redditRadio = document.getElementsByName("group1");
@@ -176,7 +177,7 @@ function storieschange() {
 }
 
 
-<script>
+
 document.addEventListener("DOMContentLoaded", () => {
   const collapsibleLinks = document.querySelectorAll("[data-bs-toggle='collapse']");
 
@@ -189,4 +190,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-</script>
+
