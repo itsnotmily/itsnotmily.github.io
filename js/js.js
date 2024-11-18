@@ -174,3 +174,18 @@ function storieschange() {
     document.querySelectorAll("#colltester")[0].innerHTML = document.querySelectorAll("#colltester")[0].innerHTML.replace("Stories (Click a story title to read more)", "Stories");
   }
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const collapsibleLinks = document.querySelectorAll("[data-bs-toggle='collapse']");
+
+  collapsibleLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      const icon = this.querySelector(".toggle-icon");
+      if (icon) {
+        // Toggle between down and up arrows
+        icon.textContent = icon.textContent === "🔽" ? "🔼" : "🔽";
+      }
+    });
+  });
+});
