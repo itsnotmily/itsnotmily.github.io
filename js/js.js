@@ -176,16 +176,17 @@ function storieschange() {
 }
 
 
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   const collapsibleLinks = document.querySelectorAll("[data-bs-toggle='collapse']");
 
   collapsibleLinks.forEach((link) => {
     link.addEventListener("click", function () {
-      const icon = this.querySelector(".toggle-icon");
+      const icon = this.textContent.match(/🔽|🔼/) ? this.textContent.match(/🔽|🔼/)[0] : "";
       if (icon) {
-        // Toggle between down and up arrows
-        icon.textContent = icon.textContent === "🔽" ? "🔼" : "🔽";
+        this.innerHTML = this.innerHTML.replace(icon, icon === "🔽" ? "🔼" : "🔽");
       }
     });
   });
 });
+</script>
