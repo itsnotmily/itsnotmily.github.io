@@ -1,14 +1,15 @@
 const axios = require('axios');
 const fs = require('fs');
 
-// Load the last check timestamp from a file (or set it to a default value if it's not available)
+// Path to the timestamp file
 const lastCheckFile = 'last_check_timestamp.json';
 
-// Retrieve the last check timestamp (in milliseconds)
+// Load the last check timestamp from the file (or set it to 0 if the file doesn't exist)
 let lastCheckTimestamp = 0;
 if (fs.existsSync(lastCheckFile)) {
   const data = fs.readFileSync(lastCheckFile);
   lastCheckTimestamp = JSON.parse(data).timestamp;
+  console.log('Last check timestamp:', lastCheckTimestamp);
 } else {
   console.log('No previous check timestamp found, setting to 0.');
 }
@@ -29,7 +30,6 @@ axios.get(historyEndpoint, {
 })
   .then(response => {
     const sessions = response.data;
-
     let newItems = [];
 
     // Loop through each item in the watch history
@@ -51,8 +51,11 @@ axios.get(historyEndpoint, {
 
       // Update the last check timestamp to the current time
       const currentTimestamp = Date.now();
+      console.log('Writing new timestamp:', currentTimestamp);
+
+      // Write the updated timestamp to the file
       fs.writeFileSync(lastCheckFile, JSON.stringify({ timestamp: currentTimestamp }));
-      console.log('Updated last check timestamp:', currentTimestamp);
+      console.log('Timestamp written to file.');
     } else {
       console.log('No new items found since last check.');
     }
