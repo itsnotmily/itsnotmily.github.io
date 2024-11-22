@@ -1,33 +1,41 @@
-name: Plex Watch Notification
+name: Plex Watch Check
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # Runs every 10 minutes (adjust the schedule as needed)
-  workflow_dispatch:  # Allows manual trigger as well
+    - cron: '0 * * * *'  # Runs every hour
 
 jobs:
-  check-plex:
+  check-plex-watch:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          # Ensure that GitHub Actions has write permissions to the repository
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
-          node-version: '14'  # Choose the version of Node.js you need
+          node-version: '14'
 
       - name: Install dependencies
-        run: |
-          npm install axios
+        run: npm install
 
-      - name: Run Plex Watch Check Script
+      - name: Run Plex Watch Script
+        run: node js/plex-watch-script.js
         env:
-          PLEX_TOKEN: ${{ secrets.PLEX_TOKEN }}  # Reference the Plex token secret
-          PLEX_SERVER_URL: ${{ secrets.PLEX_SERVER_URL }}  # Reference the Plex server URL secret
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}  # Reference the Discord webhook URL secret
-        run: |
-          node js/plex-watch-script.js  # Make sure plex-watch-script.js is in your repo
+          PLEX_TOKEN: ${{ secrets.PLEX_TOKEN }}
+          PLEX_SERVER_URL: ${{ secrets.PLEX_SERVER_URL }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
 
-      - name: Cleanup
-        run: npm cache clean --force
+      - name: Commit changes to last_watched.json
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add last_watched.json
+          git commit -m "Update last watched item"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub token for commit permissions
