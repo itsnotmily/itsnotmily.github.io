@@ -1,0 +1,29 @@
+name: Plex Watch History Check
+
+# Run the workflow on a schedule
+on:
+  schedule:
+    # This will trigger the workflow every hour (at the top of every hour)
+    - cron: '0 * * * *'  # Run at the top of every hour
+
+jobs:
+  check-plex-history:
+    runs-on: ubuntu-latest  # Use Ubuntu as the environment
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2  # This checks out your code from the repo
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2  # Set up Node.js environment
+        with:
+          node-version: '16'  # Specify the version of Node.js you want to use
+
+      - name: Install dependencies
+        run: npm install  # Install any dependencies you may have in package.json (if any)
+
+      - name: Run Plex Watch History Script
+        env:
+          PLEX_TOKEN: ${{ secrets.PLEX_TOKEN }}  # Get the Plex token from GitHub secrets
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}  # Get Discord webhook URL from GitHub secrets
+        run: node plex_check.js  # Replace `plex_check.js` with your actual script file name
