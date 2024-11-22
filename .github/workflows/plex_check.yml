@@ -20,7 +20,8 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install  # This will install all dependencies listed in package.json
 
       - name: Run Plex Watch Script
         run: node js/plex-watch-script.js
