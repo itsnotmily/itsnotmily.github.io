@@ -1,0 +1,33 @@
+name: Plex Watch Notification
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # Runs every 10 minutes (adjust the schedule as needed)
+  workflow_dispatch:  # Allows manual trigger as well
+
+jobs:
+  check-plex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'  # Choose the version of Node.js you need
+
+      - name: Install dependencies
+        run: |
+          npm install axios
+
+      - name: Run Plex Watch Check Script
+        env:
+          PLEX_TOKEN: ${{ secrets.PLEX_TOKEN }}  # Reference the Plex token secret
+          PLEX_SERVER_URL: ${{ secrets.PLEX_SERVER_URL }}  # Reference the Plex server URL secret
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}  # Reference the Discord webhook URL secret
+        run: |
+          node plex-watch-script.js  # Make sure plex-watch-script.js is in your repo
+
+      - name: Cleanup
+        run: npm cache clean --force
