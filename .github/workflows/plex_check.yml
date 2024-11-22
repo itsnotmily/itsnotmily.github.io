@@ -1,10 +1,10 @@
 const axios = require('axios');
 
 // Replace with your actual Plex token
-const plexToken = 'your-plex-token';
+const plexToken = process.env.PLEX_TOKEN;
 
 // Discord Webhook URL
-const discordWebhookUrl = 'https://discord.com/api/webhooks/your-webhook-url';
+const discordWebhookUrl = 'https://discord.com/api/webhooks/1309541342518575135/SEKAW6261A4w787tvSoDNf19TAvEdRYBIUHevilyOPx0eP0KngGvyCA-zSD3g18EHKlB';
 
 // Plex API endpoint to fetch the current sessions (watch history)
 const plexApiUrl = 'https://plex.tv/api/v2/';
