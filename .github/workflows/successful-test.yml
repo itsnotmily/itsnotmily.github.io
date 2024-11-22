@@ -29,4 +29,4 @@ jobs:
       - name: Send Discord Test Notification
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}  # Store your webhook URL as a GitHub Secret
-        run: node sendDiscordTest.js
+        run: node js/sendDiscordTest.js
