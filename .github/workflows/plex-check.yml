@@ -26,4 +26,4 @@ jobs:
         env:
           PLEX_TOKEN: ${{ secrets.PLEX_TOKEN }}  # Get the Plex token from GitHub secrets
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}  # Get Discord webhook URL from GitHub secrets
-        run: node plex_check.js  # Replace `plex_check.js` with your actual script file name
+        run: node js/plex_check.js  # Replace `plex_check.js` with your actual script file name
