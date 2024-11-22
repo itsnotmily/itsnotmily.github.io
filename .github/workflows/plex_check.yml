@@ -1,0 +1,30 @@
+name: Plex Check and Notification
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Run every hour (adjust cron as needed)
+  workflow_dispatch:  # Allows you to manually trigger the workflow
+
+jobs:
+  plex_notification:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Specify the Node.js version you want to use
+
+      - name: Install dependencies
+        run: |
+          npm install axios
+
+      - name: Run Plex check script
+        run: |
+          node plex_to_discord.js
+        env:
+          PLEX_TOKEN: ${{ secrets.PLEX_TOKEN }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
