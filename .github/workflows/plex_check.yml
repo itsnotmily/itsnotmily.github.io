@@ -32,7 +32,7 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add last_watched.json
+          git add last_watched.json  # Only add the specific file you want to commit
           git commit -m "Update last watched item"
           git push
         env:
