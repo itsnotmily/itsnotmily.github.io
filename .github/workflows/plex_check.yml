@@ -1,8 +1,7 @@
 name: Plex Watch Check
 
 on:
-  schedule:
-    - cron: '0 * * * *'  # Runs every hour
+  workflow_dispatch:  # Manual trigger for the workflow
 
 jobs:
   check-plex-watch:
