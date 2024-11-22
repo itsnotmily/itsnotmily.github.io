@@ -2,7 +2,7 @@ const axios = require('axios');
 const fs = require('fs');
 
 // Load the last check timestamp from a file (or set it to a default value if it's not available)
-const lastCheckFile = './last_check_timestamp.json';
+const lastCheckFile = 'last_check_timestamp.json';
 
 // Retrieve the last check timestamp (in milliseconds)
 let lastCheckTimestamp = 0;
