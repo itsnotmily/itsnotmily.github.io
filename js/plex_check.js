@@ -1,29 +1,36 @@
 const axios = require('axios');
 const fs = require('fs');
 
-// Path to the timestamp file
-const lastCheckFile = 'last_check_timestamp.json';
-
-// Initialize the last check timestamp
-let lastCheckTimestamp = 0;
-
-// Load the last check timestamp from the file, if it exists
-if (fs.existsSync(lastCheckFile)) {
-  const data = fs.readFileSync(lastCheckFile);
-  lastCheckTimestamp = JSON.parse(data).timestamp;
-  console.log('Last check timestamp loaded:', lastCheckTimestamp);
-} else {
-  console.log('No previous check timestamp found. Starting fresh.');
-}
-
-// Replace with your actual Plex token and Discord webhook URL
+// Replace with your Plex token
 const plexToken = process.env.PLEX_TOKEN;
+
+// Discord Webhook URL
 const discordWebhookUrl = process.env.DISCORD_WEBHOOK_URL;
 
-// Plex API endpoint to fetch watch history
-const historyEndpoint = 'https://plex.tv/api/v2/history/all';
+// Path to JSON file storing the last check timestamp
+const lastCheckFile = './last_time_checked.json';
 
-// Send request to get the watch history
+// Function to load the last check timestamp
+function loadLastCheckTimestamp() {
+  if (fs.existsSync(lastCheckFile)) {
+    const data = fs.readFileSync(lastCheckFile, 'utf8');
+    return JSON.parse(data).lastCheck || 0;
+  }
+  console.log('No previous check timestamp found. Starting fresh.');
+  return 0;
+}
+
+// Function to save the last check timestamp
+function saveLastCheckTimestamp(timestamp) {
+  fs.writeFileSync(lastCheckFile, JSON.stringify({ lastCheck: timestamp }));
+}
+
+const lastCheckTimestamp = loadLastCheckTimestamp();
+
+// API endpoint to fetch history
+const historyEndpoint = 'https://plex.tv/api/v2/user/history';
+
+// Fetch the watch history
 axios
   .get(historyEndpoint, {
     headers: {
@@ -34,56 +41,34 @@ axios
     const historyItems = response.data;
 
     let newItems = [];
-
-    // Loop through each item in the history
     historyItems.forEach((item) => {
       const { title, viewedAt } = item;
-
-      // Check if the media was viewed after the last check timestamp
       if (new Date(viewedAt).getTime() > lastCheckTimestamp) {
         newItems.push(title);
       }
     });
 
-    // If there are new items, send a Discord notification for each
     if (newItems.length > 0) {
-      newItems.forEach((item) => {
-        sendDiscordNotification(item);
-      });
-
-      // Update the last check timestamp to the most recent `viewedAt`
+      newItems.forEach((item) => sendDiscordNotification(item));
       const mostRecentViewedAt = Math.max(
         ...historyItems.map((item) => new Date(item.viewedAt).getTime())
       );
-      console.log('Setting new timestamp:', mostRecentViewedAt);
-
-      // Write the updated timestamp to the JSON file
-      fs.writeFileSync(
-        lastCheckFile,
-        JSON.stringify({ timestamp: mostRecentViewedAt })
-      );
-      console.log('Updated last check timestamp file.');
+      saveLastCheckTimestamp(mostRecentViewedAt);
     } else {
       console.log('No new items found since last check.');
     }
   })
   .catch((error) => {
-    console.error('Error fetching Plex watch history:', error);
+    console.error('Error fetching Plex watch history:', error.response?.status, error.response?.statusText);
   });
 
-// Function to send a Discord notification for a new history item
+// Function to send a Discord notification
 function sendDiscordNotification(mediaTitle) {
   const payload = {
     content: `🎉 **New Watch History Item**: ${mediaTitle}`,
   };
 
-  // Send a POST request to Discord's Webhook URL
-  axios
-    .post(discordWebhookUrl, payload)
-    .then(() => {
-      console.log(`Sent Discord notification for "${mediaTitle}"`);
-    })
-    .catch((error) => {
-      console.error('Error sending Discord notification:', error);
-    });
+  axios.post(discordWebhookUrl, payload).catch((error) => {
+    console.error('Error sending Discord notification:', error);
+  });
 }
