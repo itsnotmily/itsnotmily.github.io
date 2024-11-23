@@ -158,7 +158,7 @@
     Coatl + 1 Path 🔽
   </a>
   <div id="collapseCoatlPlusOne" class="collapse">
-    <div class="card card-body bg-dark">
+    <div class="card card-body bg-dark text-center">
       <ul class="list-unstyled w-100 mb-4">
         <li class="bg-secondary p-2 mb-2">Coatl (Activate): Discard itself. Add Mirror Swordknight.</li>
         <li class="bg-light p-2 mb-2">Normal Summon: Mirror Swordknight.</li>
@@ -212,6 +212,24 @@
 
 </div>
 <!--end of paths-->
+<script>document.addEventListener("DOMContentLoaded", function() {
+  // Get all list items
+  const items = document.querySelectorAll("ul li"); 
+
+  // Add click event listener to each list item
+  items.forEach(function(item) {
+      item.addEventListener("click", function() {
+          // Remove 'clicked' class from all items
+          items.forEach(function(i) {
+              i.classList.remove("clicked");
+          });
+          
+          // Add 'clicked' class to the clicked item
+          item.classList.add("clicked");
+      });
+  });
+});</script>
+
 
 
 <!-- Bootstrap Bundle with Popper.js for Bootstrap 5 functionality -->
