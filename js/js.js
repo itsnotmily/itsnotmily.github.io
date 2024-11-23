@@ -176,8 +176,7 @@ function storieschange() {
   }
 }
 
-
-
+// down arrow becomes up and vv
 document.addEventListener("DOMContentLoaded", () => {
   const collapsibleLinks = document.querySelectorAll("[data-bs-toggle='collapse']");
 
@@ -191,3 +190,23 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+// list items click turn green funtion
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Get all list items
+  const items = document.querySelectorAll("ul li"); 
+
+  // Add click event listener to each list item
+  items.forEach(function(item) {
+      item.addEventListener("click", function() {
+          // Remove 'clicked' class from all items
+          items.forEach(function(i) {
+              i.classList.remove("clicked");
+          });
+          
+          // Add 'clicked' class to the clicked item
+          item.classList.add("clicked");
+      });
+  });
+});
