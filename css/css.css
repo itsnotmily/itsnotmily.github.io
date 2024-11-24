@@ -70,3 +70,14 @@ color: darkorange;
   background-color: green !important; /* Makes the clicked item green */
   color: yellow !important; /* Optional: makes the text white for contrast */
 }
+
+
+.bg-light a {
+  color: #000 !important; /* Dark text for links on light backgrounds */
+  font-weight: bold;
+}
+
+.bg-secondary a {
+  color: #000 !important; /* Dark text for links on light backgrounds */
+  font-weight: bold;
+}
