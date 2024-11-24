@@ -68,14 +68,5 @@ color: darkorange;
 /* Highlight clicked list item */
 .clicked {
   background-color: green !important; /* Makes the clicked item green */
-  color: white; /* Optional: makes the text white for contrast */
-}
-
-/* Optional: changes background for odd/even items for better visual effect */
-.bg-secondary {
-  background-color: #6c757d; /* Example color */
-}
-
-.bg-light {
-  background-color: #f8f9fa; /* Example color */
+  color: orange; /* Optional: makes the text white for contrast */
 }
