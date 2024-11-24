@@ -64,3 +64,18 @@ color: darkorange;
   line-height: 1; /* Increase line height for better text spacing */
   font-family: "Arial", sans-serif; /* Use a clean sans-serif font for better readability */
 }
+
+/* Highlight clicked list item */
+.clicked {
+  background-color: green !important; /* Makes the clicked item green */
+  color: white; /* Optional: makes the text white for contrast */
+}
+
+/* Optional: changes background for odd/even items for better visual effect */
+.bg-secondary {
+  background-color: #6c757d; /* Example color */
+}
+
+.bg-light {
+  background-color: #f8f9fa; /* Example color */
+}
