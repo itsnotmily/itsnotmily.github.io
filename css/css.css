@@ -73,11 +73,13 @@ color: darkorange;
 
 
 .bg-light a {
-  color: #000 !important; /* Dark text for links on light backgrounds */
+  color: blue !important; /* Dark text for links on light backgrounds */
   font-weight: bold;
+  text-decoration: none;
 }
 
 .bg-secondary a {
-  color: #000 !important; /* Dark text for links on light backgrounds */
+  color: blue !important; /* Dark text for links on light backgrounds */
   font-weight: bold;
+  text-decoration: none;
 }
