@@ -68,5 +68,5 @@ color: darkorange;
 /* Highlight clicked list item */
 .clicked {
   background-color: green !important; /* Makes the clicked item green */
-  color: orange; /* Optional: makes the text white for contrast */
+  color: yellow !important; /* Optional: makes the text white for contrast */
 }
