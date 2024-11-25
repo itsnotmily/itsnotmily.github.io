@@ -85,6 +85,6 @@ color: darkorange;
 }
 
 .tooltip-img {
-  width: 50%; /* Adjust the width as necessary */
+  width: 100%; /* Adjust the width as necessary */
   height: auto; /* Keep aspect ratio */
 }
