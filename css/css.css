@@ -85,13 +85,15 @@ li.clicked {
   color: yellow !important; /* Optional: makes the text white for contrast */
 }
 
-li {
-  transition: background-color 0.5s ease, color 0.5s ease;
+li.p-2 {
+  transition: background-color 0.5s ease, color 0.5s ease, font-size 0.5s ease;
 }
 /* Define the hover state */
-li:hover {
+li.p-2:hover {
   background-color: green !important; /* Or any color you prefer */
-  color: yellow !important;
+  color: orange !important;
+  font-size: larger;
+  font-weight: bold !important;
 }
 
 
