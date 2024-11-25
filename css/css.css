@@ -4,6 +4,21 @@ body {
   background-color: #20222599 !important;
 }
 
+/*new gray class with white text */
+:root {
+  --bs-secondary-darker: #484e54; /* Darker Shade */
+}
+
+.bg-secondary-darker {
+  background-color: var(--bs-secondary-darker);
+}
+
+.secondary-darker {
+  color: #f8f9fa ;
+}
+.secondary {
+  color: #f8f9fa ;
+}
 
 /*keep button green after pressing */
 
@@ -81,7 +96,9 @@ li:hover {
 }
 
 
-.bg-light a {
+
+/*make links blue with shadow */
+.bg-secondary-darker a {
   color: rgb(84, 212, 255)   !important; /* Dark text for links on light backgrounds */
   font-weight: bold;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 1); /* Horizontal, Vertical, Blur radius, Color */
@@ -95,7 +112,10 @@ li:hover {
   text-decoration: none;
 }
 
+
+/*tooltip image size scale */
 .tooltip-img {
   width: 100%; /* Adjust the width as necessary */
   height: auto; /* Keep aspect ratio */
 }
+
