@@ -83,3 +83,8 @@ color: darkorange;
   font-weight: bold;
   text-decoration: none;
 }
+
+.tooltip-img {
+  width: 50%; /* Adjust the width as necessary */
+  height: auto; /* Keep aspect ratio */
+}
