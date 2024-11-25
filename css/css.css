@@ -11,12 +11,11 @@ body {
 
 .bg-secondary-darker {
   background-color: var(--bs-secondary-darker);
-}
-
-.secondary-darker {
   color: #f8f9fa ;
 }
-.secondary {
+
+
+.bg-secondary {
   color: #f8f9fa ;
 }
 
