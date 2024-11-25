@@ -213,11 +213,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Initialize all tooltips on the page
+  // Initialize tooltips with HTML content enabled
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl, {
-      html: true // Allow HTML content in the tooltip
+      html: true // This allows HTML content, such as <img> tags, to be rendered in the tooltip
     });
   });
 });
