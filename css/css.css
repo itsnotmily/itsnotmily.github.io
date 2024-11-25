@@ -100,7 +100,7 @@ li:hover {
 .bg-secondary-darker a {
   color: rgb(84, 212, 255)   !important; /* Dark text for links on light backgrounds */
   font-weight: bold;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1); /* Horizontal, Vertical, Blur radius, Color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Horizontal, Vertical, Blur radius, Color */
   text-decoration: none;
 }
 
