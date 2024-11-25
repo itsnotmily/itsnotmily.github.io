@@ -95,6 +95,10 @@ li.p-2:hover {
 }
 
 
+.enlarge:hover{
+  transition: transform 0.5s ease, box-shadow 0.5s ease; 
+  transform: scale(1.6); /*160%*/
+}
 
 /*make links blue with shadow */
 .bg-secondary-darker a {
