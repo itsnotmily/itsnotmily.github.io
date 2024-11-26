@@ -195,21 +195,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", function() {
   // Get all list items
-  const items = document.querySelectorAll("ul li"); 
+  const items = document.querySelectorAll("ul li");
 
   // Add click event listener to each list item
   items.forEach(function(item) {
-      item.addEventListener("click", function() {
-          // Remove 'clicked' class from all items
-          items.forEach(function(i) {
-              i.classList.remove("clicked");
-          });
-          
-          // Add 'clicked' class to the clicked item
-          item.classList.add("clicked");
-      });
+    item.addEventListener("click", function() {
+      // Check if the clicked item already has the 'clicked' class
+      if (item.classList.contains("clicked")) {
+        // If it does, remove the 'clicked' class
+        item.classList.remove("clicked");
+      } else {
+        // If it doesn't, first remove 'clicked' class from all items
+        items.forEach(function(i) {
+          i.classList.remove("clicked");
+        });
+        
+        // Then add the 'clicked' class to the clicked item
+        item.classList.add("clicked");
+      }
+    });
   });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
