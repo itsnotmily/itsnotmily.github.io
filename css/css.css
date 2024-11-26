@@ -81,7 +81,7 @@ color: darkorange;
 
 /* Highlight clicked list item */
 li.clicked {
-  background-color: green !important; /* Makes the clicked item green */
+  background-color: rgb(11, 94, 0) !important; /* Makes the clicked item green */
   color: orange !important;
 }
 
