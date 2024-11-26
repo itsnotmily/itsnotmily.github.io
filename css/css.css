@@ -79,8 +79,8 @@ color: darkorange;
   font-family: "Arial", sans-serif; /* Use a clean sans-serif font for better readability */
 }
 
-/* Highlight clicked list item */
-li.non-navbar.clicked {
+/* This will apply to clicked list items, but not in the navbar */
+li.p-2.clicked {
   background-color: rgb(11, 94, 0) !important; /* Makes the clicked item green */
   color: orange !important;
 }
