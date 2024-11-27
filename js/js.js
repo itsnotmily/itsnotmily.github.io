@@ -238,13 +238,33 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
-document.addEventListener('DOMContentLoaded', function () {
   // Initialize tooltips with HTML content enabled
+document.addEventListener('DOMContentLoaded', function () {
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl, {
       html: true // This allows HTML content, such as <img> tags, to be rendered in the tooltip
     });
   });
+});
+
+
+//make collapses scroll into view
+document.addEventListener('shown.bs.collapse', function (event) {
+  const target = event.target; // The collapsible element
+
+  // Get the trigger element that controls this collapsible
+  const trigger = document.querySelector(`[href="#${target.id}"]`) || 
+                 document.querySelector(`[data-bs-target="#${target.id}"]`);
+  
+  if (trigger) {
+    // Calculate the offset for smooth scrolling
+    const scrollOffset = target.offsetTop - 250; // Adjust the offset as needed
+    
+    // Smooth scrolling to the calculated position
+    window.scrollTo({
+      top: scrollOffset,
+      behavior: 'smooth'
+    });
+  }
 });
