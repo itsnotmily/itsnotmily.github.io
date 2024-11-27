@@ -164,6 +164,26 @@ function redditTopsubs() {
   }
 }
 
+
+function eightBall() {
+	
+  var eighBt = document.getElementById("balltext");
+  
+      var answers = ['Maybe.','Certainly not.','I hope so.','Not in your wildest dreams.','There is a good chance.','Quite likely.','I think so.','I hope not.', 'I hope so.', 'Never!','Fuhgeddaboudit.','Ahaha! Really?!?','Pfft.','Sorry, bucko.','Hell, yes.','Hell to the no.','The future is bleak.','The future is uncertain.','I would rather not say.','Who cares!','Possibly.','Never,ever ever.','There is a small chance.', 'Yes!'];
+      var answerz = answers[Math.floor(Math.random() * answers.length)];
+      if (eighBt.value == "" || eighBt.value == " " || eighBt.value == null)
+      {
+          document.getElementById("ball").innerHTML = "At least ask something! ";
+      document.getElementById("ballQuery").innerHTML = "";
+  
+      }
+      else{
+          document.getElementById("ball").innerHTML = answerz;
+      document.getElementById("ballQuery").innerHTML = "You asked:" + "<br>" + eighBt.value;
+          eighBt.value = "";
+  
+      }
+  }
 // storieschange function remains the same
 
 function storieschange() {
