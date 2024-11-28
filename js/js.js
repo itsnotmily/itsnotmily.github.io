@@ -268,3 +268,24 @@ document.addEventListener('shown.bs.collapse', function (event) {
     });
   }
 });
+
+
+// Show or hide "Back to Top" link based on scroll position
+
+const backToTopNav = document.getElementById('backToTopNav');
+window.addEventListener('scroll', () => {
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollPosition = window.scrollY / scrollHeight;
+
+  // Use visibility to prevent layout changes
+  if (scrollPosition > 0.4) {
+    backToTopNav.style.visibility = 'visible';
+  } else {
+    backToTopNav.style.visibility = 'hidden';
+  }
+});
+
+// Scroll to top smoothly
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
