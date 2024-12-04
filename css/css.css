@@ -105,7 +105,7 @@ li.p-3:hover {
   }
   
   .enlarge:hover {
-    transform: scale(1.6); /* Hover zoom effect */
+    transform: scale(1.4); /* Hover zoom effect */
   }
 
 /*make links blue with shadow */
