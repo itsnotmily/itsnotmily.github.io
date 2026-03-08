@@ -46,7 +46,7 @@
 <div class="container">
   <div class="card text-white text-center bg-dark mb-3 position-relative" style="min-height:220px;">
     <div class="card-header text-dark bg-warning">
-      <h3>❓ Question Game</h3>
+      <h3>Zoey Quiz</h3>
     </div>
     <div class="card-body" id="quizBody">
 
@@ -75,9 +75,9 @@
 document.addEventListener("DOMContentLoaded", function(){
 
   const questions = [
-    { text: "Is Mily cool?", correct: true, info: "Correct. Mily is cool." },
-    { text: "Is Mily awesome?", correct: true, info: "Correct again." },
-    { text: "Is Mily the best?", correct: true, info: "Obviously yes." }
+    { text: "Is Zoey the coolest person?", correct: true, info: "Correct. Zoey is the coolest person, she makes everything so much more fun just by being there." },
+    { text: "Is Zoey awesome?", correct: true, info: "Correct again." },
+    { text: "Is Zoey the best?", correct: true, info: "Obviously yes." }
   ];
 
   let current = 0;
@@ -127,7 +127,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
   // runaway No button inside quiz card
   noBtn.addEventListener("mouseover", () => {
-    const rect = quizBody.getBoundingClientRect();
     const x = Math.random() * (rect.width - noBtn.offsetWidth);
     const y = Math.random() * (rect.height - noBtn.offsetHeight);
     noBtn.style.left = x + "px";
