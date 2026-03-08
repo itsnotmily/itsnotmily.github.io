@@ -89,13 +89,17 @@ document.addEventListener("DOMContentLoaded", function(){
   const noBtn = document.getElementById("noBtn");
   const quizBody = document.getElementById("quizBody");
 
+  // store the default No button position
+  const defaultNoTop = noBtn.offsetTop;
+  const defaultNoLeft = noBtn.offsetLeft;
+
   function showQuestion() {
     questionEl.innerText = questions[current].text;
     messageEl.innerText = "";
     continueBtn.style.display = "none";
-    // reset No button inside card
-    noBtn.style.top = "0px";
-    noBtn.style.left = "0px";
+    // reset No button to default position
+    noBtn.style.top = defaultNoTop + "px";
+    noBtn.style.left = defaultNoLeft + "px";
   }
 
   function answer(choice){
