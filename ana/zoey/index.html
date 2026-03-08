@@ -135,10 +135,11 @@ document.addEventListener("DOMContentLoaded", function(){
   yesBtn.addEventListener("click", () => answer(true));
   continueBtn.addEventListener("click", nextQuestion);
 
-  // No button runs freely across the window
+  // runaway No button inside quiz card
   noBtn.addEventListener("mouseover", () => {
-    const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
-    const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+    const rect = quizBody.getBoundingClientRect();
+    const x = Math.random() * (rect.width - noBtn.offsetWidth);
+    const y = Math.random() * (rect.height - noBtn.offsetHeight);
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
   });
