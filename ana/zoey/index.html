@@ -76,8 +76,19 @@
 document.addEventListener("DOMContentLoaded", function(){
 
   const questions = [
-    { text: "Is Zoey the coolest person?", correct: true, info: "Correct. Zoey is the coolest person, she makes everything so much more fun just by being there." },
-    { text: "Is Zoey awesome?", correct: true, info: "Correct again." },
+    { text: "Is Zoey the coolest person?", correct: true, info: "Correct. Zoey is the coolest person, she makes everything so much more fun just by being there."},
+    { text: "Is Zoey a great friend?", correct: true, info: "Correct again. Zoey is a wonderful bestie. She makes me realise how true friends should be." },
+    { text: "Is Zoey an inspiration?", correct: true, info: "Correct again. Zoey is a wonderful friend. She always makes me feel better when I'm sad." },
+    { text: "Is Zoey a great friend?", correct: true, info: "Correct again. Zoey is a wonderful friend. She always makes me feel better when I'm sad." },
+    { text: "Is Zoey a great friend?", correct: true, info: "Correct again. Zoey is a wonderful friend. She always makes me feel better when I'm sad." },
+    { text: "Is Zoey a great friend?", correct: true, info: "Correct again. Zoey is a wonderful friend. She always makes me feel better when I'm sad." },
+    { text: "Is Zoey a great friend?", correct: true, info: "Correct again. Zoey is a wonderful friend. She always makes me feel better when I'm sad." },
+    { text: "Is Zoey a great friend?", correct: true, info: "Correct again. Zoey is a wonderful friend. She always makes me feel better when I'm sad." },
+    { text: "Is Zoey a great friend?", correct: true, info: "Correct again. Zoey is a wonderful friend. She always makes me feel better when I'm sad." },
+    { text: "Is Zoey a great friend?", correct: true, info: "Correct again. Zoey is a wonderful friend. She always makes me feel better when I'm sad." },
+    { text: "Is Zoey a great friend?", correct: true, info: "Correct again. Zoey is a wonderful friend. She always makes me feel better when I'm sad." },
+    { text: "Is Zoey a great friend?", correct: true, info: "Correct again. Zoey is a wonderful friend. She always makes me feel better when I'm sad." },
+    { text: "Is Zoey a great friend?", correct: true, info: "Correct again. Zoey is a wonderful friend. She always makes me feel better when I'm sad." },
     { text: "Is Zoey the best?", correct: true, info: "Obviously yes." }
   ];
 
@@ -88,9 +99,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const continueBtn = document.getElementById("continueBtn");
   const yesBtn = document.getElementById("yesBtn");
   const noBtn = document.getElementById("noBtn");
-  const quizBody = document.getElementById("quizBody");
 
-  // store the default No button position
   const defaultNoTop = noBtn.offsetTop;
   const defaultNoLeft = noBtn.offsetLeft;
 
@@ -117,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function(){
     if(current < questions.length){
       showQuestion();
     } else {
-      questionEl.innerText = "You finished!";
+      questionEl.innerText = "Now you know how amazing Zoey is!";
       messageEl.innerText = "";
       continueBtn.style.display = "none";
     }
@@ -126,10 +135,10 @@ document.addEventListener("DOMContentLoaded", function(){
   yesBtn.addEventListener("click", () => answer(true));
   continueBtn.addEventListener("click", nextQuestion);
 
-  // runaway No button inside quiz card
+  // No button runs freely across the window
   noBtn.addEventListener("mouseover", () => {
-    const x = Math.random() * (rect.width - noBtn.offsetWidth);
-    const y = Math.random() * (rect.height - noBtn.offsetHeight);
+    const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+    const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
   });
