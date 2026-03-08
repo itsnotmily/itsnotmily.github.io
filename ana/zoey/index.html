@@ -78,9 +78,9 @@ document.addEventListener("DOMContentLoaded", function(){
   const questions = [
     { text: "Is Zoey the coolest person?", correct: true, info: "Correct. Zoey is the coolest person, she makes everything so much more fun just by being there."},
     { text: "Is Zoey a great friend?", correct: true, info: "Correct again. Zoey is a wonderful bestie. She makes me realise how true friends should be." },
-    { text: "Is Zoey an inspiration?", correct: true, info: "Correct again. Zoey is a wonderful friend. She always makes me feel better when I'm sad." },
-    { text: "Is Zoey a great friend?", correct: true, info: "Correct again. Zoey is a wonderful friend. She always makes me feel better when I'm sad." },
-    { text: "Is Zoey a great friend?", correct: true, info: "Correct again. Zoey is a wonderful friend. She always makes me feel better when I'm sad." },
+    { text: "Does Zoey show inspiration?", correct: true, info: "Zoey shows me a lot of inspiration, on how to stay strong, advises me to speak up and teaches me to communicate.." },
+    { text: "Is Zoey always there for her friends?", correct: true, info: "Zoey always puts everyone else before her, even if this can be a bad thing at times, it's still something to be proud of and she does it without hesitation." },
+    { text: "Is Zoey creative?", correct: true, info: "Zoey has so many creative moments, when she makes jokes out of nothing, when she sings her songs, ." },
     { text: "Is Zoey a great friend?", correct: true, info: "Correct again. Zoey is a wonderful friend. She always makes me feel better when I'm sad." },
     { text: "Is Zoey a great friend?", correct: true, info: "Correct again. Zoey is a wonderful friend. She always makes me feel better when I'm sad." },
     { text: "Is Zoey a great friend?", correct: true, info: "Correct again. Zoey is a wonderful friend. She always makes me feel better when I'm sad." },
@@ -108,8 +108,7 @@ document.addEventListener("DOMContentLoaded", function(){
     messageEl.innerText = "";
     continueBtn.style.display = "none";
     // reset No button to default position
-    noBtn.style.top = defaultNoTop + "px";
-    noBtn.style.left = defaultNoLeft + "px";
+
   }
 
   function answer(choice){
