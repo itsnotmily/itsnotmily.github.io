@@ -54,17 +54,19 @@ document.querySelectorAll("card-link").forEach(el => {
 */
 
 document.querySelectorAll("li").forEach(li => {
-  let html = li.innerHTML;
+    let html = li.innerHTML;
 
-  for (const [cardName, cardId] of Object.entries(ygocards)) {
-    const regex = new RegExp(`\\b${cardName}\\b`, "g");
+    for (const [cardName, cardId] of Object.entries(ygocards)) {
+        const regex = new RegExp(`\\b${cardName}\\b`, "g");
+        const imageUrl = `https://images.ygoprodeck.com/images/cards/${cardId}.jpg`;
 
-    html = html.replace(
-      regex,
-      `<a href="https://images.ygoprodeck.com/images/cards/${cardId}.jpg"
-          target="_blank">${cardName}</a>`
-    );
-  }
+        html = html.replace(
+            regex,
+            `<a href="${imageUrl}"
+                target="_blank"
+                title="${imageUrl}">${cardName}</a>`
+        );
+    }
 
-  li.innerHTML = html;
+    li.innerHTML = html;
 });
