@@ -3,7 +3,7 @@ const ygocards = {
   "Shaddoll Squamata": "30328508",
   "Void Unleashing": "61345801",
   "Lev Shaddoll Fusion": "34950192",
-  "El Shaddoll Schism": "21011044",
+  "Shaddoll Schism": "21011044",
   "Tohushaddoll Grysta": "95072744",
   "El Shaddoll Meshachrer": "32467459",
   "El Shaddoll Fusion": "6417578",
