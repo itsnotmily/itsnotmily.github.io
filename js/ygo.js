@@ -1,20 +1,21 @@
 const ygocards = {
-  "Shaddoll Apkallone": "50907446",
-  "Shaddoll Squamata": "30328508",
-  "Void Unleashing": "61345801",
-  "Lev Shaddoll Fusion": "34950192",
-  "Shaddoll Schism": "21011044",
-  "Tohushaddoll Grysta": "95072744",
-  "El Shaddoll Meshachrer": "32467459",
-  "El Shaddoll Fusion": "6417578",
+  "Elder Entity N'tss": "80532587",
   "El Shaddoll Construct": "20366274",
-  "Shaddoll Hedgehog": "4939890",
-  "Reeshaddoll Wendi": "51023024",
-  "El Shaddoll Wendikurhu": "8852158",
-  "Naelshaddoll Ariel": "97518132",
+  "El Shaddoll Fusion": "6417578",
+  "El Shaddoll Meshachrer": "32467459",
   "El Shaddoll Shekhinaga": "74822425",
   "El Shaddoll Winda": "94977269",
-  "Elder Entity N'tss": "80532587"
+  "El Shaddoll Wendikurhu": "8852158",
+  "Infernoid Evil": "97051536",
+  "Lev Shaddoll Fusion": "34950192",
+  "Naelshaddoll Ariel": "97518132",
+  "Reeshaddoll Wendi": "51023024",
+  "Shaddoll Apkallone": "50907446",
+  "Shaddoll Hedgehog": "4939890",
+  "Shaddoll Schism": "21011044",
+  "Shaddoll Squamata": "30328508",
+  "Tohushaddoll Grysta": "95072744",
+  "Void Unleashing": "61345801"
 };
 
 document.querySelectorAll("card-link").forEach(el => {
