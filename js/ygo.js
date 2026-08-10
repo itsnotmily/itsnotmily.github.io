@@ -56,13 +56,15 @@ document.querySelectorAll("card-link").forEach(el => {
 document.querySelectorAll("li").forEach(li => {
     let html = li.innerHTML;
 
-    for (const [name, id] of Object.entries(ygocards)) {
+    const cards = Object.entries(ygocards)
+        .sort(([nameA], [nameB]) => nameB.length - nameA.length);
+
+    for (const [name, id] of cards) {
         const image = `https://images.ygoprodeck.com/images/cards/${id}.jpg`;
 
-        const regex = new RegExp(
-            `\\b${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`,
-            "g"
-        );
+        const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+        const regex = new RegExp(`\\b${escapedName}\\b`, "g");
 
         html = html.replace(
             regex,
@@ -77,7 +79,6 @@ document.querySelectorAll("li").forEach(li => {
     li.innerHTML = html;
 });
 
-// Initialize Bootstrap tooltips
 document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
     new bootstrap.Tooltip(el);
 });
