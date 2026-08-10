@@ -1,4 +1,5 @@
 const ygocards = {
+  //shaddoll
   "Elder Entity N'tss": "80532587",
   "El Shaddoll Construct": "20366274",
   "El Shaddoll Fusion": "6417578",
@@ -16,7 +17,18 @@ const ygocards = {
   "Shaddoll Schism": "21011044",
   "Shaddoll Squamata": "30328508",
   "Tohushaddoll Grysta": "95072744",
-  "Void Unleashing": "61345801"
+  "Void Unleashing": "61345801",
+  //dracotail
+  "Dracotail Arthalion": "33760966",
+  "Dracotail Faimena": "1498449",
+  "Dracotail Flame": "5431722",
+  "Dracotail Gulamel": "79755671",
+  "Dracotail Horn": "69932023",
+  "Dracotail Ketu": "6153210",
+  "Dracotail Lukias": "75003700",
+  "Dracotail Mululu": "7375867",
+  "Dracotail Rahu": "32548318",
+  "Dracotail Urgula": "70871153"
 };
 
 document.querySelectorAll("card-link").forEach(el => {
