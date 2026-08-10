@@ -31,7 +31,7 @@ const ygocards = {
   "Dracotail Urgula": "70871153"
 };
 
-/* first version with card link
+/* first version with card link wont be used but here for reference if needed
 document.querySelectorAll("card-link").forEach(el => {
   const name = el.textContent.trim();
   const id = ygocards[name];
@@ -53,6 +53,7 @@ document.querySelectorAll("card-link").forEach(el => {
 });
 */
 
+// Replace card names in text nodes with links to images
 document.querySelectorAll("li").forEach(li => {
 
     const walker = document.createTreeWalker(
