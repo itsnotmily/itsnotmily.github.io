@@ -13,7 +13,7 @@ const ygocards = {
   "El Shaddoll Wendikurhu": "8852158",
   "Naelshaddoll Ariel": "97518132",
   "El Shaddoll Shekhinaga": "74822425",
-  "El Shaddoll Winda": "000000",
+  "El Shaddoll Winda": "94977269",
   "Elder Entity N'tss": "80532587"
 };
 
