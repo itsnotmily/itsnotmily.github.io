@@ -56,17 +56,28 @@ document.querySelectorAll("card-link").forEach(el => {
 document.querySelectorAll("li").forEach(li => {
     let html = li.innerHTML;
 
-    for (const [cardName, cardId] of Object.entries(ygocards)) {
-        const regex = new RegExp(`\\b${cardName}\\b`, "g");
-        const imageUrl = `https://images.ygoprodeck.com/images/cards/${cardId}.jpg`;
+    for (const [name, id] of Object.entries(ygocards)) {
+        const image = `https://images.ygoprodeck.com/images/cards/${id}.jpg`;
+
+        const regex = new RegExp(
+            `\\b${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`,
+            "g"
+        );
 
         html = html.replace(
             regex,
-            `<a href="${imageUrl}"
+            `<a href="${image}"
                 target="_blank"
-                title="${imageUrl}">${cardName}</a>`
+                data-bs-toggle="tooltip"
+                data-bs-html="true"
+                title="<img src='${image}' alt='${name}' class='tooltip-img'>">${name}</a>`
         );
     }
 
     li.innerHTML = html;
+});
+
+// Initialize Bootstrap tooltips
+document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+    new bootstrap.Tooltip(el);
 });
