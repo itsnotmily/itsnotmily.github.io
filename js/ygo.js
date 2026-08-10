@@ -11,6 +11,7 @@ const ygocards = {
   "Naelshaddoll Ariel": "97518132",
   "Reeshaddoll Wendi": "51023024",
   "Shaddoll Apkallone": "50907446",
+  "Shaddoll Construst": "86938484",
   "Shaddoll Hedgehog": "4939890",
   "Shaddoll Schism": "21011044",
   "Shaddoll Squamata": "30328508",
