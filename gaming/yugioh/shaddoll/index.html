@@ -10,7 +10,8 @@
   <!-- Title -->
   <title>inm YGO - Shaddoll Deck</title>
   <!-- Bootstrap core CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="/css/css.css" rel="stylesheet">
   <!-- Favicon -->
   <link rel="shortcut icon" href="/media/fav/favicon.ico" type="image/x-icon">
@@ -19,539 +20,595 @@
 
 <body>
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="/index.html">
-      <img src="/media/logox.png" width="30" height="30" class="d-inline-block align-bottom" alt="">
-    </a>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="/index.html">
+        <img src="/media/logox.png" width="30" height="30" class="d-inline-block align-bottom" alt="">
+      </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ms-auto" id="navbarLinks">
-        <!-- Back to Top Link -->
-        <li class="nav-item">
-          <a class="nav-link" id="backToTopNav" href="#" onclick="scrollToTop()" style="visibility: hidden;">
-            Back to Top
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/projects/">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/gaming/">Gaming</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/gallery/">Gallery</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-<!-- Page Content -->
-
-
-
-<div class="container text-center">
-  <br>
-  <div class="card text-white bg-dark">
-    <div class="card-body">
-      <h1 class="card-title">Shaddoll Deck 🌑</h1>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item text-dark">
-        <strong>Main gameplan:</strong> Use Shaddoll monsters and Fusion Summoning to control the field while triggering powerful effects when Shaddoll cards are sent to the GY.
-      </li>
-      <li class="list-group-item text-white bg-dark">
-        <strong>Strengths:</strong> Strong Fusion plays, excellent resource recursion, disruptive flip effects, and powerful boss monsters such as El Shaddoll Construct and El Shaddoll Winda.
-      </li>
-      <li class="list-group-item text-dark">
-        <strong>Weaknesses:</strong> Can be vulnerable to GY hate, disruption at key points in the Fusion process, and decks that can consistently break established Shaddoll boards.
-      </li>
-      <li class="list-group-item text-white bg-dark">
-        <strong>Playstyle:</strong> Control-oriented and resource-focused, using Fusion Monsters and GY effects to generate advantage while disrupting the opponent's plays.
-      </li>
-      <li class="list-group-item text-dark">
-        Below are several dropdowns: the first provides the decklist, while the others showcase different Shaddoll combo lines, Fusion plays, and possible end boards.
-      </li>
-    </ul>
-  </div>
-</div>
-
-
-<!-- Paths -->
-
-<!-- this is the div for all the dropdowns-->
-<div class="container mt-4">
-
-<!-- Deck path -->
-  <div class="mb-4">
-    <a data-bs-toggle="collapse" href="#collapseDeck" role="button" aria-expanded="false" aria-controls="collapseDeck"
-      class="d-flex justify-content-between align-items-center d-grid gap-2 btn-info btn-lg collapsed text-decoration-none text-center fw-bold">
-      <div class="d-flex justify-content-center w-100">
-        <span>Decklist</span>
-      </div>
-      <span>🔽</span>
-    </a>
-
-    <div id="collapseDeck" class="collapse">
-      <div class="card card-body bg-dark text-center">
-        <!-- Add your deck image here -->
-        <a href="/media/Decks/shaddoll2026.jpg" target="_blank">
-          <img src="/media/Decks/shaddoll2026.jpg" alt="Shaddoll Deck" class="img-fluid my-3 enlarge"
-            style="max-width: 40%; height:auto; border-radius: 8px;">
-        </a>
-        <!-- Add a link to the decklist page -->
-        <p class="mt-3 text-white">
-          View the full decklist on
-          <a href="https://ygoprodeck.com/deck/shaddoll-2026-md-725597#/" target="_blank" class="text-info">
-            YGOPRODeck
-          </a>
-        </p>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto" id="navbarLinks">
+          <!-- Back to Top Link -->
+          <li class="nav-item">
+            <a class="nav-link" id="backToTopNav" href="#" onclick="scrollToTop()" style="visibility: hidden;">
+              Back to Top
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/yugioh/">Yu-Gi-Oh</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/gaming/">Gaming</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/gallery/">Gallery</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-  <!-- endDeck path -->
+  </nav>
 
-<!-- Lev Shaddoll Fusion combo -->
-<div class="mb-4">
-  <a data-bs-toggle="collapse" href="#collapseLevShaddollFusion" role="button" aria-expanded="false"
-    aria-controls="collapseLevShaddollFusion"
-    class="d-flex justify-content-between align-items-center d-grid gap-2 btn-warning btn-lg collapsed text-decoration-none text-center fw-bold">
-    <div class="d-flex justify-content-center w-100">
-      <span>Lev Shaddoll Fusion</span>
-    </div>
-    <span>🔽</span>
-  </a>
 
-  <div id="collapseLevShaddollFusion" class="collapse">
-    <div class="card card-body bg-dark text-center">
-      <ul class="list-unstyled w-100 mb-4">
-        <br>
+  <!-- Page Content -->
 
-        <li class="bg-secondary p-2 mb-2"><card-link>Lev Shaddoll Fusion</card-link>: Send
-          <card-link>Shaddoll Apkallone</card-link> to the GY.</li>
 
-        <li class="bg-secondary-darker p-2 mb-2">GY <card-link>Shaddoll Apkallone</card-link>: Add
-          <card-link>Shaddoll Squamata</card-link> to hand, then discard
-          <card-link>Shaddoll Squamata</card-link></li>
 
-        <li class="bg-secondary p-2 mb-2">GY <card-link>Shaddoll Squamata</card-link>: Send
-           <card-link>Tohushaddoll Grysta</card-link> from the Deck to the GY</li>
-
-        <li class="bg-secondary-darker p-2 mb-2">GY <card-link>Tohushaddoll Grysta</card-link>: Fusion Summon
-           <card-link>El Shaddoll Meshachrer</card-link> using <card-link>Shaddoll Apkallone</card-link>,
-           <card-link>Shaddoll Squamata</card-link>, and <card-link>Tohushaddoll Grysta</card-link></li>
-
-        <li class="bg-secondary p-2 mb-2"><card-link>El Shaddoll Meshachrer</card-link>: Add 
-          <card-link>Void Unleashing</card-link> to hand</li>
-
-        <li class="bg-secondary-darker p-2 mb-2"><card-link>Lev Shaddoll Fusion</card-link>: Fusion Summon
-          <card-link>El Shaddoll Construct</card-link> by using <card-link>El Shaddoll Meshachrer</card-link> as
-          material</li>
-
-        <li class="bg-secondary p-2 mb-2"><card-link>El Shaddoll Construct</card-link>: Send
-          <card-link>Shaddoll Hedgehog</card-link> from the Deck to the GY</li>
-
-        <li class="bg-secondary-darker p-2 mb-2">GY <card-link>Shaddoll Hedgehog</card-link>:
-           Add <card-link>Reeshaddoll Wendi</card-link> to hand.</li>
-
-        <li class="bg-secondary p-2 mb-2"><card-link>Void Unleashing</card-link>: Reveal 
-          <card-link>Reeshaddoll Wendi</card-link>, then add <card-link>El Shaddoll Fusion</card-link> and
-           <card-link>Shaddoll Schism</card-link> to hand, then discard a random card</li>
-
-        <li class="bg-secondary-darker p-2 mb-2"><card-link>El Shaddoll Fusion</card-link>: Fusion Summon
-          <card-link>El Shaddoll Wendikurhu</card-link> using <card-link>El Shaddoll Construct</card-link> and
-          <card-link>Reeshaddoll Wendi</card-link></li>
-
-        <li class="bg-secondary p-2 mb-2">GY <card-link>Reeshaddoll Wendi</card-link>(1) and GY
-          <card-link>El Shaddoll Construct</card-link>(2): Add <card-link>El Shaddoll Fusion</card-link> to hand and Set
-          <card-link>Naelshaddoll Ariel</card-link> from the Deck</li>
-
-        <li class="bg-secondary-darker p-2 mb-2"><card-link>El Shaddoll Wendikurhu</card-link>: flip
-          <card-link>Naelshaddoll Ariel</card-link> face-up without changing its battle position.</li>
-
-        <li class="bg-secondary p-2 mb-2"><card-link>Naelshaddoll Ariel</card-link>: Set 
-          <card-link>Shaddoll Squamata</card-link> from the banished zone.</li>
-
-        <li class="bg-secondary-darker p-2 mb-2">Set <card-link>Shaddoll Schism</card-link>.</li>
-
-        <li class="bg-secondary p-2 mb-2">Set <card-link>El Shaddoll Fusion</card-link>.</li>
-
-      </ul>
-
-      <ul class="list-unstyled w-100 mb-0">
-        <p class="text-light fw-bold my-3">End Board</p>
-
-        <li class="bg-secondary-darker p-2 mb-2">🌀 <card-link>El Shaddoll Wendikurhu</card-link> can flip
-          <card-link>Naelshaddoll Ariel</card-link> face-down for another interaction.</li>
-
-        <li class="bg-secondary p-2 mb-2">⛔ <card-link>Naelshaddoll Ariel</card-link> can send
-          <card-link>Tohushaddoll Grysta</card-link> to the GY to Fusion Summon <card-link>El Shaddoll Shekhinaga</card-link>,
-          providing an Omni-Negate.
+  <div class="container text-center">
+    <br>
+    <div class="card text-white bg-dark">
+      <div class="card-body">
+        <h1 class="card-title">Shaddoll Deck 🌑</h1>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-dark">
+          <strong>Main gameplan:</strong> Use Shaddoll monsters and Fusion Summoning to control the field while
+          triggering powerful effects when Shaddoll cards are sent to the GY.
         </li>
-
-        <li class="bg-secondary-darker p-2 mb-2">🚫 <card-link>El Shaddoll Fusion</card-link> can Fusion Summon
-          <card-link>El Shaddoll Winda</card-link>, limiting Special Summons and disrupting the opponent's turn.</li>
-
-        <li class="bg-secondary p-2 mb-2">💥 <card-link>Shaddoll Schism</card-link> can Fusion Summon during the
-          opponent's turn by sending <card-link>Elder Entity N'tss</card-link> to the GY, destroying a card while
-          also enabling <card-link>Shaddoll Apkallone</card-link> to provide another negate.</li>
-
-        <li class="bg-secondary p-2 mb-2 fw-bold">Total of multiple layered disruptions, with 
-          <card-link>Shaddoll Winda</card-link> summoned as soon as possible to restrict Special Summons.</li>
-
-        <li class="bg-secondary-darker p-2 mb-2 fw-bold">🎯 Use <card-link>Shaddoll Schism</card-link> strategically
-          to negate the opponent's most important card.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-<!-- end Lev Shaddoll Fusion combo -->
-
-<!-- Armageddon Knight + Lev Shaddoll Fusion Path -->
-
-<div class="mb-4">
-  <a data-bs-toggle="collapse" href="#collapseArmageddonKnight" role="button" aria-expanded="false"
-    aria-controls="collapseArmageddonKnight"
-    class="d-flex justify-content-between align-items-center d-grid gap-2 btn-warning btn-lg collapsed text-decoration-none text-center fw-bold">
-    <div class="d-flex justify-content-center w-100">
-      <span>Armageddon Knight + Lev Shaddoll Fusion</span>
-    </div>
-    <span>🔽</span>
-  </a>
-  <div id="collapseArmageddonKnight" class="collapse">
-    <div class="card card-body bg-dark text-center">
-      <ul class="list-unstyled w-100 mb-4">
-        <br>
-
-        <li class="bg-secondary p-2 mb-2">Normal Summon <card-link>Armageddon Knight</card-link>: Send
-          <card-link>Shaddoll Squamata</card-link> to the GY</li>
-
-        <li class="bg-secondary-darker p-2 mb-2">GY <card-link>Shaddoll
-            Squamata</card-link>: Send <card-link>Tohushaddoll Grysta</card-link> from the Deck to the GY</li>
-
-        <li class="bg-secondary p-2 mb-2">GY <card-link>Tohushaddoll Grysta</card-link>: Fusion Summon 
-          <card-link>El Shaddoll Meshachrer</card-link> using <card-link>Armageddon Knight</card-link>,
-          <card-link>Shaddoll Squamata</card-link>, and <card-link>Tohushaddoll Grysta</card-link>
+        <li class="list-group-item text-white bg-dark">
+          <strong>Strengths:</strong> Strong Fusion plays, excellent resource recursion, disruptive flip effects, and
+          powerful boss monsters such as El Shaddoll Construct and El Shaddoll Winda.
         </li>
-
-        <li class="bg-secondary-darker p-2 mb-2"><card-link>El Shaddoll Meshachrer</card-link>: Add
-          <card-link>Lev Shaddoll Fusion</card-link> to hand</li>
-
-        <li class="bg-secondary p-2 mb-2"><card-link>Lev Shaddoll Fusion</card-link>: Send
-          <card-link>Infernoid Evil</card-link> to the GY.</li>
-
-        <li class="bg-secondary-darker p-2 mb-2">GY <card-link>Infernoid Evil</card-link>: Add <card-link>Void Unleashing</card-link> to hand.</li>
-
-        <li class="bg-secondary p-2 mb-2"><card-link>Lev Shaddoll Fusion</card-link>: Fusion Summon
-          <card-link>El Shaddoll Construct</card-link> by tributing <card-link>El Shaddoll Meshachrer</card-link>.</li>
-
-        <li class="bg-secondary-darker p-2 mb-2"><card-link>El Shaddoll Construct</card-link>: Send
-          <card-link>Shaddoll Hedgehog</card-link> from the Deck to the GY.</li>
-
-        <li class="bg-secondary p-2 mb-2">GY <card-link>Shaddoll Hedgehog</card-link>: Add <card-link>Reeshaddoll Wendi</card-link> to hand.</li>
-
-        <li class="bg-secondary-darker p-2 mb-2"><card-link>Void Unleashing</card-link>: Reveal 
-          <card-link>Reeshaddoll Wendi</card-link>, then add <card-link>El Shaddoll Fusion</card-link> and 
-          <card-link>Shaddoll Schism</card-link> to hand, then discard a random card</li>
-
-        <li class="bg-secondary p-2 mb-2"><card-link>El Shaddoll Fusion</card-link>: Fusion Summon
-          <card-link>El Shaddoll Wendikurhu</card-link> using <card-link>El Shaddoll Construct</card-link> and
-          <card-link>Reeshaddoll Wendi</card-link></li>
-
-        <li class="bg-secondary-darker p-2 mb-2">GY <card-link>Reeshaddoll
-            Wendi</card-link> (1), <card-link>El Shaddoll Construct</card-link>(2): Add 
-            <card-link>El Shaddoll Fusion</card-link> to hand and Set <card-link>Naelshaddoll Ariel</card-link> from the Deck</li>
-
-        <li class="bg-secondary p-2 mb-2"><card-link>El Shaddoll Wendikurhu</card-link>: flip
-          <card-link>Naelshaddoll Ariel</card-link> face-up without changing its battle position.</li>
-
-        <li class="bg-secondary-darker p-2 mb-2"><card-link>Naelshaddoll Ariel</card-link>: Set
-          <card-link>Shaddoll Squamata</card-link> from the banished zone.</li>
-
-        <li class="bg-secondary p-2 mb-2">Set <card-link>Shaddoll Schism</card-link>.</li>
-
-        <li class="bg-secondary-darker p-2 mb-2">Set <card-link>El Shaddoll Fusion</card-link>.</li>
-
-      </ul>
-
-      <ul class="list-unstyled w-100 mb-0">
-        <p class="text-light fw-bold my-3">End Board</p>
-
-        <li class="bg-secondary-darker p-2 mb-2">🌀 <card-link>El Shaddoll Wendikurhu</card-link> can flip
-          <card-link>Naelshaddoll Ariel</card-link> face-down for another interaction.</li>
-
-        <li class="bg-secondary p-2 mb-2">⛔ <card-link>Shaddoll Squamata</card-link> can send <card-link>Tohushaddoll
-            Grysta</card-link> to the GY to Fusion Summon <card-link>El Shaddoll Shekhinaga</card-link>,
-          providing an Omni-Negate.</li>
-
-        <li class="bg-secondary-darker p-2 mb-2">🚫 <card-link>El Shaddoll Fusion</card-link> can Fusion Summon
-          <card-link>El Shaddoll Winda</card-link>, limiting Special Summons and disrupting the opponent's turn.</li>
-
-        <li class="bg-secondary p-2 mb-2">💥 <card-link>Shaddoll Schism</card-link> can Fusion Summon during the
-          opponent's turn by sending <card-link>Elder Entity N'tss</card-link> to the GY, destroying a card while
-          also enabling <card-link>Shaddoll Apkallone</card-link> to provide another negate.</li>
-
-        <li class="bg-secondary p-2 mb-2 fw-bold">Total of multiple layered disruptions, with <card-link>El Shaddoll
-            Winda</card-link> summoned as soon as possible to restrict Special Summons.</li>
-
-        <li class="bg-secondary-darker p-2 mb-2 fw-bold">🎯 Use <card-link>Shaddoll Schism</card-link> strategically
-          to negate the opponent's most important card.</li>
-      </ul>
-
-    </div>
-  </div>
-</div>
-<!-- end Armageddon Knight + Lev Shaddoll Fusion Path -->
-
-<!-- Void Unleashing + Lev Shaddoll Fusion Path -->
-
-<div class="mb-4">
-  <a data-bs-toggle="collapse" href="#collapseVoidLev" role="button" aria-expanded="false"
-    aria-controls="collapseVoidLev"
-    class="d-flex justify-content-between align-items-center d-grid gap-2 btn-warning btn-lg collapsed text-decoration-none text-center fw-bold">
-    <div class="d-flex justify-content-center w-100">
-      <span>Void Unleashing + Lev Shaddoll Fusion</span>
-    </div>
-    <span>🔽</span>
-  </a>
-  <div id="collapseVoidLev" class="collapse">
-    <div class="card card-body bg-dark text-center">
-      <ul class="list-unstyled w-100 mb-4">
-        <br>
-
-
-        <li class="bg-secondary p-2 mb-2"><card-link>Void Unleashing</card-link>: Reveal a Shaddoll monster,
-          then add <card-link>Lev Shaddoll Fusion</card-link> and <card-link>Shaddoll Schism</card-link> to hand,
-          then discard a random card.</li>
-
-        <li class="bg-secondary-darker p-2 mb-2"><card-link>Lev Shaddoll Fusion</card-link>: Send
-          <card-link>Shaddoll Apkallone</card-link> to the GY.</li>
-
-        <li class="bg-secondary p-2 mb-2">GY <card-link>Shaddoll Apkallone</card-link>: Add <card-link>Shaddoll Squamata</card-link>
-           to hand, then discard <card-link>Shaddoll Squamata</card-link>
+        <li class="list-group-item text-dark">
+          <strong>Weaknesses:</strong> Can be vulnerable to GY hate, disruption at key points in the Fusion process, and
+          decks that can consistently break established Shaddoll boards.
         </li>
-
-        <li class="bg-secondary-darker p-2 mb-2">GY <card-link>Shaddoll
-            Squamata</card-link>: Send <card-link>Tohushaddoll Grysta</card-link> from the Deck to the GY.</li>
-
-        <li class="bg-secondary p-2 mb-2">GY <card-link>Tohushaddoll Grysta</card-link>:
-          Fusion Summon <card-link>El Shaddoll Meshachrer</card-link> using <card-link>Shaddoll Apkallone</card-link>,
-          <card-link>Shaddoll Squamata</card-link>, and <card-link>Tohushaddoll Grysta</card-link></li>
-
-        <li class="bg-secondary-darker p-2 mb-2"><card-link>El Shaddoll Meshachrer</card-link>: Add
-          <card-link>El Shaddoll Fusion</card-link> to hand.</li>
-
-        <li class="bg-secondary p-2 mb-2"><card-link>Lev Shaddoll Fusion</card-link>: Fusion Summon
-          <card-link>El Shaddoll Construct</card-link> by tributing <card-link>El Shaddoll Meshachrer</card-link>.</li>
-
-        <li class="bg-secondary-darker p-2 mb-2"><card-link>El Shaddoll Construct</card-link>: Send
-          <card-link>Shaddoll Hedgehog</card-link> from the Deck to the GY.</li>
-
-        <li class="bg-secondary p-2 mb-2">GY <card-link>Shaddoll Hedgehog</card-link>: Add <card-link>Reeshaddoll Wendi</card-link> to hand.</li>
-
-        <li class="bg-secondary-darker p-2 mb-2"><card-link>El Shaddoll Fusion</card-link>: Fusion Summon
-          <card-link>El Shaddoll Wendikurhu</card-link> using <card-link>El Shaddoll Construct</card-link> and
-          <card-link>Reeshaddoll Wendi</card-link>.</li>
-
-        <li class="bg-secondary p-2 mb-2">GY <card-link>Reeshaddoll Wendi</card-link> (1), <card-link>El Shaddoll
-            Construct</card-link>(2): Add <card-link>El Shaddoll Fusion</card-link> to hand and Set <card-link>Naelshaddoll
-            Ariel</card-link> from the Deck.</li>
-
-        <li class="bg-secondary-darker p-2 mb-2"><card-link>El Shaddoll Wendikurhu</card-link>: flip
-          <card-link>Naelshaddoll Ariel</card-link> face-up without changing its battle position.</li>
-
-        <li class="bg-secondary p-2 mb-2"><card-link>Naelshaddoll Ariel</card-link>: Set
-          <card-link>Shaddoll Squamata</card-link> from the banished zone.</li>
-
-        <li class="bg-secondary-darker p-2 mb-2">Set <card-link>Shaddoll Schism</card-link>.</li>
-
-        <li class="bg-secondary p-2 mb-2">Set <card-link>El Shaddoll Fusion</card-link>.</li>
-
-      </ul>
-
-      <ul class="list-unstyled w-100 mb-0">
-        <p class="text-light fw-bold my-3">End Board</p>
-
-        <li class="bg-secondary-darker p-2 mb-2">🌀 <card-link>El Shaddoll Wendikurhu</card-link> can flip
-          <card-link>Naelshaddoll Ariel</card-link> face-down for another interaction.</li>
-
-        <li class="bg-secondary p-2 mb-2">⛔ <card-link>Shaddoll Squamata</card-link> can send <card-link>Tohushaddoll
-            Grysta</card-link> to the GY to Fusion Summon <card-link>El Shaddoll Shekhinaga</card-link>,
-          providing an Omni-Negate.</li>
-
-        <li class="bg-secondary-darker p-2 mb-2">🚫 <card-link>El Shaddoll Fusion</card-link> can Fusion Summon
-          <card-link>El Shaddoll Winda</card-link>, limiting Special Summons and disrupting the opponent's turn.</li>
-
-        <li class="bg-secondary p-2 mb-2">💥 <card-link>Shaddoll Schism</card-link> can Fusion Summon during the
-          opponent's turn by sending <card-link>Elder Entity N'tss</card-link> to the GY, destroying a card while
-          also enabling <card-link>Shaddoll Apkallone</card-link> to provide another negate.</li>
-
-        <li class="bg-secondary p-2 mb-2 fw-bold">Total of multiple layered disruptions, with <card-link>Shaddoll
-            Winda</card-link> summoned as soon as possible to restrict Special Summons.</li>
-
-        <li class="bg-secondary-darker p-2 mb-2 fw-bold">🎯 Use <card-link>Shaddoll Schism</card-link> strategically
-          to negate the opponent's most important card.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-<!-- end Void Unleashing + Lev Shaddoll Fusion Path -->
-
-<!-- alternate path -->
-<div class="mb-4">
-  <a data-bs-toggle="collapse" href="#collapseAlternate" role="button" aria-expanded="false"
-    aria-controls="collapseAlternate"
-    class="d-flex justify-content-between align-items-center d-grid gap-2 btn-warning btn-lg collapsed text-decoration-none text-center fw-bold">
-    <div class="d-flex justify-content-center w-100">
-      <span>Alternate Path</span>
-    </div>
-    <span>🔽</span>
-  </a>
-  <div id="collapseAlternate" class="collapse">
-    <div class="card card-body bg-dark text-center">
-      <ul class="list-unstyled w-100 mb-4">
-        <br>
-
-        <li class="bg-secondary p-2 mb-2">
-          <card-link>Lev Shaddoll Fusion</card-link>: Send <card-link>Shaddoll Apkallone</card-link> to the
-          GY.
+        <li class="list-group-item text-white bg-dark">
+          <strong>Playstyle:</strong> Control-oriented and resource-focused, using Fusion Monsters and GY effects to
+          generate advantage while disrupting the opponent's plays.
         </li>
-        <li class="bg-secondary-darker p-2 mb-2">
-          GY <card-link>Shaddoll Apkallone</card-link>: Add <card-link>Shaddoll
-            Squamata</card-link> to hand, then discard <card-link>Shaddoll Squamata</card-link>.
-        </li>
-        <li class="bg-secondary p-2 mb-2">
-          GY <card-link>Shaddoll Squamata</card-link>: Send <card-link>Tohushaddoll
-            Grysta</card-link> from the Deck to the GY.
-        </li>
-        <li class="bg-secondary-darker p-2 mb-2">
-          GY <card-link>Tohushaddoll Grysta</card-link>: Fusion Summon <card-link>El
-            Shaddoll Meshachrer</card-link> using <card-link>Shaddoll Apkallone</card-link>, <card-link>Shaddoll
-            Squamata</card-link>, and <card-link>Tohushaddoll Grysta</card-link>.
-        </li>
-        <li class="bg-secondary p-2 mb-2">
-          <card-link>El Shaddoll Meshachrer</card-link>: Add <card-link>Void Unleashing</card-link> to hand.
-        </li>
-        <li class="bg-secondary-darker p-2 mb-2">
-          <card-link>Lev Shaddoll Fusion</card-link>: Fusion Summon <card-link>El Shaddoll
-            Construct</card-link> by tributing <card-link>El Shaddoll Meshachrer</card-link>.
-        </li>
-        <li class="bg-secondary p-2 mb-2">
-          <card-link>El Shaddoll Construct</card-link>: Send <card-link>Shaddoll Hedgehog</card-link> from
-          the Deck to the GY.
-        </li>
-        <li class="bg-secondary-darker p-2 mb-2">
-          GY <card-link>Shaddoll Hedgehog</card-link>: Add <card-link>Reeshaddoll
-            Wendi</card-link> to hand.
-        </li>
-        <li class="bg-secondary-darker p-2 mb-2">
-          <card-link>Void Unleashing</card-link>: Reveal <card-link>Reeshaddoll Wendi</card-link>, then add
-          <card-link>El Shaddoll Fusion</card-link> and <card-link>Shaddoll Schism</card-link> to hand, then discard
-          <card-link>Shaddoll Schism</card-link>.
-        </li>
-        <li class="bg-secondary p-2 mb-2">
-          <card-link>El Shaddoll Fusion</card-link>: Fusion Summon <card-link>El Shaddoll
-            Wendikurhu</card-link> using <card-link>El Shaddoll Construct</card-link> and <card-link>Reeshaddoll
-            Wendi</card-link>.
-        </li>
-        <li class="bg-secondary p-2 mb-2">
-          GY <card-link>Reeshaddoll Wendi</card-link> (1), <card-link>El Shaddoll
-            Construct</card-link>(2): Add <card-link>El Shaddoll Fusion</card-link> to hand and Set <card-link>Naelshaddoll
-            Ariel</card-link> from the Deck.
-        </li>
-        <li class="bg-secondary-darker p-2 mb-2">
-          <card-link>El Shaddoll Wendikurhu</card-link>: flip <card-link>Naelshaddoll Ariel</card-link>
-          face-up without changing its battle position.
-        </li>
-        <li class="bg-secondary p-2 mb-2">
-          <card-link>Naelshaddoll Ariel</card-link>: Special Summon <card-link>Shaddoll Squamata</card-link>
-          face-up from the banished zone.
-        </li>
-        <li class="bg-secondary-darker p-2 mb-2">
-          Link Summon <card-link>Shaddoll Construct</card-link> using <card-link>Naelshaddoll Ariel</card-link> and
-          <card-link>Shaddoll Squamata</card-link>.
-        </li>
-        <li class="bg-secondary p-2 mb-2">
-          <card-link>Shaddoll Construct</card-link>: Fusion Summon <card-link>El Shaddoll
-            Construct</card-link> using both monsters.
-        </li>
-        <li class="bg-secondary-darker p-2 mb-2">
-          <card-link>El Shaddoll Construct</card-link> (1) and <card-link>Reeshaddoll
-            Wendi</card-link> (2): Add <card-link>Shaddoll Squamata</card-link> and send <card-link>Shaddoll
-            Incarnation</card-link> to the GY.
-        </li>
-        <li class="bg-secondary p-2 mb-2">
-          GY <card-link>Shaddoll Construct</card-link>: Send <card-link>El Shaddoll
-            Construct</card-link> from the GY to Special Summon itself.
-        </li>
-        <li class="bg-secondary-darker p-2 mb-2">
-          GY <card-link>El Shaddoll Construct</card-link>: Add <card-link>El Shaddoll
-            Fusion</card-link> from the GY to hand.
-        </li>
-        <li class="bg-secondary p-2 mb-2">
-          Set <card-link>Shaddoll Squamata</card-link>, Set <card-link>Shaddoll Schism</card-link>, and Set
-          <card-link>El Shaddoll Fusion</card-link>.
-        </li>
-
-      </ul>
-
-      <ul class="list-unstyled w-100 mb-0">
-        <p class="text-light fw-bold my-3">End Board</p>
-
-        <li class="bg-secondary-darker p-2 mb-2">
-          🌀 <card-link>El Shaddoll Wendikurhu</card-link> can flip <card-link>Naelshaddoll Ariel</card-link> face-down
-          for another interaction.
-        </li>
-
-        <li class="bg-secondary p-2 mb-2">
-          ⛔ <card-link>Shaddoll Squamata</card-link> can send <card-link>Tohushaddoll Grysta</card-link> to the
-          GY to Fusion Summon <card-link>El Shaddoll Shekhinaga</card-link>, providing an Omni-Negate.
-        </li>
-
-        <li class="bg-secondary-darker p-2 mb-2">
-          🚫 <card-link>Shaddoll Fusion</card-link> can Fusion Summon <card-link>Shaddoll Winda</card-link>,
-          limiting Special Summons and disrupting the opponent's turn.
-        </li>
-
-        <li class="bg-secondary p-2 mb-2">
-          💥 <card-link>Shaddoll Schism</card-link> can Fusion Summon during the opponent's turn by sending
-          <card-link>Elder Entity N'tss</card-link> to the GY, destroying a card while also enabling
-          <card-link>Shaddoll Apkallone</card-link> to provide another negate.
-        </li>
-
-        <li class="bg-secondary p-2 mb-2 fw-bold">
-          Total of multiple layered disruptions, with <card-link>Shaddoll Winda</card-link> summoned as soon as
-          possible to restrict Special Summons.
-        </li>
-
-        <li class="bg-secondary-darker p-2 mb-2 fw-bold">
-          🎯 Use <card-link>Shaddoll Schism</card-link> strategically to negate the opponent's most important card.
+        <li class="list-group-item text-dark">
+          Below are several dropdowns: the first provides the decklist, while the others showcase different Shaddoll
+          combo lines, Fusion plays, and possible end boards.
         </li>
       </ul>
     </div>
   </div>
-</div>
-<!-- endAlternate path -->
 
-<!-- this is the div for all the dropdowns-->
-</div>
-<!-- this is the div for all the dropdowns-->
 
-<!-- Bootstrap Bundle with Popper.js for Bootstrap 5 functionality -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- My custom JavaScript -->
-<script src="/js/js.js" type="text/javascript"></script>
-<script src="/js/ygo.js" type="text/javascript"></script>
+  <!-- Paths -->
+
+  <!-- this is the div for all the dropdowns-->
+  <div class="container mt-4">
+
+    <!-- Deck path -->
+    <div class="mb-4">
+      <a data-bs-toggle="collapse" href="#collapseDeck" role="button" aria-expanded="false" aria-controls="collapseDeck"
+        class="d-flex justify-content-between align-items-center d-grid gap-2 btn-info btn-lg collapsed text-decoration-none text-center fw-bold">
+        <div class="d-flex justify-content-center w-100">
+          <span>Decklist</span>
+        </div>
+        <span>🔽</span>
+      </a>
+
+      <div id="collapseDeck" class="collapse">
+        <div class="card card-body bg-dark text-center">
+          <!-- Add your deck image here -->
+          <a href="/media/Decks/shaddoll2026.jpg" target="_blank">
+            <img src="/media/Decks/shaddoll2026.jpg" alt="Shaddoll Deck" class="img-fluid my-3 enlarge"
+              style="max-width: 40%; height:auto; border-radius: 8px;">
+          </a>
+          <!-- Add a link to the decklist page -->
+          <p class="mt-3 text-white">
+            View the full decklist on
+            <a href="https://ygoprodeck.com/deck/shaddoll-2026-md-725597#/" target="_blank" class="text-info">
+              YGOPRODeck
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- endDeck path -->
+
+    <!-- Lev Shaddoll Fusion combo -->
+    <div class="mb-4">
+      <a data-bs-toggle="collapse" href="#collapseLevShaddollFusion" role="button" aria-expanded="false"
+        aria-controls="collapseLevShaddollFusion"
+        class="d-flex justify-content-between align-items-center d-grid gap-2 btn-warning btn-lg collapsed text-decoration-none text-center fw-bold">
+        <div class="d-flex justify-content-center w-100">
+          <span>Lev Shaddoll Fusion</span>
+        </div>
+        <span>🔽</span>
+      </a>
+
+      <div id="collapseLevShaddollFusion" class="collapse">
+        <div class="card card-body bg-dark text-center">
+          <ul class="list-unstyled w-100 mb-4">
+            <br>
+
+            <li class="bg-secondary p-2 mb-2"><card-link>Lev Shaddoll Fusion</card-link>: Send
+              <card-link>Shaddoll Apkallone</card-link> to the GY.
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2">GY <card-link>Shaddoll Apkallone</card-link>: Add
+              <card-link>Shaddoll Squamata</card-link> to hand, then discard
+              <card-link>Shaddoll Squamata</card-link>
+            </li>
+
+            <li class="bg-secondary p-2 mb-2">GY <card-link>Shaddoll Squamata</card-link>: Send
+              <card-link>Tohushaddoll Grysta</card-link> from the Deck to the GY
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2">GY <card-link>Tohushaddoll Grysta</card-link>: Fusion Summon
+              <card-link>El Shaddoll Meshachrer</card-link> using <card-link>Shaddoll Apkallone</card-link>,
+              <card-link>Shaddoll Squamata</card-link>, and <card-link>Tohushaddoll Grysta</card-link>
+            </li>
+
+            <li class="bg-secondary p-2 mb-2"><card-link>El Shaddoll Meshachrer</card-link>: Add
+              <card-link>Void Unleashing</card-link> to hand
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2"><card-link>Lev Shaddoll Fusion</card-link>: Fusion Summon
+              <card-link>El Shaddoll Construct</card-link> by using <card-link>El Shaddoll Meshachrer</card-link> as
+              material
+            </li>
+
+            <li class="bg-secondary p-2 mb-2"><card-link>El Shaddoll Construct</card-link>: Send
+              <card-link>Shaddoll Hedgehog</card-link> from the Deck to the GY
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2">GY <card-link>Shaddoll Hedgehog</card-link>:
+              Add <card-link>Reeshaddoll Wendi</card-link> to hand.</li>
+
+            <li class="bg-secondary p-2 mb-2"><card-link>Void Unleashing</card-link>: Reveal
+              <card-link>Reeshaddoll Wendi</card-link>, then add <card-link>El Shaddoll Fusion</card-link> and
+              <card-link>Shaddoll Schism</card-link> to hand, then discard a random card
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2"><card-link>El Shaddoll Fusion</card-link>: Fusion Summon
+              <card-link>El Shaddoll Wendikurhu</card-link> using <card-link>El Shaddoll Construct</card-link> and
+              <card-link>Reeshaddoll Wendi</card-link>
+            </li>
+
+            <li class="bg-secondary p-2 mb-2">GY <card-link>Reeshaddoll Wendi</card-link>(1) and GY
+              <card-link>El Shaddoll Construct</card-link>(2): Add <card-link>El Shaddoll Fusion</card-link> to hand and
+              Set
+              <card-link>Naelshaddoll Ariel</card-link> from the Deck
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2"><card-link>El Shaddoll Wendikurhu</card-link>: flip
+              <card-link>Naelshaddoll Ariel</card-link> face-up without changing its battle position.
+            </li>
+
+            <li class="bg-secondary p-2 mb-2"><card-link>Naelshaddoll Ariel</card-link>: Set
+              <card-link>Shaddoll Squamata</card-link> from the banished zone.
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2">Set <card-link>Shaddoll Schism</card-link>.</li>
+
+            <li class="bg-secondary p-2 mb-2">Set <card-link>El Shaddoll Fusion</card-link>.</li>
+
+          </ul>
+
+          <ul class="list-unstyled w-100 mb-0">
+            <p class="text-light fw-bold my-3">End Board</p>
+
+            <li class="bg-secondary-darker p-2 mb-2">🌀 <card-link>El Shaddoll Wendikurhu</card-link> can flip
+              <card-link>Naelshaddoll Ariel</card-link> face-down for another interaction.
+            </li>
+
+            <li class="bg-secondary p-2 mb-2">⛔ <card-link>Naelshaddoll Ariel</card-link> can send
+              <card-link>Tohushaddoll Grysta</card-link> to the GY to Fusion Summon <card-link>El Shaddoll
+                Shekhinaga</card-link>,
+              providing an Omni-Negate.
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2">🚫 <card-link>El Shaddoll Fusion</card-link> can Fusion Summon
+              <card-link>El Shaddoll Winda</card-link>, limiting Special Summons and disrupting the opponent's turn.
+            </li>
+
+            <li class="bg-secondary p-2 mb-2">💥 <card-link>Shaddoll Schism</card-link> can Fusion Summon during the
+              opponent's turn by sending <card-link>Elder Entity N'tss</card-link> to the GY, destroying a card while
+              also enabling <card-link>Shaddoll Apkallone</card-link> to provide another negate.</li>
+
+            <li class="bg-secondary p-2 mb-2 fw-bold">Total of multiple layered disruptions, with
+              <card-link>El Shaddoll Winda</card-link> summoned as soon as possible to restrict Special Summons.
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2 fw-bold">🎯 Use <card-link>Shaddoll Schism</card-link> strategically
+              to negate the opponent's most important card.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- end Lev Shaddoll Fusion combo -->
+
+    <!-- Armageddon Knight + Lev Shaddoll Fusion Path -->
+
+    <div class="mb-4">
+      <a data-bs-toggle="collapse" href="#collapseArmageddonKnight" role="button" aria-expanded="false"
+        aria-controls="collapseArmageddonKnight"
+        class="d-flex justify-content-between align-items-center d-grid gap-2 btn-warning btn-lg collapsed text-decoration-none text-center fw-bold">
+        <div class="d-flex justify-content-center w-100">
+          <span>Armageddon Knight + Lev Shaddoll Fusion</span>
+        </div>
+        <span>🔽</span>
+      </a>
+      <div id="collapseArmageddonKnight" class="collapse">
+        <div class="card card-body bg-dark text-center">
+          <ul class="list-unstyled w-100 mb-4">
+            <br>
+
+            <li class="bg-secondary p-2 mb-2">Normal Summon <card-link>Armageddon Knight</card-link>: Send
+              <card-link>Shaddoll Squamata</card-link> to the GY
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2">GY <card-link>Shaddoll
+                Squamata</card-link>: Send <card-link>Tohushaddoll Grysta</card-link> from the Deck to the GY</li>
+
+            <li class="bg-secondary p-2 mb-2">GY <card-link>Tohushaddoll Grysta</card-link>: Fusion Summon
+              <card-link>El Shaddoll Meshachrer</card-link> using <card-link>Armageddon Knight</card-link>,
+              <card-link>Shaddoll Squamata</card-link>, and <card-link>Tohushaddoll Grysta</card-link>
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2"><card-link>El Shaddoll Meshachrer</card-link>: Add
+              <card-link>Lev Shaddoll Fusion</card-link> to hand
+            </li>
+
+            <li class="bg-secondary p-2 mb-2"><card-link>Lev Shaddoll Fusion</card-link>: Send
+              <card-link>Infernoid Evil</card-link> to the GY.
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2">GY <card-link>Infernoid Evil</card-link>: Add <card-link>Void
+                Unleashing</card-link> to hand.</li>
+
+            <li class="bg-secondary p-2 mb-2"><card-link>Lev Shaddoll Fusion</card-link>: Fusion Summon
+              <card-link>El Shaddoll Construct</card-link> by tributing <card-link>El Shaddoll Meshachrer</card-link>.
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2"><card-link>El Shaddoll Construct</card-link>: Send
+              <card-link>Shaddoll Hedgehog</card-link> from the Deck to the GY.
+            </li>
+
+            <li class="bg-secondary p-2 mb-2">GY <card-link>Shaddoll Hedgehog</card-link>: Add <card-link>Reeshaddoll
+                Wendi</card-link> to hand.</li>
+
+            <li class="bg-secondary-darker p-2 mb-2"><card-link>Void Unleashing</card-link>: Reveal
+              <card-link>Reeshaddoll Wendi</card-link>, then add <card-link>El Shaddoll Fusion</card-link> and
+              <card-link>Shaddoll Schism</card-link> to hand, then discard a random card
+            </li>
+
+            <li class="bg-secondary p-2 mb-2"><card-link>El Shaddoll Fusion</card-link>: Fusion Summon
+              <card-link>El Shaddoll Wendikurhu</card-link> using <card-link>El Shaddoll Construct</card-link> and
+              <card-link>Reeshaddoll Wendi</card-link>
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2">GY <card-link>Reeshaddoll
+                Wendi</card-link> (1), <card-link>El Shaddoll Construct</card-link>(2): Add
+              <card-link>El Shaddoll Fusion</card-link> to hand and Set <card-link>Naelshaddoll Ariel</card-link> from
+              the Deck
+            </li>
+
+            <li class="bg-secondary p-2 mb-2"><card-link>El Shaddoll Wendikurhu</card-link>: flip
+              <card-link>Naelshaddoll Ariel</card-link> face-up without changing its battle position.
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2"><card-link>Naelshaddoll Ariel</card-link>: Set
+              <card-link>Shaddoll Squamata</card-link> from the banished zone.
+            </li>
+
+            <li class="bg-secondary p-2 mb-2">Set <card-link>Shaddoll Schism</card-link>.</li>
+
+            <li class="bg-secondary-darker p-2 mb-2">Set <card-link>El Shaddoll Fusion</card-link>.</li>
+
+          </ul>
+
+          <ul class="list-unstyled w-100 mb-0">
+            <p class="text-light fw-bold my-3">End Board</p>
+
+            <li class="bg-secondary-darker p-2 mb-2">🌀 <card-link>El Shaddoll Wendikurhu</card-link> can flip
+              <card-link>Naelshaddoll Ariel</card-link> face-down for another interaction.
+            </li>
+
+            <li class="bg-secondary p-2 mb-2">⛔ <card-link>Shaddoll Squamata</card-link> can send
+              <card-link>Tohushaddoll
+                Grysta</card-link> to the GY to Fusion Summon <card-link>El Shaddoll Shekhinaga</card-link>,
+              providing an Omni-Negate.</li>
+
+            <li class="bg-secondary-darker p-2 mb-2">🚫 <card-link>El Shaddoll Fusion</card-link> can Fusion Summon
+              <card-link>El Shaddoll Winda</card-link>, limiting Special Summons and disrupting the opponent's turn.
+            </li>
+
+            <li class="bg-secondary p-2 mb-2">💥 <card-link>Shaddoll Schism</card-link> can Fusion Summon during the
+              opponent's turn by sending <card-link>Elder Entity N'tss</card-link> to the GY, destroying a card while
+              also enabling <card-link>Shaddoll Apkallone</card-link> to provide another negate.</li>
+
+            <li class="bg-secondary p-2 mb-2 fw-bold">Total of multiple layered disruptions, with <card-link>El Shaddoll
+                Winda</card-link> summoned as soon as possible to restrict Special Summons.</li>
+
+            <li class="bg-secondary-darker p-2 mb-2 fw-bold">🎯 Use <card-link>Shaddoll Schism</card-link> strategically
+              to negate the opponent's most important card.</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <!-- end Armageddon Knight + Lev Shaddoll Fusion Path -->
+
+    <!-- Void Unleashing + Lev Shaddoll Fusion Path -->
+
+    <div class="mb-4">
+      <a data-bs-toggle="collapse" href="#collapseVoidLev" role="button" aria-expanded="false"
+        aria-controls="collapseVoidLev"
+        class="d-flex justify-content-between align-items-center d-grid gap-2 btn-warning btn-lg collapsed text-decoration-none text-center fw-bold">
+        <div class="d-flex justify-content-center w-100">
+          <span>Void Unleashing + Lev Shaddoll Fusion</span>
+        </div>
+        <span>🔽</span>
+      </a>
+      <div id="collapseVoidLev" class="collapse">
+        <div class="card card-body bg-dark text-center">
+          <ul class="list-unstyled w-100 mb-4">
+            <br>
+
+
+            <li class="bg-secondary p-2 mb-2"><card-link>Void Unleashing</card-link>: Reveal a Shaddoll monster,
+              then add <card-link>Lev Shaddoll Fusion</card-link> and <card-link>Shaddoll Schism</card-link> to hand,
+              then discard a random card.</li>
+
+            <li class="bg-secondary-darker p-2 mb-2"><card-link>Lev Shaddoll Fusion</card-link>: Send
+              <card-link>Shaddoll Apkallone</card-link> to the GY.
+            </li>
+
+            <li class="bg-secondary p-2 mb-2">GY <card-link>Shaddoll Apkallone</card-link>: Add <card-link>Shaddoll
+                Squamata</card-link>
+              to hand, then discard <card-link>Shaddoll Squamata</card-link>
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2">GY <card-link>Shaddoll
+                Squamata</card-link>: Send <card-link>Tohushaddoll Grysta</card-link> from the Deck to the GY.</li>
+
+            <li class="bg-secondary p-2 mb-2">GY <card-link>Tohushaddoll Grysta</card-link>:
+              Fusion Summon <card-link>El Shaddoll Meshachrer</card-link> using <card-link>Shaddoll
+                Apkallone</card-link>,
+              <card-link>Shaddoll Squamata</card-link>, and <card-link>Tohushaddoll Grysta</card-link>
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2"><card-link>El Shaddoll Meshachrer</card-link>: Add
+              <card-link>El Shaddoll Fusion</card-link> to hand.
+            </li>
+
+            <li class="bg-secondary p-2 mb-2"><card-link>Lev Shaddoll Fusion</card-link>: Fusion Summon
+              <card-link>El Shaddoll Construct</card-link> by tributing <card-link>El Shaddoll Meshachrer</card-link>.
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2"><card-link>El Shaddoll Construct</card-link>: Send
+              <card-link>Shaddoll Hedgehog</card-link> from the Deck to the GY.
+            </li>
+
+            <li class="bg-secondary p-2 mb-2">GY <card-link>Shaddoll Hedgehog</card-link>: Add <card-link>Reeshaddoll
+                Wendi</card-link> to hand.</li>
+
+            <li class="bg-secondary-darker p-2 mb-2"><card-link>El Shaddoll Fusion</card-link>: Fusion Summon
+              <card-link>El Shaddoll Wendikurhu</card-link> using <card-link>El Shaddoll Construct</card-link> and
+              <card-link>Reeshaddoll Wendi</card-link>.
+            </li>
+
+            <li class="bg-secondary p-2 mb-2">GY <card-link>Reeshaddoll Wendi</card-link> (1), <card-link>El Shaddoll
+                Construct</card-link>(2): Add <card-link>El Shaddoll Fusion</card-link> to hand and Set
+              <card-link>Naelshaddoll
+                Ariel</card-link> from the Deck.</li>
+
+            <li class="bg-secondary-darker p-2 mb-2"><card-link>El Shaddoll Wendikurhu</card-link>: flip
+              <card-link>Naelshaddoll Ariel</card-link> face-up without changing its battle position.
+            </li>
+
+            <li class="bg-secondary p-2 mb-2"><card-link>Naelshaddoll Ariel</card-link>: Set
+              <card-link>Shaddoll Squamata</card-link> from the banished zone.
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2">Set <card-link>Shaddoll Schism</card-link>.</li>
+
+            <li class="bg-secondary p-2 mb-2">Set <card-link>El Shaddoll Fusion</card-link>.</li>
+
+          </ul>
+
+          <ul class="list-unstyled w-100 mb-0">
+            <p class="text-light fw-bold my-3">End Board</p>
+
+            <li class="bg-secondary-darker p-2 mb-2">🌀 <card-link>El Shaddoll Wendikurhu</card-link> can flip
+              <card-link>Naelshaddoll Ariel</card-link> face-down for another interaction.
+            </li>
+
+            <li class="bg-secondary p-2 mb-2">⛔ <card-link>Shaddoll Squamata</card-link> can send
+              <card-link>Tohushaddoll
+                Grysta</card-link> to the GY to Fusion Summon <card-link>El Shaddoll Shekhinaga</card-link>,
+              providing an Omni-Negate.</li>
+
+            <li class="bg-secondary-darker p-2 mb-2">🚫 <card-link>El Shaddoll Fusion</card-link> can Fusion Summon
+              <card-link>El Shaddoll Winda</card-link>, limiting Special Summons and disrupting the opponent's turn.
+            </li>
+
+            <li class="bg-secondary p-2 mb-2">💥 <card-link>Shaddoll Schism</card-link> can Fusion Summon during the
+              opponent's turn by sending <card-link>Elder Entity N'tss</card-link> to the GY, destroying a card while
+              also enabling <card-link>Shaddoll Apkallone</card-link> to provide another negate.</li>
+
+            <li class="bg-secondary p-2 mb-2 fw-bold">Total of multiple layered disruptions, with <card-link>Shaddoll
+                Winda</card-link> summoned as soon as possible to restrict Special Summons.</li>
+
+            <li class="bg-secondary-darker p-2 mb-2 fw-bold">🎯 Use <card-link>Shaddoll Schism</card-link> strategically
+              to negate the opponent's most important card.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- end Void Unleashing + Lev Shaddoll Fusion Path -->
+
+    <!-- alternate path -->
+    <div class="mb-4">
+      <a data-bs-toggle="collapse" href="#collapseAlternate" role="button" aria-expanded="false"
+        aria-controls="collapseAlternate"
+        class="d-flex justify-content-between align-items-center d-grid gap-2 btn-warning btn-lg collapsed text-decoration-none text-center fw-bold">
+        <div class="d-flex justify-content-center w-100">
+          <span>Alternate Path</span>
+        </div>
+        <span>🔽</span>
+      </a>
+      <div id="collapseAlternate" class="collapse">
+        <div class="card card-body bg-dark text-center">
+          <ul class="list-unstyled w-100 mb-4">
+            <br>
+
+            <li class="bg-secondary p-2 mb-2">
+              <card-link>Lev Shaddoll Fusion</card-link>: Send <card-link>Shaddoll Apkallone</card-link> to the
+              GY.
+            </li>
+            <li class="bg-secondary-darker p-2 mb-2">
+              GY <card-link>Shaddoll Apkallone</card-link>: Add <card-link>Shaddoll
+                Squamata</card-link> to hand, then discard <card-link>Shaddoll Squamata</card-link>.
+            </li>
+            <li class="bg-secondary p-2 mb-2">
+              GY <card-link>Shaddoll Squamata</card-link>: Send <card-link>Tohushaddoll
+                Grysta</card-link> from the Deck to the GY.
+            </li>
+            <li class="bg-secondary-darker p-2 mb-2">
+              GY <card-link>Tohushaddoll Grysta</card-link>: Fusion Summon <card-link>El
+                Shaddoll Meshachrer</card-link> using <card-link>Shaddoll Apkallone</card-link>, <card-link>Shaddoll
+                Squamata</card-link>, and <card-link>Tohushaddoll Grysta</card-link>.
+            </li>
+            <li class="bg-secondary p-2 mb-2">
+              <card-link>El Shaddoll Meshachrer</card-link>: Add <card-link>Void Unleashing</card-link> to hand.
+            </li>
+            <li class="bg-secondary-darker p-2 mb-2">
+              <card-link>Lev Shaddoll Fusion</card-link>: Fusion Summon <card-link>El Shaddoll
+                Construct</card-link> by tributing <card-link>El Shaddoll Meshachrer</card-link>.
+            </li>
+            <li class="bg-secondary p-2 mb-2">
+              <card-link>El Shaddoll Construct</card-link>: Send <card-link>Shaddoll Hedgehog</card-link> from
+              the Deck to the GY.
+            </li>
+            <li class="bg-secondary-darker p-2 mb-2">
+              GY <card-link>Shaddoll Hedgehog</card-link>: Add <card-link>Reeshaddoll
+                Wendi</card-link> to hand.
+            </li>
+            <li class="bg-secondary-darker p-2 mb-2">
+              <card-link>Void Unleashing</card-link>: Reveal <card-link>Reeshaddoll Wendi</card-link>, then add
+              <card-link>El Shaddoll Fusion</card-link> and <card-link>Shaddoll Schism</card-link> to hand, then discard
+              <card-link>Shaddoll Schism</card-link>.
+            </li>
+            <li class="bg-secondary p-2 mb-2">
+              <card-link>El Shaddoll Fusion</card-link>: Fusion Summon <card-link>El Shaddoll
+                Wendikurhu</card-link> using <card-link>El Shaddoll Construct</card-link> and <card-link>Reeshaddoll
+                Wendi</card-link>.
+            </li>
+            <li class="bg-secondary p-2 mb-2">
+              GY <card-link>Reeshaddoll Wendi</card-link> (1), <card-link>El Shaddoll
+                Construct</card-link>(2): Add <card-link>El Shaddoll Fusion</card-link> to hand and Set
+              <card-link>Naelshaddoll
+                Ariel</card-link> from the Deck.
+            </li>
+            <li class="bg-secondary-darker p-2 mb-2">
+              <card-link>El Shaddoll Wendikurhu</card-link>: flip <card-link>Naelshaddoll Ariel</card-link>
+              face-up without changing its battle position.
+            </li>
+            <li class="bg-secondary p-2 mb-2">
+              <card-link>Naelshaddoll Ariel</card-link>: Special Summon <card-link>Shaddoll Squamata</card-link>
+              face-up from the banished zone.
+            </li>
+            <li class="bg-secondary-darker p-2 mb-2">
+              Link Summon <card-link>Shaddoll Construct</card-link> using <card-link>Naelshaddoll Ariel</card-link> and
+              <card-link>Shaddoll Squamata</card-link>.
+            </li>
+            <li class="bg-secondary p-2 mb-2">
+              <card-link>Shaddoll Construct</card-link>: Fusion Summon <card-link>El Shaddoll
+                Construct</card-link> using both monsters.
+            </li>
+            <li class="bg-secondary-darker p-2 mb-2">
+              <card-link>El Shaddoll Construct</card-link> (1) and <card-link>Reeshaddoll
+                Wendi</card-link> (2): Add <card-link>Shaddoll Squamata</card-link> and send <card-link>Shaddoll
+                Incarnation</card-link> to the GY.
+            </li>
+            <li class="bg-secondary p-2 mb-2">
+              GY <card-link>Shaddoll Construct</card-link>: Send <card-link>El Shaddoll
+                Construct</card-link> from the GY to Special Summon itself.
+            </li>
+            <li class="bg-secondary-darker p-2 mb-2">
+              GY <card-link>El Shaddoll Construct</card-link>: Add <card-link>El Shaddoll
+                Fusion</card-link> from the GY to hand.
+            </li>
+            <li class="bg-secondary p-2 mb-2">
+              Set <card-link>Shaddoll Squamata</card-link>, Set <card-link>Shaddoll Schism</card-link>, and Set
+              <card-link>El Shaddoll Fusion</card-link>.
+            </li>
+
+          </ul>
+
+          <ul class="list-unstyled w-100 mb-0">
+            <p class="text-light fw-bold my-3">End Board</p>
+
+            <li class="bg-secondary-darker p-2 mb-2">
+              🌀 <card-link>El Shaddoll Wendikurhu</card-link> can flip <card-link>Naelshaddoll Ariel</card-link>
+              face-down
+              for another interaction.
+            </li>
+
+            <li class="bg-secondary p-2 mb-2">
+              ⛔ <card-link>Shaddoll Squamata</card-link> can send <card-link>Tohushaddoll Grysta</card-link> to the
+              GY to Fusion Summon <card-link>El Shaddoll Shekhinaga</card-link>, providing an Omni-Negate.
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2">
+              🚫 <card-link>Shaddoll Fusion</card-link> can Fusion Summon <card-link>Shaddoll Winda</card-link>,
+              limiting Special Summons and disrupting the opponent's turn.
+            </li>
+
+            <li class="bg-secondary p-2 mb-2">
+              💥 <card-link>Shaddoll Schism</card-link> can Fusion Summon during the opponent's turn by sending
+              <card-link>Elder Entity N'tss</card-link> to the GY, destroying a card while also enabling
+              <card-link>Shaddoll Apkallone</card-link> to provide another negate.
+            </li>
+
+            <li class="bg-secondary p-2 mb-2 fw-bold">
+              Total of multiple layered disruptions, with <card-link>Shaddoll Winda</card-link> summoned as soon as
+              possible to restrict Special Summons.
+            </li>
+
+            <li class="bg-secondary-darker p-2 mb-2 fw-bold">
+              🎯 Use <card-link>Shaddoll Schism</card-link> strategically to negate the opponent's most important card.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- endAlternate path -->
+
+    <!-- this is the div for all the dropdowns-->
+  </div>
+  <!-- this is the div for all the dropdowns-->
+
+  <!-- Bootstrap Bundle with Popper.js for Bootstrap 5 functionality -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- My custom JavaScript -->
+  <script src="/js/js.js" type="text/javascript"></script>
+  <script src="/js/ygo.js" type="text/javascript"></script>
 </body>
+
 </html>
