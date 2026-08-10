@@ -31,6 +31,7 @@ const ygocards = {
   "Dracotail Urgula": "70871153"
 };
 
+/* first version with card link
 document.querySelectorAll("card-link").forEach(el => {
   const name = el.textContent.trim();
   const id = ygocards[name];
@@ -49,4 +50,21 @@ document.querySelectorAll("card-link").forEach(el => {
   link.textContent = name;
 
   el.replaceWith(link);
+});
+*/
+
+document.querySelectorAll("li").forEach(li => {
+  let html = li.innerHTML;
+
+  for (const [cardName, cardId] of Object.entries(ygocards)) {
+    const regex = new RegExp(`\\b${cardName}\\b`, "g");
+
+    html = html.replace(
+      regex,
+      `<a href="https://images.ygoprodeck.com/images/cards/${cardId}.jpg"
+          target="_blank">${cardName}</a>`
+    );
+  }
+
+  li.innerHTML = html;
 });
