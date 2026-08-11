@@ -277,7 +277,7 @@ window.addEventListener('scroll', function () {
         document.documentElement.scrollHeight - window.innerHeight;
 
     document.getElementById('backToTopNav').style.visibility =
-        window.scrollY >= maxScroll / 2 ? 'visible' : 'hidden';
+        window.scrollY >= maxScroll *0.3 ? 'visible' : 'hidden';
 });
 
 
