@@ -269,7 +269,7 @@ document.addEventListener('shown.bs.collapse', function (event) {
   }
 });
 
-
+// Back to Top button functionality
 const backToTopNav = document.getElementById('backToTopNav');
 
 if (backToTopNav) {
