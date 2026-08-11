@@ -269,6 +269,7 @@ document.addEventListener('shown.bs.collapse', function (event) {
   }
 });
 
+// Function to scroll to the top of the page
 const backToTopNav = document.getElementById('backToTopNav');
 
 window.addEventListener('scroll', function () {
