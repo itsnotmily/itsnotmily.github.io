@@ -270,22 +270,17 @@ document.addEventListener('shown.bs.collapse', function (event) {
 });
 
 
-// Show or hide "Back to Top" link based on scroll position
 const backToTopNav = document.getElementById('backToTopNav');
 
-if (backToTopNav) {
-  window.addEventListener('scroll', () => {
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrollPosition = window.scrollY / scrollHeight;
+window.addEventListener('scroll', () => {
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
 
-    // Use visibility to prevent layout changes
-    if (scrollPosition > 0.4) {
-      backToTopNav.style.visibility = 'visible';
+    if (window.scrollY > scrollHeight / 2) {
+        backToTopNav.style.visibility = 'visible';
     } else {
-      backToTopNav.style.visibility = 'hidden';
+        backToTopNav.style.visibility = 'hidden';
     }
-  });
-}
+});
 
 
 // Scroll to top smoothly
