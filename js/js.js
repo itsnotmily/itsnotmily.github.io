@@ -274,7 +274,7 @@ const backToTopNav = document.getElementById('backToTopNav');
 window.addEventListener('scroll', function () {
   const topNav = document.getElementById('backToTopNav');
 
-  if (window.scrollY > document.body.scrollHeight * 0.4) {
+  if (window.scrollY > document.body.scrollHeight * 0.3) {
     topNav.style.visibility = 'visible';
   } else {
     topNav.style.visibility = 'hidden';
