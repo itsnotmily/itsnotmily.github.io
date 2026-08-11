@@ -51,7 +51,7 @@ const ygocards = {
   "Coatl": "92565383",
   "Patchwork": "34773082",
   "Polymerization": "24094653",
-  "EIC": "61173621",
+  "Edge Imp Chain": "61173621",
   "Bounzer": "92661479",
   "Berfomet the King of Phantom Beasts": "69601012",
   "Muckraker from the Underworld": "71607202",
