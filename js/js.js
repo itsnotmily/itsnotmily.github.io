@@ -272,14 +272,12 @@ document.addEventListener('shown.bs.collapse', function (event) {
 
 const backToTopNav = document.getElementById('backToTopNav');
 
-window.addEventListener('scroll', () => {
-    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+window.addEventListener('scroll', function () {
+    const maxScroll =
+        document.documentElement.scrollHeight - window.innerHeight;
 
-    if (window.scrollY > scrollHeight / 2) {
-        backToTopNav.style.visibility = 'visible';
-    } else {
-        backToTopNav.style.visibility = 'hidden';
-    }
+    document.getElementById('backToTopNav').style.visibility =
+        window.scrollY >= maxScroll / 2 ? 'visible' : 'hidden';
 });
 
 
