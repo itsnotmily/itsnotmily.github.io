@@ -17,7 +17,7 @@ const ygocards = {
   "Nightmare Apprentice": "58143852",  "Mirror Swordknight": "28954097",  "Big-Winged Berfomet": "55461744",
   "Gazelle": "23076639",  "Chimera Fusion": "63136489",  "Chimera the King of Phantom Beasts": "1769875",
   "Coatl": "92565383",  "Patchwork": "34773082",  "Polymerization": "24094653",  "Edge Imp Chain": "61173621",
-  "Bounzer": "92661479",  "Berfomet the King of Phantom Beasts": "69601012",  "Muckraker from the Underworld": "71607202",
+  "Bounzer": "92661479",  "Berfomet the Mythical King of Phantom Beasts": "69601012",  "Muckraker from the Underworld": "71607202",
   "Chanter": "34541543",  "Cross Sheep": "50277355",
   "Placeholder": "12345678" // Simply here because i forget last comma
 };
