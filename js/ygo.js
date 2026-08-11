@@ -33,9 +33,11 @@ const ygocards = {
   "Dracotail Rahu": "32548318",
   "Dracotail Urgula": "70871153",
   "Heavenly Spheres": "24361622",
+  "Secretarion Dragon": "89851827",
   "Spirit with Eyes of Blue": "42097666",
   //branded
   "Albion the Branded Dragon": "87746184",
+  "Albion the Sanctifire Dragon": "87746184",
   "Branded Fusion": "44362883",
   "Fallen of Albaz": "68468459",
   "Placeholer": "12345678" // Simply here because i forget last comma
