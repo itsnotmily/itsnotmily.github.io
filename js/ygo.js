@@ -32,6 +32,7 @@ const ygocards = {
   "Dracotail Phryxul": "84477320",
   "Dracotail Rahu": "32548318",
   "Dracotail Urgula": "70871153",
+  "Spirit with Eyes of Blue": "42097666",
   //branded
   "Albion the Branded Dragon": "87746184",
   "Branded Fusion": "44362883",
