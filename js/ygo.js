@@ -54,6 +54,7 @@ document.querySelectorAll("card-link").forEach(el => {
 });
 */
 
+/*
 // Replace card names in text nodes with links to images
 document.querySelectorAll("li").forEach(li => {
 
@@ -174,3 +175,21 @@ document.querySelectorAll("li").forEach(li => {
 document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
     new bootstrap.Tooltip(el);
 });
+*/
+
+document.querySelectorAll("li").forEach(li => {
+    li.innerHTML = li.innerHTML.replace(/\[([^\]]+)\]/g, (match, name) => {
+        const id = ygocards[name];
+        if (!id) return match;
+
+        const image = `https://images.ygoprodeck.com/images/cards/${id}.jpg`;
+
+        return `<a href="${image}" target="_blank"
+            data-bs-toggle="tooltip" data-bs-html="true"
+            title="<img src='${image}' alt='${name}' class='tooltip-img'>">${name}</a>`;
+    });
+});
+
+document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el =>
+    new bootstrap.Tooltip(el)
+);
