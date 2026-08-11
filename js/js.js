@@ -273,22 +273,10 @@ const backToTopNav = document.getElementById('backToTopNav');
 
 if (backToTopNav) {
     window.addEventListener('scroll', function () {
-        const maxScroll =
-            document.documentElement.scrollHeight - window.innerHeight;
-
-        console.log({
-            scrollY: window.scrollY,
-            scrollHeight: document.documentElement.scrollHeight,
-            innerHeight: window.innerHeight,
-            maxScroll: maxScroll,
-            percentage: (window.scrollY / maxScroll * 100).toFixed(1) + '%'
-        });
-
         backToTopNav.style.visibility =
             window.scrollY > 500 ? 'visible' : 'hidden';
     });
 }
-
 
 // Scroll to top smoothly
 function scrollToTop() {
