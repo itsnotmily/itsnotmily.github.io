@@ -30,7 +30,8 @@ const ygocards = {
   "Dracotail Lukias": "75003700",
   "Dracotail Mululu": "7375867",
   "Dracotail Rahu": "32548318",
-  "Dracotail Urgula": "70871153"
+  "Dracotail Urgula": "70871153",
+  "Placeholer": "12345678" // Simply here because i forget last comma
 };
 
 // Replace card names in square brackets with links to their images

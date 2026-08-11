@@ -272,15 +272,13 @@ document.addEventListener('shown.bs.collapse', function (event) {
 // Back to Top button functionality
 const backToTopNav = document.getElementById('backToTopNav');
 
-if (backToTopNav) {
-    window.addEventListener('scroll', function () {
-        const maxScroll =
-            document.documentElement.scrollHeight - window.innerHeight;
+window.addEventListener('scroll', function () {
+    const maxScroll =
+        document.documentElement.scrollHeight - window.innerHeight;
 
-        backToTopNav.style.visibility =
-            window.scrollY >= maxScroll * 0.4 ? 'visible' : 'hidden';
-    });
-}
+    backToTopNav.style.visibility =
+        window.scrollY >= maxScroll * 0.4 ? 'visible' : 'hidden';
+});
 
 
 // Scroll to top smoothly
