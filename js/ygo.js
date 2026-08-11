@@ -41,7 +41,23 @@ const ygocards = {
   "Albion the Sanctifire Dragon": "38811586",
   "Branded Fusion": "44362883",
   "Fallen of Albaz": "68468459",
-  "Placeholer": "12345678" // Simply here because i forget last comma
+  //chimera
+  "Nightmare Apprentice": "58143852",
+  "Mirror Swordknight": "28954097",
+  "Big-Winged Berfomet": "55461744",
+  "Gazelle": "23076639",
+  "Chimera Fusion": "63136489",
+  "Chimera the King of Phantom Beasts": "1769875",
+  "Coatl": "92565383",
+  "Patchwork": "34773082",
+  "Polymerization": "24094653",
+  "EIC": "61173621",
+  "Bounzer": "92661479",
+  "Berfomet the King of Phantom Beasts": "69601012",
+  "Muckraker from the Underworld": "71607202",
+  "Chanter": "34541543",
+  "Cross Sheep": "50277355",
+  "Placeholder": "12345678" // Simply here because i forget last comma
 };
 
 // Replace card names in square brackets with links to their images
