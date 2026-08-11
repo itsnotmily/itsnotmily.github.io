@@ -273,11 +273,12 @@ const backToTopNav = document.getElementById('backToTopNav');
 
 if (backToTopNav) {
     window.addEventListener('scroll', function () {
-        const maxScroll =
-            document.documentElement.scrollHeight - window.innerHeight;
+        const percentage =
+            window.scrollY /
+            (document.documentElement.scrollHeight - window.innerHeight);
 
         backToTopNav.style.visibility =
-            window.scrollY >= maxScroll * 0.4 ? 'visible' : 'hidden';
+            percentage >= 0.4 ? 'visible' : 'hidden';
     });
 }
 
