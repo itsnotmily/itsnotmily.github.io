@@ -271,12 +271,10 @@ document.addEventListener('shown.bs.collapse', function (event) {
 
 const backToTopNav = document.getElementById('backToTopNav');
 
-if (backToTopNav) {
     window.addEventListener('scroll', function () {
         backToTopNav.style.visibility =
             window.scrollY > 500 ? 'visible' : 'hidden';
     });
-}
 
 // Scroll to top smoothly
 function scrollToTop() {
