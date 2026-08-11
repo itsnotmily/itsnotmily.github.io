@@ -271,20 +271,14 @@ document.addEventListener('shown.bs.collapse', function (event) {
 
 const backToTopNav = document.getElementById('backToTopNav');
 
-window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-  const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+window.addEventListener('scroll', function () {
+  const topNav = document.getElementById('backToTopNav');
 
-  // Avoid division by zero on very short pages
-  if (pageHeight <= 0) {
-    backToTopNav.style.visibility = 'hidden';
-    return;
+  if (window.scrollY > document.body.scrollHeight * 0.4) {
+    topNav.style.visibility = 'visible';
+  } else {
+    topNav.style.visibility = 'hidden';
   }
-
-  const scrollPercentage = (scrollTop / pageHeight) * 100;
-
-  backToTopNav.style.visibility =
-    scrollPercentage >= 40 ? 'visible' : 'hidden';
 });
 
 
