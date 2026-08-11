@@ -1,5 +1,6 @@
 const ygocards = {
   //shaddoll
+  "Armageddon Knight": "28985331",
   "Elder Entity N'tss": "80532587",
   "El Shaddoll Construct": "20366274",
   "El Shaddoll Fusion": "6417578",
